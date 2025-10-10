@@ -1,41 +1,68 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="select-none">
     <head>
         <title>Tạ Quang Khôi</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="icon" href="images/medal.svg">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta charset="UTF-8">
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="tailwind.config.js"></script>
         <!-- Motion.js for animations -->
         <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+        <style type="text/tailwindcss">
+            @font-face {
+                font-family: myCascadiaBold;
+                src: url(/font/CascadiaCode-Bold.otf);
+            }
+
+            @font-face {
+                font-family: "Cascadia Code";
+                src: url('./font/CascadiaCode-Bold.otf');
+            }
+
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: #ff6347;
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        </style>
     </head>
     
-    <body>
+    <body class="bg-blue-300 h-full mx-5 my-5 font-cascadia">
     <!-- Navigation Bar -->
     <nav>
-        <div class="nav-container">
-            <ul class='content'>
-                <li>
-                    <a href="index.html">
+        <div class="flex flex-row justify-between items-center h-[50px] bg-gray-100 rounded-xl px-5 mb-5 shadow-custom-lg">
+            <ul class="flex">
+                <li class="list-none p-2.5">
+                    <a href="index.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
                         <span>Home</span>
                     </a>
                 </li>
-                <li>
+                <li class="list-none p-2.5">
                     <a title="Tìm Hiều về Khôi"
-                       href="pages/about.html">
+                       href="pages/about.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
                         <span>About</span>
                     </a>
                 </li>
-                <li>
+                <li class="list-none p-2.5">
                     <a title="Liên Hệ Ngay với Khôi"
-                       href="pages/contact.html">
+                       href="pages/contact.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
                         <span>Contact</span>
                     </a>
                 </li>
-                <li>
-                    <a href="https://blog.taquangkhoi.tech">
+                <li class="list-none p-2.5">
+                    <a href="https://blog.taquangkhoi.tech" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
                         <span>Blog</span>
                     </a>
                 </li>
@@ -48,9 +75,9 @@
     </nav>
         
         <main class="mb-6">
-            <div class="container">
-                <h1>Nơi Khôi Viết Ra Những Gì Khôi Làm</h1>
-                <p class="inline-quote"><q>viết để không bị quên lãng</q></p>
+            <div class="bg-white bg-opacity-80 p-5 rounded-xl shadow-custom-lg mb-5">
+                <h1 class="font-cascadia-mono text-[100%] font-normal text-black bg-gray-100 border-2 border-tomato p-1.5 m-0 text-center shadow-custom rounded-lg">Nơi Khôi Viết Ra Những Gì Khôi Làm</h1>
+                <p class="bg-[dodgerblue] text-center py-2 px-3 shadow-custom-lg rounded-xl my-2.5"><q>viết để không bị quên lãng</q></p>
             </div>
         </main>
 
@@ -58,19 +85,19 @@
 
         <!-- Các bài viết -->
         
-        <div class="list-blog">
-            <div>
-            <a href="blog/2021/cach-su-dung-remnote.html">
+        <div class="flex flex-col gap-[15px] mt-5">
+            <div class="bg-white py-[15px] px-5 rounded-xl shadow-custom transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-0.5">
+            <a href="blog/2021/cach-su-dung-remnote.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
                 Cách Sử Dụng RemNote</a>
             </div>
             
-            <div>
-            <a href="blog/2021/bat-dau-xay-dung-cong-dong-remnote-vietname-tren-facebook.html">
+            <div class="bg-white py-[15px] px-5 rounded-xl shadow-custom transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-0.5">
+            <a href="blog/2021/bat-dau-xay-dung-cong-dong-remnote-vietname-tren-facebook.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
                 Bắt Đầu Xây Dựng Cộng Đồng RemNote Trên Facebook</a>
             </div>
 
-            <div>
-            <a href="blog/2021/cam-xuc-khi-duoc-karthikk-vijay-moi-tro-thanh-mot-moderator-cua-remnote.html">
+            <div class="bg-white py-[15px] px-5 rounded-xl shadow-custom transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-0.5">
+            <a href="blog/2021/cam-xuc-khi-duoc-karthikk-vijay-moi-tro-thanh-mot-moderator-cua-remnote.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
                 Cảm Xúc Khi Được Karthikk Vijay Mời Trở Thành Một Moderator Của RemNote</a>
             </div>
         </div>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion.js Animation Examples</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="icon" href="../images/medal.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Motion.js for animations -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <style>
+        .demo-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .demo-box {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .demo-button {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .demo-button:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <ul class='content'>
+                <li><a href="../index.html"><span>Home</span></a></li>
+                <li><a href="../pages/about.html"><span>About</span></a></li>
+                <li><a href="../pages/contact.html"><span>Contact</span></a></li>
+                <li><a href="https://blog.taquangkhoi.tech"><span>Blog</span></a></li>
+            </ul>
+            <p>Motion.js Examples</p>
+        </div>
+    </nav>
+
+    <main class="mb-6">
+        <div class="container">
+            <h1>Motion.js Animation Examples</h1>
+            <p class="inline-quote">Interactive demonstration of various Motion.js animations</p>
+        </div>
+    </main>
+
+    <!-- Example 1: Basic Animations -->
+    <div class="demo-section">
+        <h2>1. Basic Transform Animations</h2>
+        <div id="box1" class="demo-box">Click Me!</div>
+        <div class="button-group">
+            <button class="demo-button" onclick="animateScale()">Scale</button>
+            <button class="demo-button" onclick="animateRotate()">Rotate</button>
+            <button class="demo-button" onclick="animateTranslate()">Translate</button>
+            <button class="demo-button" onclick="animateFade()">Fade</button>
+        </div>
+    </div>
+
+    <!-- Example 2: Combined Animations -->
+    <div class="demo-section">
+        <h2>2. Combined Animations</h2>
+        <div id="box2" class="demo-box">Combo!</div>
+        <div class="button-group">
+            <button class="demo-button" onclick="animateCombo1()">Bounce In</button>
+            <button class="demo-button" onclick="animateCombo2()">Flip</button>
+            <button class="demo-button" onclick="animateCombo3()">Pulse</button>
+        </div>
+    </div>
+
+    <!-- Example 3: Easing Functions -->
+    <div class="demo-section">
+        <h2>3. Different Easing Functions</h2>
+        <div id="box3" class="demo-box">Easing</div>
+        <div class="button-group">
+            <button class="demo-button" onclick="animateEasing('linear')">Linear</button>
+            <button class="demo-button" onclick="animateEasing('ease-in')">Ease In</button>
+            <button class="demo-button" onclick="animateEasing('ease-out')">Ease Out</button>
+            <button class="demo-button" onclick="animateEasing('ease-in-out')">Ease In-Out</button>
+        </div>
+    </div>
+
+    <!-- Example 4: Stagger Animations -->
+    <div class="demo-section">
+        <h2>4. Stagger Animation</h2>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <div class="stagger-box" style="width: 60px; height: 60px; background: #667eea; border-radius: 8px;"></div>
+            <div class="stagger-box" style="width: 60px; height: 60px; background: #667eea; border-radius: 8px;"></div>
+            <div class="stagger-box" style="width: 60px; height: 60px; background: #667eea; border-radius: 8px;"></div>
+            <div class="stagger-box" style="width: 60px; height: 60px; background: #667eea; border-radius: 8px;"></div>
+            <div class="stagger-box" style="width: 60px; height: 60px; background: #667eea; border-radius: 8px;"></div>
+        </div>
+        <div class="button-group">
+            <button class="demo-button" onclick="animateStagger()">Animate Stagger</button>
+        </div>
+    </div>
+
+    <script>
+        // Basic Transform Animations
+        function animateScale() {
+            Motion.animate('#box1', 
+                { scale: [1, 1.5, 1] },
+                { duration: 0.6, easing: 'ease-in-out' }
+            );
+        }
+
+        function animateRotate() {
+            Motion.animate('#box1',
+                { rotate: [0, 360] },
+                { duration: 0.8, easing: 'ease-out' }
+            );
+        }
+
+        function animateTranslate() {
+            Motion.animate('#box1',
+                { x: [0, 100, -100, 0] },
+                { duration: 1, easing: 'ease-in-out' }
+            );
+        }
+
+        function animateFade() {
+            Motion.animate('#box1',
+                { opacity: [1, 0, 1] },
+                { duration: 1, easing: 'ease-in-out' }
+            );
+        }
+
+        // Combined Animations
+        function animateCombo1() {
+            Motion.animate('#box2',
+                {
+                    scale: [0, 1.2, 1],
+                    opacity: [0, 1]
+                },
+                {
+                    duration: 0.6,
+                    easing: [0.68, -0.55, 0.265, 1.55] // Bounce
+                }
+            );
+        }
+
+        function animateCombo2() {
+            Motion.animate('#box2',
+                {
+                    rotateY: [0, 180, 360],
+                    scale: [1, 1.1, 1]
+                },
+                { duration: 1, easing: 'ease-in-out' }
+            );
+        }
+
+        function animateCombo3() {
+            Motion.animate('#box2',
+                {
+                    scale: [1, 1.15, 1],
+                    boxShadow: [
+                        '0 4px 6px rgba(0,0,0,0.1)',
+                        '0 20px 40px rgba(102,126,234,0.5)',
+                        '0 4px 6px rgba(0,0,0,0.1)'
+                    ]
+                },
+                { duration: 0.8, easing: 'ease-in-out' }
+            );
+        }
+
+        // Easing Functions
+        function animateEasing(easing) {
+            Motion.animate('#box3',
+                { x: [0, 200, 0] },
+                { duration: 1.5, easing: easing }
+            );
+        }
+
+        // Stagger Animation
+        function animateStagger() {
+            const boxes = document.querySelectorAll('.stagger-box');
+            boxes.forEach((box, index) => {
+                Motion.animate(box,
+                    {
+                        y: [0, -50, 0],
+                        backgroundColor: ['#667eea', '#764ba2', '#667eea']
+                    },
+                    {
+                        duration: 0.6,
+                        delay: index * 0.1,
+                        easing: 'ease-out'
+                    }
+                );
+            });
+        }
+
+        // Initial page load animations
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Motion !== 'undefined') {
+                // Animate demo sections
+                const sections = document.querySelectorAll('.demo-section');
+                sections.forEach((section, index) => {
+                    Motion.animate(section,
+                        {
+                            opacity: [0, 1],
+                            y: [50, 0]
+                        },
+                        {
+                            duration: 0.6,
+                            delay: index * 0.1,
+                            easing: 'ease-out'
+                        }
+                    );
+                });
+
+                // Animate demo boxes
+                const boxes = document.querySelectorAll('.demo-box');
+                boxes.forEach((box, index) => {
+                    Motion.animate(box,
+                        {
+                            scale: [0, 1],
+                            opacity: [0, 1]
+                        },
+                        {
+                            duration: 0.5,
+                            delay: 0.3 + index * 0.15,
+                            easing: [0.68, -0.55, 0.265, 1.55]
+                        }
+                    );
+                });
+            }
+        });
+    </script>
+
+    <!-- Load Motion.js animations -->
+    <script src="../js/animations.js"></script>
+</body>
+</html>

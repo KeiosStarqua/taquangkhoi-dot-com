@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+    <!-- Motion.js for animations -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
     <link rel="stylesheet" href="../css/curves.css" />
     </style>
   </head>
@@ -107,5 +109,38 @@
       <h1>Nice Curves!</h1>
       <p>A website is like a road. The more curves it has the more interesting it is.</p>
     </section>
+
+    <!-- Add Motion.js animations for scroll effects -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof Motion !== 'undefined') {
+          // Animate all h1 elements on scroll
+          const sections = document.querySelectorAll('section');
+          sections.forEach((section, index) => {
+            Motion.animate(section,
+              {
+                opacity: [0, 1],
+                transform: ['translateY(50px)', 'translateY(0)']
+              },
+              {
+                duration: 0.8,
+                delay: index * 0.1,
+                easing: 'ease-out'
+              }
+            );
+          });
+
+          // Add subtle parallax effect to spacers
+          const spacers = document.querySelectorAll('.spacer');
+          window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            spacers.forEach((spacer, index) => {
+              const speed = (index + 1) * 0.3;
+              spacer.style.transform = `translateY(${scrollY * speed}px)`;
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>

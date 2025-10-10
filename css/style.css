@@ -1,169 +1,29 @@
+/* Font Face Definitions - Keep for custom fonts */
 @font-face {
     font-family: myCascadiaBold;
     src: url(/font/CascadiaCode-Bold.otf);
-
 }
 
-@font-face
-{
+@font-face {
     font-family: "Cascadia Code";
     src: url('../font/CascadiaCode-Bold.otf');
 }
 
-html {
-    user-select: none;
-}
-* {
-    font-family: myCascadiaBold, serif, "Cascadia Code", Cascadia, Arial;
+/* Custom Scrollbar - Not easily replicable in Tailwind */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-body{
-    background-color: lightblue;
-    /*max-width: 1920px;*/
-    /*width: 100%;*/
-    height: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-
-
-h1{
-    font-family: myCascadiaBold, serif, "Cascadia Mono", "Cascadia";
-    font-size: 100%;
-    font-weight: normal;
-    color: #000000;
-    background-color: #f0f0f0;
-    border: 2px solid tomato;
-    padding: 5px;
-    margin: 0;
-    text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-}
-.box {
-    border: 1px double;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-}
-.inline-quote {
-    background-color: dodgerblue;
-    text-align: center;
-    padding: 8px 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
-    margin: 10px 0;
+::-webkit-scrollbar-thumb {
+    background: #ff6347;
 }
 
-/* Custom Scrollbar */
-    /* width */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-  
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
-  
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: #ff6347;
-    }
-  
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
-
-/* Custom Link */
-    a:link {
-        color: green;
-        background-color: transparent;
-        text-decoration: none;
-    }
-  
-    a:visited {
-        color: yellowgreen;
-        background-color: transparent;
-        text-decoration: none;
-    }
-  
-    a:hover {
-        color: red;
-        background-color: transparent;
-        text-decoration: underline;
-    }
-  
-    a:active {
-        color: yellow;
-        background-color: transparent;
-        text-decoration: underline;
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
-/* Modern styling for blog list items */
-.list-blog {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.list-blog > div {
-    background-color: #ffffff;
-    padding: 15px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-}
-
-.list-blog > div:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    transform: translateY(-2px);
-}
-
-/* Container styling */
-.container {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
-}
-
-/* Social media box */
-#social-media-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    margin-top: 20px;
-}
-
-/* Image styling with shadow */
-img {
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-/*
-ul{
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-ul.content {
-    margin-top: 1rem;
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
-    position: sticky;
-    top: 20px;
-    z-index: 10;
-}*/
+/* All other styles have been migrated to TailwindCSS utility classes */

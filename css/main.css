@@ -1,25 +1,5 @@
-/*** Chứa các CSS sẽ dùng chung ***/
+/*** All CSS has been migrated to TailwindCSS utility classes ***/
+/* Navigation, typography, layout, and other styles are now inline Tailwind classes */
+/* See: index.html, pages/about.html, pages/contact.html, 404.html, and demos/motion-examples.html */
 
-
-/* Cái nav đẹp đấy */
-.nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    background-color: #f1f1f1;
-    border-radius: 12px;
-    padding: 0 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.nav-container ul {
-    display: flex;
-}
-
-.nav-container ul li {
-    list-style-type: none;
-    padding: 10px;
-}
+/* Font face definitions and custom scrollbar styles are now in style.css */

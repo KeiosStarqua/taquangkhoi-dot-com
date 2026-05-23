@@ -1,0 +1,29 @@
+/* Font Face Definitions - Keep for custom fonts */
+@font-face {
+    font-family: myCascadiaBold;
+    src: url(/font/CascadiaCode-Bold.otf);
+}
+
+@font-face {
+    font-family: "Cascadia Code";
+    src: url('../font/CascadiaCode-Bold.otf');
+}
+
+/* Custom Scrollbar - Not easily replicable in Tailwind */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff6347;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* All other styles have been migrated to TailwindCSS utility classes */

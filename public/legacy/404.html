@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi" class="select-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Trang không tìm thấy</title>
+    <link rel="icon" href="images/medal.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Motion.js for animations -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'cascadia': ['myCascadiaBold', 'serif', 'Cascadia Code', 'Cascadia', 'Arial'],
+                        'cascadia-mono': ['myCascadiaBold', 'serif', 'Cascadia Mono', 'Cascadia'],
+                    },
+                    colors: {
+                        'tomato': '#ff6347',
+                    },
+                    boxShadow: {
+                        'custom': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'custom-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @font-face {
+            font-family: myCascadiaBold;
+            src: url(/font/CascadiaCode-Bold.otf);
+        }
+
+        @font-face {
+            font-family: "Cascadia Code";
+            src: url('./font/CascadiaCode-Bold.otf');
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #ff6347;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ff6347;
+            margin: 0;
+            line-height: 1;
+        }
+        .error-message {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body class="bg-blue-300 h-full mx-5 my-5 font-cascadia">
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="flex flex-row justify-between items-center h-[50px] bg-gray-100 rounded-xl px-5 mb-5 shadow-custom-lg">
+            <ul class="flex">
+                <li class="list-none p-2.5">
+                    <a href="index.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="list-none p-2.5">
+                    <a title="Tìm Hiều về Khôi" href="pages/about.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="list-none p-2.5">
+                    <a title="Liên Hệ Ngay với Khôi" href="pages/contact.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="list-none p-2.5">
+                    <a href="https://blog.taquangkhoi.tech" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                        <span>Blog</span>
+                    </a>
+                </li>
+            </ul>
+            <p>Tạ Quang Khôi</p>
+        </div>
+    </nav>
+
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <p class="error-message">Trang không tìm thấy</p>
+        <p>Do Quyen - Trang bạn đang tìm kiếm không tồn tại.</p>
+        <div class="mt-6">
+            <a href="index.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all">
+                Quay về Trang Chủ
+            </a>
+        </div>
+    </div>
+
+    <!-- Load Motion.js animations -->
+    <script src="js/animations.js"></script>
+    <script>
+        // Additional 404-specific animations
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Motion !== 'undefined') {
+                // Animate error code with bounce
+                Motion.animate('.error-code',
+                    {
+                        opacity: [0, 1],
+                        transform: ['scale(0.5) rotate(-10deg)', 'scale(1) rotate(0deg)']
+                    },
+                    {
+                        duration: 0.8,
+                        easing: [0.68, -0.55, 0.265, 1.55] // Bounce easing
+                    }
+                );
+
+                // Animate error message
+                Motion.animate('.error-message',
+                    {
+                        opacity: [0, 1],
+                        transform: ['translateY(30px)', 'translateY(0)']
+                    },
+                    {
+                        duration: 0.6,
+                        delay: 0.3,
+                        easing: 'ease-out'
+                    }
+                );
+
+                // Animate button
+                Motion.animate('.error-container a',
+                    {
+                        opacity: [0, 1],
+                        transform: ['translateY(20px)', 'translateY(0)']
+                    },
+                    {
+                        duration: 0.5,
+                        delay: 0.6,
+                        easing: 'ease-out'
+                    }
+                );
+            }
+        });
+    </script>
+</body>
+</html>
+

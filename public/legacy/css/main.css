@@ -1,0 +1,5 @@
+/*** All CSS has been migrated to TailwindCSS utility classes ***/
+/* Navigation, typography, layout, and other styles are now inline Tailwind classes */
+/* See: index.html, pages/about.html, pages/contact.html, 404.html, and demos/motion-examples.html */
+
+/* Font face definitions and custom scrollbar styles are now in style.css */

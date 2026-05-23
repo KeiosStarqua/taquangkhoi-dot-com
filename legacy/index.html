@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi" class="select-none">
+    <head>
+        <title>Tạ Quang Khôi</title>
+        <link rel="icon" href="images/medal.svg">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="UTF-8">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Motion.js for animations -->
+        <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'cascadia': ['myCascadiaBold', 'serif', 'Cascadia Code', 'Cascadia', 'Arial'],
+                            'cascadia-mono': ['myCascadiaBold', 'serif', 'Cascadia Mono', 'Cascadia'],
+                        },
+                        colors: {
+                            'tomato': '#ff6347',
+                        },
+                        boxShadow: {
+                            'custom': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                            'custom-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        }
+                    }
+                }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            @font-face {
+                font-family: myCascadiaBold;
+                src: url(/font/CascadiaCode-Bold.otf);
+            }
+
+            @font-face {
+                font-family: "Cascadia Code";
+                src: url('./font/CascadiaCode-Bold.otf');
+            }
+
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: #ff6347;
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        </style>
+    </head>
+    
+    <body class="bg-blue-300 h-full mx-5 my-5 font-cascadia">
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="flex flex-row justify-between items-center h-[50px] bg-gray-100 rounded-xl px-5 mb-5 shadow-custom-lg">
+            <ul class="flex">
+                <li class="list-none p-2.5">
+                    <a href="index.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="list-none p-2.5">
+                    <a title="Tìm Hiều về Khôi"
+                       href="pages/about.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="list-none p-2.5">
+                    <a title="Liên Hệ Ngay với Khôi"
+                       href="pages/contact.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="list-none p-2.5">
+                    <a href="https://blog.taquangkhoi.tech" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                        <span>Blog</span>
+                    </a>
+                </li>
+
+            </ul>
+            <p>
+                Tạ Quang Khôi
+            </p>
+        </div>
+    </nav>
+        
+        <main class="mb-6">
+            <div class="bg-white bg-opacity-80 p-5 rounded-xl shadow-custom-lg mb-5">
+                <h1 class="font-cascadia-mono text-[100%] font-normal text-black bg-gray-100 border-2 border-tomato p-1.5 m-0 text-center shadow-custom rounded-lg">Nơi Khôi Viết Ra Những Gì Khôi Làm</h1>
+                <p class="bg-[dodgerblue] text-center py-2 px-3 shadow-custom-lg rounded-xl my-2.5"><q>viết để không bị quên lãng</q></p>
+            </div>
+        </main>
+
+        <p class="text-lg font-semibold text-gray-800 bg-white p-4 rounded-lg shadow-md mb-6">Dịch Vụ Facebook: Mở Khoá Facebook, Tăng Like, Tăng Follow, Tăng Comment</p>
+
+        <!-- Các bài viết -->
+        
+        <div class="flex flex-col gap-[15px] mt-5">
+            <div class="bg-white py-[15px] px-5 rounded-xl shadow-custom transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-0.5">
+            <a href="blog/2021/cach-su-dung-remnote.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                Cách Sử Dụng RemNote</a>
+            </div>
+            
+            <div class="bg-white py-[15px] px-5 rounded-xl shadow-custom transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-0.5">
+            <a href="blog/2021/bat-dau-xay-dung-cong-dong-remnote-vietname-tren-facebook.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                Bắt Đầu Xây Dựng Cộng Đồng RemNote Trên Facebook</a>
+            </div>
+
+            <div class="bg-white py-[15px] px-5 rounded-xl shadow-custom transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-0.5">
+            <a href="blog/2021/cam-xuc-khi-duoc-karthikk-vijay-moi-tro-thanh-mot-moderator-cua-remnote.html" class="text-green-600 no-underline hover:text-red-600 hover:underline visited:text-[yellowgreen] active:text-yellow-400">
+                Cảm Xúc Khi Được Karthikk Vijay Mời Trở Thành Một Moderator Của RemNote</a>
+            </div>
+        </div>
+
+        <div id = 'like-button-container' class="mt-8 p-4"></div>
+
+        <!-- Load React-->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <!-- Load my React component. -->
+        <script src="like-button.js"></script>
+        
+        <!-- Load Motion.js animations -->
+        <script src="js/animations.js"></script>
+    </body>
+</html>

@@ -1,4 +1,37 @@
-Welcome to your new TanStack Start app! 
+# About Keios Starqua - Tạ Quang Khôi
+
+Hi everyone, I am Keios, a learner and a coder.
+
+## Project Structure
+
+```
+├── index.html          # Main homepage
+├── pages/              # Website pages
+│   ├── about.html      # About me page
+│   └── contact.html    # Contact page
+├── css/                # Stylesheets
+├── js/                 # JavaScript files
+├── images/             # Images and media assets
+├── font/               # Font files
+├── demos/              # Demo and test pages
+├── archive/            # Old code and legacy files
+└── README.md           # This file
+```
+
+## Description
+
+This is my personal website hosted on GitHub Pages. It showcases my work, blog posts, and provides information about me.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- React (for interactive components)
+
+---
+
+Welcome to your new TanStack Start app!
 
 # Getting Started
 
@@ -42,13 +75,11 @@ If you prefer not to use Tailwind CSS:
 
 This project uses [Biome](https://biomejs.dev/) for linting and formatting. The following scripts are available:
 
-
 ```bash
 npm run lint
 npm run format
 npm run check
 ```
-
 
 ## Deploy to Cloudflare Workers
 
@@ -62,10 +93,9 @@ For production env vars, run `wrangler secret put MY_VAR` for each secret listed
 
 KV, D1, R2, and Durable Object bindings are configured in `wrangler.jsonc` — see https://developers.cloudflare.com/workers/wrangler/configuration/.
 
-
 # TanStack Chat Application
 
-Am example chat application built with TanStack Start, TanStack Store, and Claude AI.
+An example chat application built with TanStack Start, TanStack Store, and Claude AI.
 
 ## .env Updates
 
@@ -73,24 +103,24 @@ Am example chat application built with TanStack Start, TanStack Store, and Claud
 ANTHROPIC_API_KEY=your_anthropic_api_key
 ```
 
-## ✨ Features
+## Features
 
 ### AI Capabilities
-- 🤖 Powered by Claude 3.5 Sonnet 
-- 📝 Rich markdown formatting with syntax highlighting
-- 🎯 Customizable system prompts for tailored AI behavior
-- 🔄 Real-time message updates and streaming responses (coming soon)
+- Powered by Claude 3.5 Sonnet
+- Rich markdown formatting with syntax highlighting
+- Customizable system prompts for tailored AI behavior
+- Real-time message updates and streaming responses (coming soon)
 
 ### User Experience
-- 🎨 Modern UI with Tailwind CSS and Lucide icons
-- 🔍 Conversation management and history
-- 🔐 Secure API key management
-- 📋 Markdown rendering with code highlighting
+- Modern UI with Tailwind CSS and Lucide icons
+- Conversation management and history
+- Secure API key management
+- Markdown rendering with code highlighting
 
 ### Technical Features
-- 📦 Centralized state management with TanStack Store
-- 🔌 Extensible architecture for multiple AI providers
-- 🛠️ TypeScript for type safety
+- Centralized state management with TanStack Store
+- Extensible architecture for multiple AI providers
+- TypeScript for type safety
 
 ## Architecture
 
@@ -108,8 +138,6 @@ Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
 ```bash
 pnpm dlx shadcn@latest add button
 ```
-
-
 
 ## Routing
 
@@ -262,3 +290,11 @@ Files prefixed with `demo` can be safely deleted. They are there to provide a st
 You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
 
 For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+
+---
+
+## Contact
+
+- Facebook: [Tạ Quang Khôi](https://www.facebook.com/TaLaTaQuangKhoi)
+- Email: taquangkhoi@hotmail.com
+- Blog: [blog.taquangkhoi.tech](https://blog.taquangkhoi.tech)

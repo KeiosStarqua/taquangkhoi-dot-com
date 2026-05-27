@@ -1,0 +1,152 @@
+{
+	"meta": {
+		"home": {
+			"title": "Tạ Quang Khôi — Software Developer & Musician",
+			"description": "Software developer and musician from Vietnam. Building AI agents, exploring quantum computing at TRUE-TECH, and making music with Ardour."
+		},
+		"about": {
+			"title": "About — Tạ Quang Khôi",
+			"description": "About Tạ Quang Khôi — Vietnamese software developer, musician, and open source contributor. Graduate of Ba Ria Vung Tau University."
+		}
+	},
+	"home": {
+		"kicker": "Software Developer & Musician · Vietnam",
+		"title": "Tạ Quang Khôi",
+		"tagline": "coding and loving myself 🥰",
+		"bio": "I build software at <0>@TRUE-TECH</0>, craft AI agents, and make music with Ardour. Currently exploring quantum programming on the side.",
+		"cta": {
+			"github": "GitHub Profile",
+			"about": "About Me",
+			"coffee": "☕ Buy me a coffee"
+		},
+		"focus": {
+			"ai": {
+				"title": "AI Agents",
+				"desc": "Currently building AI agents and exploring how they can automate complex workflows."
+			},
+			"quantum": {
+				"title": "Quantum Programming",
+				"desc": "Exploring quantum computing concepts and their potential applications."
+			},
+			"music": {
+				"title": "Music with Ardour",
+				"desc": "Making music as a creative outlet using the open-source Ardour DAW."
+			}
+		},
+		"skills": {
+			"kicker": "Skills",
+			"languages": "Languages",
+			"frontend": "Frontend",
+			"backend": "Backend",
+			"mobile": "Mobile"
+		},
+		"featured": {
+			"kicker": "Featured Project",
+			"title": "Vina Doctor 🏥",
+			"desc": "An AI-powered Vietnamese medical assistant built for the Qwen AI Build Day hackathon. Helps Vietnamese users access health information in their native language."
+		}
+	},
+	"about": {
+		"kicker": "About",
+		"title": "Hey, I'm Khôi 🥰",
+		"bio": "I'm a software developer and musician based in Vietnam. I love writing code, building things that matter, and making music with open-source tools. My GitHub handle is <0>TaQuangKhoi</0>, but online I'm often known as <1>Keios Starqua</1>.",
+		"education": {
+			"kicker": "Education",
+			"university": "Ba Ria Vung Tau University",
+			"degree": "Mobile & Game Development",
+			"desc": "Graduate in <0>Mobile & Game Development</0>. This is where I got my foundation in mobile development with Android and Flutter, and caught the programming bug for good."
+		},
+		"focus": {
+			"kicker": "What I'm Up To",
+			"ai": "Building <0>AI agents</0> — automating tasks and exploring how intelligent systems can work for people.",
+			"quantum": "Exploring <0>quantum programming</0> as a long-term curiosity project.",
+			"remnote": "Using <0>RemNote</0> for learning and knowledge management — I'm also a community moderator there.",
+			"music": "Making music with <0>Ardour</0>, the open-source digital audio workstation."
+		},
+		"oss": {
+			"kicker": "Open Source",
+			"intro": "I believe in open source and try to give back where I can.",
+			"webscrobbler": {
+				"title": "Web Scrobbler",
+				"desc": "Contributing to the browser extension that scrobbles music to Last.fm and other services."
+			},
+			"vinadoctor": {
+				"title": "Vina Doctor",
+				"desc": "AI-powered Vietnamese medical assistant — built for Qwen AI Build Day."
+			},
+			"napkin": {
+				"title": "Napkin-Collect-Android",
+				"desc": "Android app to send thoughts directly to napkin.one. 12 stars on GitHub."
+			}
+		},
+		"connect": {
+			"kicker": "Connect",
+			"github": "225 repos, 3.7k stars",
+			"linkedin": "Professional profile",
+			"twitter": "@TaLaTaQuangKhoi",
+			"kofi": "Buy me a coffee ☕",
+			"orcid": "Research identity",
+			"facebook": "keios.starqua"
+		}
+	},
+	"products": {
+		"kicker": "My Products",
+		"title": "Things I Build",
+		"subtitle": "Personal products and side projects — from language learning tools to blockchain apps.",
+		"back": "All Products",
+		"features": "Features",
+		"links": "Links",
+		"status": {
+			"active": "Active",
+			"hackathon": "Hackathon",
+			"open-source": "Open Source"
+		},
+		"opensen": {
+			"name": "OpenSen",
+			"tagline": "Learn English through chunking — memorize whole phrases, not words.",
+			"description": "Open Sentence is a language learning ecosystem that helps learners memorize English through the chunking method: memorizing whole sentences and pre-assembled phrases so they retrieve language automatically rather than constructing it word-by-word.",
+			"features": [
+				"Dialog Builder — Generate memorization-ready dialogs and speeches",
+				"Chunk Library — High-frequency native phrases with swap patterns",
+				"Situation Coverage — Real-world scenarios (small talk, ordering, travel, etc.)",
+				"Practice Plan — Spaced repetition based practice schedules",
+				"Anki export — Take your chunks anywhere"
+			]
+		},
+		"yt-hunter": {
+			"name": "YT Hunter",
+			"tagline": "Save YouTube URLs and auto-fetch transcripts instantly.",
+			"description": "A small open-source tool with a mobile app and browser extension. Paste a YouTube URL and YT Hunter automatically saves the video and fetches the transcript via TranscriptAPI — stored locally with the video reference.",
+			"features": [
+				"Browser extension for Chrome & Firefox — one-click save",
+				"Mobile app (Flutter / React Native) for on-the-go capture",
+				"Auto-fetch transcripts via TranscriptAPI",
+				"Local storage with IndexedDB — your data stays yours",
+				"Optional sync backend for multi-device access"
+			]
+		},
+		"open-farm": {
+			"name": "Open Farm Sui",
+			"tagline": "AI-powered agricultural trust platform on the Sui blockchain.",
+			"description": "Open Farm connects consumers directly with farmers through transparent crop stories, decentralized identity, and climate-aware farming intelligence. Scan a product QR code and instantly discover who grew your food, the harvest history, sustainability score, and AI-generated farming insights.",
+			"features": [
+				"Farmer Passport — on-chain identity, trust score, sustainability badges",
+				"Harvest Story Timeline — crop journey from planting to delivery via Walrus storage",
+				"AI Farm Copilot — crop disease detection, weather predictions, irrigation suggestions",
+				"QR Crop Verification — consumers scan products to see full farm origin",
+				"Community Trust — reputation system connecting farmers and consumers directly"
+			]
+		}
+	},
+	"nav": {
+		"home": "Home",
+		"about": "About",
+		"products": "Products",
+		"demo": "Demo"
+	},
+	"langSwitch": {
+		"label": "Language",
+		"en": "English",
+		"vi": "Tiếng Việt"
+	}
+}

@@ -1,0 +1,152 @@
+{
+	"meta": {
+		"home": {
+			"title": "Tạ Quang Khôi — Lập trình viên & Nhạc sĩ",
+			"description": "Lập trình viên và nhạc sĩ từ Việt Nam. Xây dựng AI agent, khám phá điện toán lượng tử tại TRUE-TECH, và làm nhạc với Ardour."
+		},
+		"about": {
+			"title": "Giới thiệu — Tạ Quang Khôi",
+			"description": "Giới thiệu về Tạ Quang Khôi — lập trình viên, nhạc sĩ và người đóng góp mã nguồn mở từ Việt Nam. Tốt nghiệp Đại học Bà Rịa - Vũng Tàu."
+		}
+	},
+	"home": {
+		"kicker": "Lập trình viên & Nhạc sĩ · Việt Nam",
+		"title": "Tạ Quang Khôi",
+		"tagline": "lập trình và yêu bản thân 🥰",
+		"bio": "Tôi xây dựng phần mềm tại <0>@TRUE-TECH</0>, tạo các AI agent, và làm nhạc với Ardour. Hiện đang khám phá lập trình lượng tử như một sở thích bên lề.",
+		"cta": {
+			"github": "Hồ sơ GitHub",
+			"about": "Giới thiệu",
+			"coffee": "☕ Mời tôi một ly cà phê"
+		},
+		"focus": {
+			"ai": {
+				"title": "AI Agent",
+				"desc": "Đang xây dựng các AI agent và khám phá cách chúng có thể tự động hóa các quy trình phức tạp."
+			},
+			"quantum": {
+				"title": "Lập trình Lượng tử",
+				"desc": "Khám phá các khái niệm điện toán lượng tử và những ứng dụng tiềm năng của chúng."
+			},
+			"music": {
+				"title": "Làm nhạc với Ardour",
+				"desc": "Làm nhạc như một cách thư giãn sáng tạo bằng phần mềm DAW mã nguồn mở Ardour."
+			}
+		},
+		"skills": {
+			"kicker": "Kỹ năng",
+			"languages": "Ngôn ngữ lập trình",
+			"frontend": "Frontend",
+			"backend": "Backend",
+			"mobile": "Lập trình Di động"
+		},
+		"featured": {
+			"kicker": "Dự án Nổi bật",
+			"title": "Vina Doctor 🏥",
+			"desc": "Trợ lý y tế Việt Nam được hỗ trợ bởi AI, xây dựng cho hackathon Qwen AI Build Day. Giúp người dùng Việt Nam tiếp cận thông tin y tế bằng tiếng mẹ đẻ."
+		}
+	},
+	"about": {
+		"kicker": "Giới thiệu",
+		"title": "Xin chào, tôi là Khôi 🥰",
+		"bio": "Tôi là lập trình viên và nhạc sĩ sống tại Việt Nam. Tôi thích viết code, xây dựng những thứ có ý nghĩa, và làm nhạc với các công cụ mã nguồn mở. Tài khoản GitHub của tôi là <0>TaQuangKhoi</0>, nhưng trên mạng tôi thường được biết đến với cái tên <1>Keios Starqua</1>.",
+		"education": {
+			"kicker": "Học vấn",
+			"university": "Đại học Bà Rịa - Vũng Tàu",
+			"degree": "Lập trình Di động & Phát triển Game",
+			"desc": "Tốt nghiệp ngành <0>Lập trình Di động & Phát triển Game</0>. Đây là nơi tôi có nền tảng về lập trình di động với Android và Flutter, và bắt đầu say mê lập trình."
+		},
+		"focus": {
+			"kicker": "Hiện tại tôi đang làm gì",
+			"ai": "Xây dựng <0>AI agent</0> — tự động hóa công việc và khám phá cách các hệ thống thông minh có thể hỗ trợ con người.",
+			"quantum": "Khám phá <0>lập trình lượng tử</0> như một dự án nghiên cứu dài hạn.",
+			"remnote": "Sử dụng <0>RemNote</0> để học tập và quản lý kiến thức — tôi cũng là người điều phối cộng đồng ở đó.",
+			"music": "Làm nhạc với <0>Ardour</0>, phần mềm DAW mã nguồn mở."
+		},
+		"oss": {
+			"kicker": "Mã nguồn Mở",
+			"intro": "Tôi tin tưởng vào mã nguồn mở và cố gắng đóng góp khi có thể.",
+			"webscrobbler": {
+				"title": "Web Scrobbler",
+				"desc": "Đóng góp cho tiện ích mở rộng trình duyệt giúp ghi nhận nhạc đang nghe lên Last.fm và các dịch vụ khác."
+			},
+			"vinadoctor": {
+				"title": "Vina Doctor",
+				"desc": "Trợ lý y tế Việt Nam được hỗ trợ bởi AI — xây dựng cho Qwen AI Build Day."
+			},
+			"napkin": {
+				"title": "Napkin-Collect-Android",
+				"desc": "Ứng dụng Android để gửi suy nghĩ trực tiếp lên napkin.one. 12 sao trên GitHub."
+			}
+		},
+		"connect": {
+			"kicker": "Liên hệ",
+			"github": "225 repo, 3.7k sao",
+			"linkedin": "Hồ sơ chuyên nghiệp",
+			"twitter": "@TaLaTaQuangKhoi",
+			"kofi": "Mời tôi cà phê ☕",
+			"orcid": "Danh tính nghiên cứu",
+			"facebook": "keios.starqua"
+		}
+	},
+	"products": {
+		"kicker": "Sản phẩm của tôi",
+		"title": "Những thứ tôi xây dựng",
+		"subtitle": "Các sản phẩm cá nhân và dự án bên lề — từ công cụ học ngôn ngữ đến ứng dụng blockchain.",
+		"back": "Tất cả sản phẩm",
+		"features": "Tính năng",
+		"links": "Liên kết",
+		"status": {
+			"active": "Đang phát triển",
+			"hackathon": "Hackathon",
+			"open-source": "Mã nguồn mở"
+		},
+		"opensen": {
+			"name": "OpenSen",
+			"tagline": "Học tiếng Anh qua chunking — ghi nhớ cả cụm từ, không phải từng từ.",
+			"description": "Open Sentence là một hệ sinh thái học ngôn ngữ giúp người học ghi nhớ tiếng Anh thông qua phương pháp chunking: học thuộc toàn bộ câu và các cụm từ được lắp sẵn, giúp truy xuất ngôn ngữ tự động thay vì ghép từng từ.",
+			"features": [
+				"Dialog Builder — Tạo hội thoại và bài phát biểu sẵn sàng để học thuộc",
+				"Chunk Library — Các cụm từ bản ngữ tần suất cao với mẫu thay thế",
+				"Situation Coverage — Các tình huống thực tế (nói chuyện bình thường, gọi đồ, du lịch, v.v.)",
+				"Practice Plan — Lịch ôn tập theo spaced repetition",
+				"Xuất Anki — Mang chunks của bạn đi bất cứ đâu"
+			]
+		},
+		"yt-hunter": {
+			"name": "YT Hunter",
+			"tagline": "Lưu URL YouTube và tự động tải transcript tức thì.",
+			"description": "Một công cụ mã nguồn mở nhỏ gọn với ứng dụng di động và tiện ích trình duyệt. Dán URL YouTube và YT Hunter tự động lưu video, tải transcript qua TranscriptAPI — lưu cục bộ cùng với tham chiếu video.",
+			"features": [
+				"Tiện ích trình duyệt Chrome & Firefox — lưu một cú nhấp",
+				"Ứng dụng di động (Flutter / React Native) để lưu mọi lúc mọi nơi",
+				"Tự động tải transcript qua TranscriptAPI",
+				"Lưu cục bộ với IndexedDB — dữ liệu của bạn, thuộc về bạn",
+				"Backend đồng bộ tùy chọn cho đa thiết bị"
+			]
+		},
+		"open-farm": {
+			"name": "Open Farm Sui",
+			"tagline": "Nền tảng tín nhiệm nông nghiệp được hỗ trợ bởi AI trên blockchain Sui.",
+			"description": "Open Farm kết nối người tiêu dùng trực tiếp với nông dân qua câu chuyện mùa vụ minh bạch, danh tính phi tập trung và trí tuệ nông nghiệp nhận thức khí hậu. Quét mã QR sản phẩm để biết ngay ai trồng thức ăn của bạn, lịch sử thu hoạch, điểm bền vững và thông tin AI.",
+			"features": [
+				"Farmer Passport — danh tính on-chain, điểm tín nhiệm, huy hiệu bền vững",
+				"Harvest Story Timeline — hành trình cây trồng từ gieo đến giao hàng qua Walrus",
+				"AI Farm Copilot — phát hiện bệnh cây, dự báo thời tiết, gợi ý tưới tiêu",
+				"QR Crop Verification — người tiêu dùng quét sản phẩm để xem toàn bộ nguồn gốc",
+				"Community Trust — hệ thống danh tiếng kết nối trực tiếp nông dân và người tiêu dùng"
+			]
+		}
+	},
+	"nav": {
+		"home": "Trang chủ",
+		"about": "Giới thiệu",
+		"products": "Sản phẩm",
+		"demo": "Demo"
+	},
+	"langSwitch": {
+		"label": "Ngôn ngữ",
+		"en": "English",
+		"vi": "Tiếng Việt"
+	}
+}

@@ -110,17 +110,18 @@
 			"hackathon": "Hackathon",
 			"open-source": "Mã nguồn mở"
 		},
-		"opensen": {
+"opensen": {
 			"name": "OpenSen",
-			"tagline": "Học tiếng Anh qua chunking — ghi nhớ cả cụm từ, không phải từng từ.",
-			"description": "Open Sentence là một hệ sinh thái học ngôn ngữ giúp người học ghi nhớ tiếng Anh thông qua phương pháp chunking: học thuộc toàn bộ câu và các cụm từ được lắp sẵn, giúp truy xuất ngôn ngữ tự động thay vì ghép từng từ.",
+			"tagline": "Học tiếng Anh qua phương pháp chunking — ghi nhớ cả cụm từ, không phải từng từ.",
+			"description": "Open Sentence là một hệ sinh thái học ngôn ngữ giúp người học ghi nhớ tiếng Anh qua phương pháp chunking: ghi nhớ cả câu và cụm từ được ghép sẵn để lấy ngôn ngữ một cách tự động thay vì ghép từng từ một.",
 			"features": [
-				"Dialog Builder — Tạo hội thoại và bài phát biểu sẵn sàng để học thuộc",
-				"Chunk Library — Các cụm từ bản ngữ tần suất cao với mẫu thay thế",
-				"Situation Coverage — Các tình huống thực tế (nói chuyện bình thường, gọi đồ, du lịch, v.v.)",
-				"Practice Plan — Lịch ôn tập theo spaced repetition",
-				"Xuất Anki — Mang chunks của bạn đi bất cứ đâu"
-			]
+				"Dialog Builder — Tạo các đoạn hội thoại và bài phát biểu sẵn sàng để ghi nhớ",
+				"Chunk Library — Các cụm từ phổ biến với các mẫu hoán đổi",
+				"Situation Coverage — Các tình huống thực tế (tán gẫu, đặt món, du lịch, v.v.)",
+				"Practice Plan — Lịch học tập với Spaced Repetition",
+				"Anki export — Mang chunk đi đâu cũng được"
+			],
+			"video": "Nguồn cảm hứng"
 		},
 		"yt-hunter": {
 			"name": "YT Hunter",

@@ -121,6 +121,22 @@ function ProductDetailPage() {
 				</section>
 			)}
 
+			{/* Video */}
+			{product.id === "opensen" && (
+				<section className="island-shell rounded-2xl p-6 sm:p-8">
+					<p className="island-kicker mb-4">{t("products.opensen.video")}</p>
+					<div className="aspect-video overflow-hidden rounded-xl border border-[rgba(50,143,151,0.2)]">
+						<iframe
+							src="https://www.youtube.com/embed/nRouJO5Dhjw"
+							title="OpenSen Inspiration"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowFullScreen
+							className="h-full w-full"
+						/>
+					</div>
+				</section>
+			)}
+
 			{/* Links */}
 			{product.links.length > 0 && (
 				<section className="island-shell rounded-2xl p-6 sm:p-8">

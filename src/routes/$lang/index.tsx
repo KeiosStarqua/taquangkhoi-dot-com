@@ -183,26 +183,6 @@ function Home() {
 				</div>
 			</section>
 
-		{/* Inspiration Video */}
-		<section className="island-shell mt-8 rounded-2xl p-6 sm:p-8">
-			<p className="island-kicker mb-4">{t("home.video.kicker")}</p>
-			<h2 className="mb-3 text-xl font-bold text-[var(--sea-ink)] sm:text-2xl">
-				{t("home.video.title")}
-			</h2>
-			<p className="mb-5 text-sm text-[var(--sea-ink-soft)]">
-				{t("home.video.desc")}
-			</p>
-			<div className="relative w-full overflow-hidden rounded-xl" style={{ paddingBottom: "56.25%" }}>
-				<iframe
-					className="absolute inset-0 h-full w-full"
-					src="https://www.youtube.com/embed/nRouJO5Dhjw"
-					title={t("home.video.title")}
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowFullScreen
-				/>
-			</div>
-		</section>
-
 		{/* Featured Project */}
 		<section className="mt-8">
 			<p className="island-kicker mb-4">{t("home.featured.kicker")}</p>

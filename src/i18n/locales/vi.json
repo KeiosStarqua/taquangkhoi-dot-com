@@ -40,6 +40,11 @@
 			"backend": "Backend",
 			"mobile": "Lập trình Di động"
 		},
+		"video": {
+			"kicker": "Cảm hứng",
+			"title": "Nơi Tất Cả Bắt Đầu",
+			"desc": "Video này là nguồn cảm hứng đã châm ngòi cho ý tưởng của ứng dụng — và lý do tôi bắt đầu xây dựng nó."
+		},
 		"featured": {
 			"kicker": "Dự án Nổi bật",
 			"title": "Vina Doctor 🏥",

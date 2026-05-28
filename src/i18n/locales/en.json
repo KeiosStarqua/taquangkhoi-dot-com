@@ -40,6 +40,11 @@
 			"backend": "Backend",
 			"mobile": "Mobile"
 		},
+		"video": {
+			"kicker": "Inspiration",
+			"title": "Where It All Began",
+			"desc": "This video is the spark that inspired the idea behind this app — and why I started building it."
+		},
 		"featured": {
 			"kicker": "Featured Project",
 			"title": "Vina Doctor 🏥",

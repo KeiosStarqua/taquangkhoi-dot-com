@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Trans, useTranslation } from "react-i18next";
+import { products } from "#/data/products";
 
 const CANONICAL_ORIGIN = "https://taquangkhoi.com";
 
@@ -183,34 +184,52 @@ function Home() {
 				</div>
 			</section>
 
-		{/* Featured Project */}
-		<section className="mt-8">
-			<p className="island-kicker mb-4">{t("home.featured.kicker")}</p>
-				<a
-					href="https://github.com/TaQuangKhoi/vina-doctor"
-					target="_blank"
-					rel="noreferrer"
-					className="island-shell feature-card block rounded-2xl p-6 no-underline sm:p-8"
-				>
-					<div className="flex items-start justify-between gap-4">
-						<div>
-							<h2 className="display-title mb-2 text-xl font-bold text-[var(--sea-ink)] sm:text-2xl">
-								{t("home.featured.title")}
+			{/* Featured Projects */}
+			<section className="mt-8">
+				<div className="mb-4 flex items-center justify-between">
+					<p className="island-kicker">{t("home.featured.kicker")}</p>
+					<Link
+						to="/$lang/products"
+						params={{ lang }}
+						className="text-sm font-semibold text-[var(--lagoon-deep)] no-underline transition hover:underline"
+					>
+						{t("home.featured.viewAll")} →
+					</Link>
+				</div>
+				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+					{products.map((product, index) => (
+						<Link
+							key={product.id}
+							to="/$lang/products/$productId"
+							params={{ lang, productId: product.id }}
+							className="island-shell feature-card rise-in block rounded-2xl p-6 no-underline"
+							style={{ animationDelay: `${index * 90}ms` }}
+						>
+							<div className="mb-3 flex items-center justify-between">
+								<span className="text-3xl">{product.icon}</span>
+								<span className="rounded-full border border-[rgba(50,143,151,0.3)] bg-[rgba(79,184,178,0.1)] px-2.5 py-0.5 text-xs font-semibold text-[var(--lagoon-deep)]">
+									{t(`products.status.${product.status}`)}
+								</span>
+							</div>
+							<h2 className="display-title mb-2 text-lg font-bold text-[var(--sea-ink)]">
+								{t(`products.${product.id}.name`)}
 							</h2>
-							<p className="m-0 max-w-xl text-sm leading-6 text-[var(--sea-ink-soft)]">
-								{t("home.featured.desc")}
+							<p className="mb-4 text-sm leading-6 text-[var(--sea-ink-soft)]">
+								{t(`products.${product.id}.tagline`)}
 							</p>
-						</div>
-						<span className="flex-shrink-0 rounded-full border border-[rgba(50,143,151,0.3)] bg-[rgba(79,184,178,0.1)] px-3 py-1 text-xs font-semibold text-[var(--lagoon-deep)]">
-							AI
-						</span>
-					</div>
-					<div className="mt-4 flex flex-wrap gap-2">
-						<SkillBadge label="AI" />
-						<SkillBadge label="Vietnamese" />
-						<SkillBadge label="Medical" />
-					</div>
-				</a>
+							<div className="flex flex-wrap gap-1.5">
+								{product.tags.slice(0, 3).map((tag) => (
+									<span
+										key={tag}
+										className="inline-flex items-center rounded-full border border-[rgba(50,143,151,0.2)] bg-[rgba(79,184,178,0.08)] px-2.5 py-0.5 text-xs font-medium text-[var(--lagoon-deep)]"
+									>
+										{tag}
+									</span>
+								))}
+							</div>
+						</Link>
+					))}
+				</div>
 			</section>
 		</main>
 	);

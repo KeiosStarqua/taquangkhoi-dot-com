@@ -48,7 +48,8 @@
 		"featured": {
 			"kicker": "Dự án Nổi bật",
 			"title": "Vina Doctor 🏥",
-			"desc": "Trợ lý y tế Việt Nam được hỗ trợ bởi AI, xây dựng cho hackathon Qwen AI Build Day. Giúp người dùng Việt Nam tiếp cận thông tin y tế bằng tiếng mẹ đẻ."
+			"desc": "Trợ lý y tế Việt Nam được hỗ trợ bởi AI, xây dựng cho hackathon Qwen AI Build Day. Giúp người dùng Việt Nam tiếp cận thông tin y tế bằng tiếng mẹ đẻ.",
+			"viewAll": "Xem tất cả sản phẩm"
 		}
 	},
 	"about": {

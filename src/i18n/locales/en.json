@@ -46,9 +46,10 @@
 			"desc": "This video is the spark that inspired the idea behind this app — and why I started building it."
 		},
 		"featured": {
-			"kicker": "Featured Project",
+			"kicker": "Featured Projects",
 			"title": "Vina Doctor 🏥",
-			"desc": "An AI-powered Vietnamese medical assistant built for the Qwen AI Build Day hackathon. Helps Vietnamese users access health information in their native language."
+			"desc": "An AI-powered Vietnamese medical assistant built for the Qwen AI Build Day hackathon. Helps Vietnamese users access health information in their native language.",
+			"viewAll": "View all products"
 		}
 	},
 	"about": {

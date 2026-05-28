@@ -96,6 +96,10 @@
 		"back": "All Products",
 		"features": "Features",
 		"links": "Links",
+		"ideaBy": {
+			"label": "Original Idea",
+			"note": "This project was built based on the original idea from this person."
+		},
 		"status": {
 			"active": "Active",
 			"hackathon": "Hackathon",
@@ -126,15 +130,16 @@
 			]
 		},
 		"open-farm": {
-			"name": "Open Farm Sui",
-			"tagline": "AI-powered agricultural trust platform on the Sui blockchain.",
-			"description": "Open Farm connects consumers directly with farmers through transparent crop stories, decentralized identity, and climate-aware farming intelligence. Scan a product QR code and instantly discover who grew your food, the harvest history, sustainability score, and AI-generated farming insights.",
+			"name": "Open Farm SUI",
+			"tagline": "A gamified DeFi farming platform on the SUI blockchain — idea by Henry Nguyen.",
+			"description": "Open Farm SUI turns liquidity providing into an interactive farming game on the SUI blockchain. Users tend to virtual crops that represent their LP positions in Cetus CLMM pools — each crop is a dynamic NFT whose appearance evolves based on real-time DeFi metrics like fee earnings and price range health. The idea was conceived by Henry Nguyen; built and submitted to the Hack the Farm hackathon.",
 			"features": [
-				"Farmer Passport — on-chain identity, trust score, sustainability badges",
-				"Harvest Story Timeline — crop journey from planting to delivery via Walrus storage",
-				"AI Farm Copilot — crop disease detection, weather predictions, irrigation suggestions",
-				"QR Crop Verification — consumers scan products to see full farm origin",
-				"Community Trust — reputation system connecting farmers and consumers directly"
+				"Farm Slots & Land System — plant seeds representing LP tokens from Cetus CLMM pools",
+				"Dynamic NFT Crops — appearance evolves based on fee earnings, price range health, and time in position",
+				"Social & Competitive Elements — leaderboards, farm sharing, and achievement systems",
+				"Educational Onboarding — farming metaphors abstract away DeFi complexity for new users",
+				"Smart Contracts in Move — farm management, crop lifecycle, NFT minting/evolution, and reward distribution",
+				"What's next: Multi-Protocol Support, DAO Governance, Mobile App, and Cross-Chain expansion"
 			]
 		}
 	},

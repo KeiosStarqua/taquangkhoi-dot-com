@@ -4,6 +4,7 @@ export interface Product {
 	tags: string[];
 	links: { label: string; href: string }[];
 	status: "active" | "hackathon" | "open-source";
+	ideaBy?: string;
 }
 
 export const products: Product[] = [
@@ -11,7 +12,12 @@ export const products: Product[] = [
 		id: "opensen",
 		icon: "🗣️",
 		tags: ["AI", "Language Learning", "React", "PWA"],
-		links: [],
+		links: [
+			{
+				label: "Inspiration Video",
+				href: "https://www.youtube.com/watch?v=nRouJO5Dhjw",
+			},
+		],
 		status: "active",
 	},
 	{
@@ -29,14 +35,23 @@ export const products: Product[] = [
 	{
 		id: "open-farm",
 		icon: "🌾",
-		tags: ["Blockchain", "AI", "Sui", "Agriculture", "Web3"],
+		tags: ["Sui", "DeFi", "Move", "Next.js", "NFT", "Cetus CLMM"],
 		links: [
 			{
 				label: "Devpost",
 				href: "https://devpost.com/software/open-farm-sui",
 			},
+			{
+				label: "Follow on X",
+				href: "https://x.com/OpenFarmSUI",
+			},
+			{
+				label: "Demo Video",
+				href: "https://www.youtube.com/watch?v=ROXPz9D5m_4",
+			},
 		],
 		status: "hackathon",
+		ideaBy: "Henry Nguyen",
 	},
 ];
 

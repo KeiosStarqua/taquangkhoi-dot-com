@@ -96,6 +96,10 @@
 		"back": "Tất cả sản phẩm",
 		"features": "Tính năng",
 		"links": "Liên kết",
+		"ideaBy": {
+			"label": "Ý tưởng gốc",
+			"note": "Dự án này được xây dựng dựa trên ý tưởng gốc từ người này."
+		},
 		"status": {
 			"active": "Đang phát triển",
 			"hackathon": "Hackathon",
@@ -126,15 +130,16 @@
 			]
 		},
 		"open-farm": {
-			"name": "Open Farm Sui",
-			"tagline": "Nền tảng tín nhiệm nông nghiệp được hỗ trợ bởi AI trên blockchain Sui.",
-			"description": "Open Farm kết nối người tiêu dùng trực tiếp với nông dân qua câu chuyện mùa vụ minh bạch, danh tính phi tập trung và trí tuệ nông nghiệp nhận thức khí hậu. Quét mã QR sản phẩm để biết ngay ai trồng thức ăn của bạn, lịch sử thu hoạch, điểm bền vững và thông tin AI.",
+			"name": "Open Farm SUI",
+			"tagline": "Nền tảng DeFi farming gamified trên blockchain SUI — ý tưởng của Henry Nguyễn.",
+			"description": "Open Farm SUI biến việc cung cấp thanh khoản thành một trò chơi nông trại tương tác trên blockchain SUI. Người dùng chăm sóc các cây trồng ảo đại diện cho vị thế LP trong Cetus CLMM pools — mỗi cây là một Dynamic NFT có ngoại hình thay đổi theo các chỉ số DeFi thực tế như phí kiếm được và sức khỏe dải giá. Ý tưởng được khởi xướng bởi Henry Nguyễn; được xây dựng và nộp cho hackathon Hack the Farm.",
 			"features": [
-				"Farmer Passport — danh tính on-chain, điểm tín nhiệm, huy hiệu bền vững",
-				"Harvest Story Timeline — hành trình cây trồng từ gieo đến giao hàng qua Walrus",
-				"AI Farm Copilot — phát hiện bệnh cây, dự báo thời tiết, gợi ý tưới tiêu",
-				"QR Crop Verification — người tiêu dùng quét sản phẩm để xem toàn bộ nguồn gốc",
-				"Community Trust — hệ thống danh tiếng kết nối trực tiếp nông dân và người tiêu dùng"
+				"Farm Slots & Land System — trồng hạt giống đại diện cho LP token từ Cetus CLMM pools",
+				"Dynamic NFT Crops — ngoại hình thay đổi theo phí kiếm được, sức khỏe dải giá và thời gian nắm giữ",
+				"Social & Competitive — bảng xếp hạng, chia sẻ farm và hệ thống thành tích",
+				"Educational Onboarding — ẩn dụ nông trại giúp người dùng mới hiểu DeFi dễ dàng hơn",
+				"Smart Contracts bằng Move — quản lý farm, vòng đời cây, mint/tiến hóa NFT và phân phối thưởng",
+				"Tiếp theo: Hỗ trợ đa giao thức, DAO Governance, Mobile App và Cross-Chain"
 			]
 		}
 	},

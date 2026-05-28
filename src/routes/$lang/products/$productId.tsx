@@ -140,6 +140,19 @@ function ProductDetailPage() {
 					</div>
 				</section>
 			)}
+
+			{/* Idea credit */}
+			{product.ideaBy && (
+				<section className="island-shell rounded-2xl border border-[rgba(106,79,184,0.2)] bg-[rgba(145,115,220,0.07)] p-6 sm:p-8">
+					<p className="island-kicker mb-3">{t("products.ideaBy.label")}</p>
+					<p className="text-base font-semibold text-[var(--sea-ink)]">
+						💡 {product.ideaBy}
+					</p>
+					<p className="mt-1 text-sm text-[var(--sea-ink-soft)]">
+						{t("products.ideaBy.note")}
+					</p>
+				</section>
+			)}
 		</main>
 	);
 }

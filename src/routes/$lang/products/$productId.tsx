@@ -50,6 +50,20 @@ function ProductDetailPage() {
 		defaultValue: [],
 	}) as string[];
 
+	const problem = t(`products.${product.id}.problem`, {
+		defaultValue: "",
+	}) as string;
+
+	const techStack = t(`products.${product.id}.techStack`, {
+		returnObjects: true,
+		defaultValue: null,
+	}) as { label: string; groups: string[] } | null;
+
+	const whatsNext = t(`products.${product.id}.whatsNext`, {
+		returnObjects: true,
+		defaultValue: null,
+	}) as { label: string; items: string[] } | null;
+
 	return (
 		<main className="page-wrap space-y-6 px-4 py-12">
 			{/* Back */}

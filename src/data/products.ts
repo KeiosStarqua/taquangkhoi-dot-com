@@ -35,7 +35,7 @@ export const products: Product[] = [
 	{
 		id: "open-farm",
 		icon: "🌾",
-		tags: ["Sui", "DeFi", "Move", "Next.js", "NFT", "Cetus CLMM"],
+		tags: ["Sui", "AI", "Walrus", "zkLogin", "Next.js", "AgriTech"],
 		links: [
 			{
 				label: "Devpost",

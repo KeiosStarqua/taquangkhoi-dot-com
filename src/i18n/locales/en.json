@@ -137,17 +137,39 @@
 			]
 		},
 		"open-farm": {
-			"name": "Open Farm SUI",
-			"tagline": "A gamified DeFi farming platform on the SUI blockchain — idea by Henry Nguyen.",
-			"description": "Open Farm SUI turns liquidity providing into an interactive farming game on the SUI blockchain. Users tend to virtual crops that represent their LP positions in Cetus CLMM pools — each crop is a dynamic NFT whose appearance evolves based on real-time DeFi metrics like fee earnings and price range health. The idea was conceived by Henry Nguyen; built and submitted to the Hack the Farm hackathon.",
+			"name": "Open Farm",
+			"tagline": "An AI-powered food trust platform on Sui — scan a QR code and see who grew your food, idea by Henry Nguyen.",
+			"description": "Open Farm is an AI-powered agricultural trust platform built on Sui. It helps people who buy food connect directly with the farmers who grow it. Scan a product's QR code and you can instantly see who grew the food, its harvest history, a sustainability score, AI farming insights, and a community trust score. The goal is simple: food should not only be traceable — it should feel human, carrying the identity, trust, and story of the person who grew it. Built by Henry Nguyen and submitted to a hackathon on Devpost.",
+			"problem": "Today, food has a big trust gap. Shoppers rarely know where their food comes from, who produced it, or whether it was grown in a sustainable way. At the same time, farmers find it hard to build a digital reputation, prove their product is good, and reach buyers directly. Climate change makes farming even less predictable each year. Open Farm was built so every harvest can carry identity, trust, and a human story.",
 			"features": [
-				"Farm Slots & Land System — plant seeds representing LP tokens from Cetus CLMM pools",
-				"Dynamic NFT Crops — appearance evolves based on fee earnings, price range health, and time in position",
-				"Social & Competitive Elements — leaderboards, farm sharing, and achievement systems",
-				"Educational Onboarding — farming metaphors abstract away DeFi complexity for new users",
-				"Smart Contracts in Move — farm management, crop lifecycle, NFT minting/evolution, and reward distribution",
-				"What's next: Multi-Protocol Support, DAO Governance, Mobile App, and Cross-Chain expansion"
-			]
+				"Farmer Passport — each farmer gets an on-chain identity, a trust score, sustainability badges, and a full harvest history",
+				"Harvest Story Timeline — the journey of every crop (planting, watering, harvesting, delivery) is recorded and stored with Walrus decentralized storage",
+				"AI Farm Copilot — AI helps farmers with crop disease detection, weather forecasts, irrigation tips, and climate risk alerts",
+				"QR Crop Verification — shoppers scan a product to instantly see its farm origin, harvest timeline, the farmer's story, and sustainability insights",
+				"Community Reputation System — trust scores are built from delivery consistency, crop quality, sustainable practices, and buyer feedback",
+				"Invisible Web3 — zkLogin lets non-crypto users sign in with a normal account, so the blockchain stays out of the way"
+			],
+			"techStack": {
+				"label": "How it's built",
+				"groups": [
+					"Frontend — Next.js, TailwindCSS, Framer Motion",
+					"Blockchain — Sui (fast, consumer-grade UX and object-centric design for crop tracking), Walrus (decentralized storage for harvest media), zkLogin (easy onboarding)",
+					"AI — OpenAI API, image recognition for crop health, climate analytics",
+					"Design — Figma, a cinematic UI approach instead of a plain dashboard"
+				]
+			},
+			"whatsNext": {
+				"label": "What's next",
+				"items": [
+					"Carbon credit integration",
+					"AI yield forecasting",
+					"Export verification tools",
+					"A farm insurance layer",
+					"AI farmer avatars",
+					"Regional climate intelligence maps",
+					"Local farming community rewards"
+				]
+			}
 		}
 	},
 	"nav": {

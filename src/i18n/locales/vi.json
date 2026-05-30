@@ -137,17 +137,39 @@
 			]
 		},
 		"open-farm": {
-			"name": "Open Farm SUI",
-			"tagline": "Nền tảng DeFi farming gamified trên blockchain SUI — ý tưởng của Henry Nguyễn.",
-			"description": "Open Farm SUI biến việc cung cấp thanh khoản thành một trò chơi nông trại tương tác trên blockchain SUI. Người dùng chăm sóc các cây trồng ảo đại diện cho vị thế LP trong Cetus CLMM pools — mỗi cây là một Dynamic NFT có ngoại hình thay đổi theo các chỉ số DeFi thực tế như phí kiếm được và sức khỏe dải giá. Ý tưởng được khởi xướng bởi Henry Nguyễn; được xây dựng và nộp cho hackathon Hack the Farm.",
+			"name": "Open Farm",
+			"tagline": "Nền tảng minh bạch thực phẩm dùng AI trên Sui — quét mã QR để biết ai đã trồng ra món ăn của bạn, ý tưởng của Henry Nguyễn.",
+			"description": "Open Farm là một nền tảng minh bạch nông nghiệp dùng AI, xây dựng trên Sui. Nó giúp người mua thực phẩm kết nối trực tiếp với người nông dân đã trồng ra sản phẩm. Chỉ cần quét mã QR trên sản phẩm, bạn có thể thấy ngay ai đã trồng, lịch sử thu hoạch, điểm bền vững, các phân tích nông nghiệp từ AI, và điểm tín nhiệm từ cộng đồng. Mục tiêu rất đơn giản: thực phẩm không chỉ truy xuất được nguồn gốc — mà còn mang tính con người, mang theo danh tính, niềm tin và câu chuyện của người đã trồng ra nó. Được xây dựng bởi Henry Nguyễn và nộp cho một hackathon trên Devpost.",
+			"problem": "Ngày nay, thực phẩm có một khoảng cách lớn về niềm tin. Người mua hiếm khi biết thực phẩm đến từ đâu, ai đã sản xuất, hay nó có được trồng theo cách bền vững hay không. Cùng lúc đó, người nông dân rất khó để xây dựng uy tín số, chứng minh sản phẩm tốt và tiếp cận người mua trực tiếp. Biến đổi khí hậu lại khiến việc canh tác mỗi năm một khó đoán hơn. Open Farm ra đời để mỗi vụ thu hoạch đều có thể mang theo danh tính, niềm tin và một câu chuyện con người.",
 			"features": [
-				"Farm Slots & Land System — trồng hạt giống đại diện cho LP token từ Cetus CLMM pools",
-				"Dynamic NFT Crops — ngoại hình thay đổi theo phí kiếm được, sức khỏe dải giá và thời gian nắm giữ",
-				"Social & Competitive — bảng xếp hạng, chia sẻ farm và hệ thống thành tích",
-				"Educational Onboarding — ẩn dụ nông trại giúp người dùng mới hiểu DeFi dễ dàng hơn",
-				"Smart Contracts bằng Move — quản lý farm, vòng đời cây, mint/tiến hóa NFT và phân phối thưởng",
-				"Tiếp theo: Hỗ trợ đa giao thức, DAO Governance, Mobile App và Cross-Chain"
-			]
+				"Farmer Passport — mỗi nông dân có một danh tính on-chain, điểm tín nhiệm, huy hiệu bền vững và toàn bộ lịch sử thu hoạch",
+				"Harvest Story Timeline — hành trình của mỗi vụ mùa (gieo trồng, tưới nước, thu hoạch, giao hàng) được ghi lại và lưu trữ bằng Walrus",
+				"AI Farm Copilot — AI hỗ trợ nông dân phát hiện bệnh cây, dự báo thời tiết, gợi ý tưới tiêu và cảnh báo rủi ro khí hậu",
+				"QR Crop Verification — người mua quét sản phẩm để thấy ngay nguồn gốc nông trại, dòng thời gian thu hoạch, câu chuyện của nông dân và thông tin bền vững",
+				"Hệ thống Tín nhiệm Cộng đồng — điểm tín nhiệm được tính từ độ ổn định giao hàng, chất lượng nông sản, thực hành bền vững và phản hồi của người mua",
+				"Web3 ẩn đi — zkLogin cho phép người dùng không rành crypto đăng nhập bằng tài khoản thông thường, để blockchain không gây cản trở"
+			],
+			"techStack": {
+				"label": "Công nghệ sử dụng",
+				"groups": [
+					"Frontend — Next.js, TailwindCSS, Framer Motion",
+					"Blockchain — Sui (trải nghiệm nhanh, mượt như app thường và mô hình object phù hợp để theo dõi nông sản), Walrus (lưu trữ phi tập trung cho hình ảnh thu hoạch), zkLogin (đăng nhập dễ dàng)",
+					"AI — OpenAI API, nhận diện hình ảnh để đánh giá sức khỏe cây trồng, phân tích khí hậu",
+					"Thiết kế — Figma, hướng giao diện điện ảnh thay vì một dashboard khô khan"
+				]
+			},
+			"whatsNext": {
+				"label": "Tiếp theo",
+				"items": [
+					"Tích hợp tín chỉ carbon",
+					"Dự báo sản lượng bằng AI",
+					"Công cụ xác minh xuất khẩu",
+					"Lớp bảo hiểm nông trại",
+					"AI farmer avatars",
+					"Bản đồ thông tin khí hậu theo vùng",
+					"Phần thưởng cho cộng đồng nông dân địa phương"
+				]
+			}
 		}
 	},
 	"nav": {

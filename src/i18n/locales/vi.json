@@ -138,36 +138,37 @@
 		},
 		"open-farm": {
 			"name": "Open Farm",
-			"tagline": "Nền tảng minh bạch thực phẩm dùng AI trên Sui — quét mã QR để biết ai đã trồng ra món ăn của bạn, ý tưởng của Henry Nguyễn.",
-			"description": "Open Farm là một nền tảng minh bạch nông nghiệp dùng AI, xây dựng trên Sui. Nó giúp người mua thực phẩm kết nối trực tiếp với người nông dân đã trồng ra sản phẩm. Chỉ cần quét mã QR trên sản phẩm, bạn có thể thấy ngay ai đã trồng, lịch sử thu hoạch, điểm bền vững, các phân tích nông nghiệp từ AI, và điểm tín nhiệm từ cộng đồng. Mục tiêu rất đơn giản: thực phẩm không chỉ truy xuất được nguồn gốc — mà còn mang tính con người, mang theo danh tính, niềm tin và câu chuyện của người đã trồng ra nó. Được xây dựng bởi Henry Nguyễn và nộp cho một hackathon trên Devpost.",
-			"problem": "Ngày nay, thực phẩm có một khoảng cách lớn về niềm tin. Người mua hiếm khi biết thực phẩm đến từ đâu, ai đã sản xuất, hay nó có được trồng theo cách bền vững hay không. Cùng lúc đó, người nông dân rất khó để xây dựng uy tín số, chứng minh sản phẩm tốt và tiếp cận người mua trực tiếp. Biến đổi khí hậu lại khiến việc canh tác mỗi năm một khó đoán hơn. Open Farm ra đời để mỗi vụ thu hoạch đều có thể mang theo danh tính, niềm tin và một câu chuyện con người.",
+			"tagline": "Lớp danh tính và truy xuất nguồn gốc phi tập trung cho nông trại thật trên Sui. Mỗi vụ thu hoạch đều mang theo nông dân, câu chuyện và bằng chứng.",
+			"description": "Open Farm là một nền tảng AgTech thực tế, dùng Web3 làm hạ tầng chứ không phải trò chơi. Sản phẩm gắn một danh tính on-chain có thể xác minh và một bản ghi thu hoạch cho mỗi nông trại thật cùng từng vụ mùa, sau đó để người tiêu dùng xem bản ghi đó bằng cách quét mã QR. Bên dưới là bộ Move package trên Sui (Farmer Passport, Season Log NFT), Harvest Story lưu trên Walrus để chống sửa âm thầm, AI Copilot ký advisory lên chain, và một trang Consumer Trust Scan công khai. Sản phẩm được nộp cho hackathon trên Devpost; Web3 được cố tình giấu đi để người mua bình thường không phải nghĩ tới ví hay gas.",
+			"problem": "Thực phẩm có một khoảng cách lớn về niềm tin. Người mua không thể kiểm chứng ai trồng cái gì, ở đâu, bằng cách nào. Người nông dân thì không có danh tính số mang theo được, và cũng không có cách nào chứng minh chất lượng cũng như tính bền vững của một vụ thu hoạch cụ thể. Biến đổi khí hậu khiến kết quả mỗi mùa càng khó đoán. Open Farm biến mỗi vụ thu hoạch thành một bản ghi có chữ ký và truy vấn được, để niềm tin dựa trên bằng chứng — không dựa trên câu chữ quảng cáo.",
 			"features": [
-				"Farmer Passport — mỗi nông dân có một danh tính on-chain, điểm tín nhiệm, huy hiệu bền vững và toàn bộ lịch sử thu hoạch",
-				"Harvest Story Timeline — hành trình của mỗi vụ mùa (gieo trồng, tưới nước, thu hoạch, giao hàng) được ghi lại và lưu trữ bằng Walrus",
-				"AI Farm Copilot — AI hỗ trợ nông dân phát hiện bệnh cây, dự báo thời tiết, gợi ý tưới tiêu và cảnh báo rủi ro khí hậu",
-				"QR Crop Verification — người mua quét sản phẩm để thấy ngay nguồn gốc nông trại, dòng thời gian thu hoạch, câu chuyện của nông dân và thông tin bền vững",
-				"Hệ thống Tín nhiệm Cộng đồng — điểm tín nhiệm được tính từ độ ổn định giao hàng, chất lượng nông sản, thực hành bền vững và phản hồi của người mua",
-				"Web3 ẩn đi — zkLogin cho phép người dùng không rành crypto đăng nhập bằng tài khoản thông thường, để blockchain không gây cản trở"
+				"Farmer Passport — danh tính on-chain của nông dân, kèm điểm tín nhiệm, chứng nhận bền vững và Green Points tích lũy theo từng mùa đã xác minh",
+				"Season Log NFT + Walrus Harvest Story — dòng thời gian mốc quan trọng (gieo trồng, tưới nước, thu hoạch, giao hàng) cho từng vụ, ảnh và ghi chú được ghim lên Walrus để bản ghi không thể bị sửa âm thầm",
+				"AI Copilot với advisory đã ký — phát hiện bệnh cây, dự báo thời tiết, gợi ý tưới tiêu và cảnh báo rủi ro khí hậu; mỗi khuyến nghị được ký lên chain qua AISignerCap và chống replay",
+				"Consumer Trust Scan — trang QR công khai mà ai cũng mở được, không bắt buộc có ví; zkLogin có sẵn cho người mua muốn để lại phản hồi hoặc theo dõi nông trại",
+				"Mốc thu hoạch khoá escrow — bằng chứng thu hoạch mở khoá thanh toán theo từng giai đoạn, để bản ghi on-chain và dòng tiền off-chain luôn đồng bộ",
+				"Web3 ẩn đi — sponsored transaction và zkLogin giúp người mua bình thường không bao giờ phải nghĩ tới ví, seed phrase hay gas"
 			],
 			"techStack": {
 				"label": "Công nghệ sử dụng",
 				"groups": [
-					"Frontend — Next.js, TailwindCSS, Framer Motion",
-					"Blockchain — Sui (trải nghiệm nhanh, mượt như app thường và mô hình object phù hợp để theo dõi nông sản), Walrus (lưu trữ phi tập trung cho hình ảnh thu hoạch), zkLogin (đăng nhập dễ dàng)",
-					"AI — OpenAI API, nhận diện hình ảnh để đánh giá sức khỏe cây trồng, phân tích khí hậu",
-					"Thiết kế — Figma, hướng giao diện điện ảnh thay vì một dashboard khô khan"
+					"Move package trên Sui — Farmer Passport, Season Log NFT, module ký advisory của AI và module escrow (mô hình object-centric, quản trị qua UpgradeCap)",
+					"Lưu trữ — Walrus cho media thu hoạch và payload advisory của AI, đảm bảo chống sửa âm thầm",
+					"Auth & onboarding — zkLogin cho nông dân và người tiêu dùng, sponsored transaction để blockchain không cản đường",
+					"Frontend — Next.js, TailwindCSS, Framer Motion; một trang đọc công khai cho luồng quét QR",
+					"AI — nhận diện hình ảnh sức khoẻ cây trồng và phân tích khí hậu; output được ký trước khi ghi on-chain",
+					"Lớp dữ liệu — indexer và worker xử lý event nông trại, truy vấn provenance, chứng nhận và replay advisory"
 				]
 			},
 			"whatsNext": {
 				"label": "Tiếp theo",
 				"items": [
-					"Tích hợp tín chỉ carbon",
-					"Dự báo sản lượng bằng AI",
-					"Công cụ xác minh xuất khẩu",
-					"Lớp bảo hiểm nông trại",
-					"AI farmer avatars",
-					"Bản đồ thông tin khí hậu theo vùng",
-					"Phần thưởng cho cộng đồng nông dân địa phương"
+					"Escrow direct-market: người mua có thể trả tiền cho nông dân theo các mốc thu hoạch đã xác minh",
+					"Bản đồ thông tin khí hậu theo vùng, xây trên các advisory đã ký",
+					"Công cụ xác minh xuất khẩu, tận dụng lại bản ghi thu hoạch trên Walrus",
+					"Green Points cấp hợp tác xã, để các nông trại nhỏ gộp uy tín bền vững chung",
+					"Primitive bảo hiểm sàn cho nông dân khi rủi ro do AI cảnh báo vượt ngưỡng",
+					"API mở cho nhà bán lẻ và đơn vị kiểm định an toàn thực phẩm truy vấn trực tiếp provenance trên chain"
 				]
 			}
 		}

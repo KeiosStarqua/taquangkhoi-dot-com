@@ -138,36 +138,37 @@
 		},
 		"open-farm": {
 			"name": "Open Farm",
-			"tagline": "An AI-powered food trust platform on Sui — scan a QR code and see who grew your food, idea by Henry Nguyen.",
-			"description": "Open Farm is an AI-powered agricultural trust platform built on Sui. It helps people who buy food connect directly with the farmers who grow it. Scan a product's QR code and you can instantly see who grew the food, its harvest history, a sustainability score, AI farming insights, and a community trust score. The goal is simple: food should not only be traceable — it should feel human, carrying the identity, trust, and story of the person who grew it. Built by Henry Nguyen and submitted to a hackathon on Devpost.",
-			"problem": "Today, food has a big trust gap. Shoppers rarely know where their food comes from, who produced it, or whether it was grown in a sustainable way. At the same time, farmers find it hard to build a digital reputation, prove their product is good, and reach buyers directly. Climate change makes farming even less predictable each year. Open Farm was built so every harvest can carry identity, trust, and a human story.",
+			"tagline": "A decentralized identity and traceability layer for real farms on Sui. Every harvest carries the farmer, the story, and the proof.",
+			"description": "Open Farm is a real-world AgTech platform that uses Web3 as infrastructure — not as a game. It puts a verifiable on-chain identity and harvest record on every physical farm and every crop it produces, then lets consumers see that record by scanning a QR code. The product is a Sui Move stack (Farmer Passport, Season Log NFT), a Walrus-backed Harvest Story for tamper-evident media, an AI Copilot that signs its advisories on chain, and a public Consumer Trust Scan landing page. Built as a Devpost hackathon submission; the Web3 is intentionally invisible to normal shoppers.",
+			"problem": "Food has a trust gap. Shoppers cannot verify who grew what, where, or how. Farmers have no portable digital identity and no way to prove the quality and sustainability of a specific harvest. Climate change is making outcomes less predictable every season. Open Farm turns each harvest into a signed, queryable record so trust is grounded in evidence — not in marketing copy.",
 			"features": [
-				"Farmer Passport — each farmer gets an on-chain identity, a trust score, sustainability badges, and a full harvest history",
-				"Harvest Story Timeline — the journey of every crop (planting, watering, harvesting, delivery) is recorded and stored with Walrus decentralized storage",
-				"AI Farm Copilot — AI helps farmers with crop disease detection, weather forecasts, irrigation tips, and climate risk alerts",
-				"QR Crop Verification — shoppers scan a product to instantly see its farm origin, harvest timeline, the farmer's story, and sustainability insights",
-				"Community Reputation System — trust scores are built from delivery consistency, crop quality, sustainable practices, and buyer feedback",
-				"Invisible Web3 — zkLogin lets non-crypto users sign in with a normal account, so the blockchain stays out of the way"
+				"Farmer Passport — on-chain farmer identity with a trust score, sustainability certifications, and Green Points earned per verified season",
+				"Season Log NFT + Walrus Harvest Story — a milestone timeline (planting, watering, harvest, delivery) for every crop, with photos and notes pinned to Walrus so the record cannot be silently edited",
+				"AI Copilot with signed advisories — disease detection, weather, irrigation, and climate risk, with each recommendation signed on chain via AISignerCap and protected against replay",
+				"Consumer Trust Scan — a public QR landing page that anyone can open; no wallet required, with zkLogin available for buyers who want to leave feedback or follow the farm",
+				"Escrow-gated milestones — harvest evidence unlocks payouts progressively, so the on-chain record and the off-chain settlement stay aligned",
+				"Web3 stays invisible — sponsored transactions and zkLogin mean a normal shopper never has to think about a wallet, a seed phrase, or gas"
 			],
 			"techStack": {
 				"label": "How it's built",
 				"groups": [
-					"Frontend — Next.js, TailwindCSS, Framer Motion",
-					"Blockchain — Sui (fast, consumer-grade UX and object-centric design for crop tracking), Walrus (decentralized storage for harvest media), zkLogin (easy onboarding)",
-					"AI — OpenAI API, image recognition for crop health, climate analytics",
-					"Design — Figma, a cinematic UI approach instead of a plain dashboard"
+					"Move packages on Sui — Farmer Passport, Season Log NFT, AI advisory signer, and escrow module (object-centric design, UpgradeCap-governed)",
+					"Storage — Walrus for tamper-evident harvest media and AI advisory payloads",
+					"Auth & onboarding — zkLogin for farmers and consumers, sponsored transactions so the chain stays out of the way",
+					"Frontend — Next.js, TailwindCSS, Framer Motion; a public read view for the QR scan flow",
+					"AI — image recognition for crop health and climate analytics; outputs are signed before being written on chain",
+					"Data layer — indexer and worker for farm events, provenance lookups, certifications, and AI advisory replays"
 				]
 			},
 			"whatsNext": {
 				"label": "What's next",
 				"items": [
-					"Carbon credit integration",
-					"AI yield forecasting",
-					"Export verification tools",
-					"A farm insurance layer",
-					"AI farmer avatars",
-					"Regional climate intelligence maps",
-					"Local farming community rewards"
+					"Direct-market escrow so buyers can pay farmers against verified harvest milestones",
+					"Regional climate intelligence maps built on top of signed advisories",
+					"Export verification tool that reuses the Walrus-backed harvest record",
+					"Cooperative-level Green Points so small farms can pool sustainability reputation",
+					"Floor insurance primitive for farmers whose AI-flagged risk crosses a threshold",
+					"Open APIs for retailers and food safety auditors to query the on-chain provenance directly"
 				]
 			}
 		}

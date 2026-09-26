@@ -25,7 +25,12 @@
 		},
 		"terminal": {
 			"motto": "Coding, music, and curiosity keep me alive.",
-			"hello": "Hello, world!"
+			"hello": "Hello, world!",
+			"run": "Run",
+			"running": "Running",
+			"copy": "Copy",
+			"copied": "Copied",
+			"idle": "scroll the file, then Run"
 		},
 		"rails": [
 			{ "verb": "Build", "title": "AI Agents" },

@@ -95,7 +95,7 @@ When the user requests a durable behavior change, record it here or in the relev
 - New shadcn components: `pnpm dlx shadcn@latest add <component>`
 - Meta tags: TanStack Router `head()` on the route. Do not add `react-helmet` or another head library
 - After adding or renaming route files, run `pnpm dev` once so `src/routeTree.gen.ts` regenerates
-- Tests: Vitest via `pnpm test`
+- Tests: Vitest via `pnpm test`. Config is `vitest.config.ts`, separate from the Cloudflare Vite config.
 
 ### Architecture Principles
 

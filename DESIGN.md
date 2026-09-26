@@ -109,11 +109,12 @@ Both are pills. Hover lifts `1px`. No third button style on the homepage.
 
 `.code-window` is a dark editor chrome:
 
-- Traffic-light dots, mono filename, `.run-btn` aligned right.
-- Line numbers in `--ink-faint`, keywords in mint, strings in `--code-green`.
-- Footer prompt: `>` plus `Hello, world!`
-
-The Run control is a visual acknowledgement. It highlights the prompt; it does not execute code.
+- Traffic-light dots, mono filename, Copy and `.run-btn` aligned right.
+- The source is long. `.code-scroll` clips it and scrolls on both axes. Fades mark hidden lines.
+- Click a line or use arrow keys (when the window is focused) to select it. Ctrl/Cmd+Enter runs.
+- Line numbers stay in the gutter. Keywords are mint, strings are `--code-green`.
+- Run plays a scripted trace of `about-me.ts`: the active line follows execution and the console prints `console.log` output, then the return value. It does not eval visitor input.
+- Idle console: `>` plus the scroll-and-run hint. After a run the console border glows.
 
 ### Focus rail
 

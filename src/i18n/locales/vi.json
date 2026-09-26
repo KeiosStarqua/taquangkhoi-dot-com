@@ -25,7 +25,12 @@
 		},
 		"terminal": {
 			"motto": "Code, âm nhạc, và sự tò mò giữ tôi sống.",
-			"hello": "Hello, world!"
+			"hello": "Hello, world!",
+			"run": "Chạy",
+			"running": "Đang chạy",
+			"copy": "Sao chép",
+			"copied": "Đã chép",
+			"idle": "cuộn file, rồi bấm Chạy"
 		},
 		"rails": [
 			{ "verb": "Xây dựng", "title": "AI Agent" },

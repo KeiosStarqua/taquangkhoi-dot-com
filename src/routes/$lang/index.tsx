@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { type ReactNode, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import AboutCode from "#/components/AboutCode";
 import ProjectCard from "#/components/ProjectCard";
 import SocialLinks from "#/components/SocialLinks";
 import { products } from "#/data/products";
@@ -134,10 +134,7 @@ function Home() {
 					<SocialLinks />
 				</div>
 
-				<AboutCode
-					motto={t("home.terminal.motto")}
-					hello={t("home.terminal.hello")}
-				/>
+				<AboutCode />
 
 				<div className="flex items-stretch gap-4 xl:max-w-[280px]">
 					<ol className="rail m-0 min-w-0 flex-1 list-none p-0">
@@ -244,81 +241,6 @@ function Home() {
 				</div>
 			</section>
 		</main>
-	);
-}
-
-function AboutCode({ motto, hello }: { motto: string; hello: string }) {
-	const [ran, setRan] = useState(false);
-
-	return (
-		<div className="code-window rise-in" style={{ animationDelay: "80ms" }}>
-			<div className="code-chrome">
-				<div className="code-dots" aria-hidden="true">
-					<span />
-					<span />
-					<span />
-				</div>
-				<span className="code-filename">{"// about-me.ts"}</span>
-				<button
-					type="button"
-					className={ran ? "run-btn is-hot" : "run-btn"}
-					onClick={() => setRan(true)}
-					aria-pressed={ran}
-				>
-					Run ▶
-				</button>
-			</div>
-			<pre className="code-body">
-				<code>
-					<Line n={1}>
-						<span className="tok-key">const</span> taQuangKhoi = {"{"}
-					</Line>
-					<Line n={2}>
-						{"  "}roles: [<span className="tok-str">"Developer"</span>,{" "}
-						<span className="tok-str">"AI Explorer"</span>,{" "}
-						<span className="tok-str">"Musician"</span>],
-					</Line>
-					<Line n={3}>
-						{"  "}location: <span className="tok-str">"Vietnam"</span>,
-					</Line>
-					<Line n={4}>{"  "}currentFocus: [</Line>
-					<Line n={5}>
-						{"    "}
-						<span className="tok-str">"AI Agents"</span>,
-					</Line>
-					<Line n={6}>
-						{"    "}
-						<span className="tok-str">"Quantum Programming"</span>,
-					</Line>
-					<Line n={7}>
-						{"    "}
-						<span className="tok-str">"Open Source"</span>,
-					</Line>
-					<Line n={8}>
-						{"    "}
-						<span className="tok-str">"Music with Ardour"</span>,
-					</Line>
-					<Line n={9}>{"  ],"}</Line>
-					<Line n={10}>
-						{"  "}motto: <span className="tok-str">"{motto}"</span>
-					</Line>
-					<Line n={11}>{"}"}</Line>
-				</code>
-			</pre>
-			<p className={ran ? "code-prompt is-hot" : "code-prompt"}>
-				<span className="prompt-mark">&gt;</span>
-				{hello} 👋
-			</p>
-		</div>
-	);
-}
-
-function Line({ n, children }: { n: number; children: ReactNode }) {
-	return (
-		<span className="code-line">
-			<span className="ln">{n}</span>
-			<span>{children}</span>
-		</span>
 	);
 }
 

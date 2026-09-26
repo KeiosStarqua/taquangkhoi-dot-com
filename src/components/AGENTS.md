@@ -12,7 +12,7 @@ Owns presentational components used by routes. Route metadata and copy stay in `
 
 - Dark-first terminal HUD. Use the CSS variables in `src/styles.css` (`--bg-base`, `--accent`, and the rest named in `DESIGN.md`). Do not hard-code a new hex when a token exists.
 - One accent (phosphor mint). Serif for names, sans for reading text, mono for indices and labels.
-- The about-me code window stays the dark phosphor panel in light mode.
+- The about-me code window stays the dark phosphor panel in light mode. `AboutCode.tsx` renders it. `about-program.ts` owns the source, the scrollable line list, and the scripted Run trace. Run does not eval visitor input.
 - Files prefixed `demo-` are playground UI, not shell components. See `src/routes/demo/AGENTS.md`.
 
 ## Work Guidance

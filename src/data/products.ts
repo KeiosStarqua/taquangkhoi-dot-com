@@ -38,6 +38,10 @@ export const products: Product[] = [
 		tags: ["Sui", "AI", "Walrus", "zkLogin", "Next.js", "AgriTech"],
 		links: [
 			{
+				label: "Website",
+				href: "https://openfarmgroup.com/?utm_source=taquangkhoi.com",
+			},
+			{
 				label: "Devpost",
 				href: "https://devpost.com/software/open-farm-sui",
 			},

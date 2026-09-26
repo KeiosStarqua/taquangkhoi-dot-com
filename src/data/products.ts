@@ -14,6 +14,10 @@ export const products: Product[] = [
 		tags: ["AI", "Language Learning", "React", "PWA"],
 		links: [
 			{
+				label: "Website",
+				href: "https://opensen.taquangkhoi.com/?utm_source=taquangkhoi.com",
+			},
+			{
 				label: "Inspiration Video",
 				href: "https://www.youtube.com/watch?v=nRouJO5Dhjw",
 			},

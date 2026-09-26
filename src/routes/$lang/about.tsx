@@ -71,10 +71,12 @@ function About() {
 
 	return (
 		<main className="page-wrap space-y-6 px-4 py-12">
-			{/* Intro */}
-			<section className="island-shell rounded-2xl p-6 sm:p-8">
-				<p className="island-kicker mb-2">{t("about.kicker")}</p>
-				<h1 className="display-title mb-3 text-4xl font-bold text-[var(--sea-ink)] sm:text-5xl">
+			<section>
+				<p className="island-kicker mb-3">
+					<span className="kicker-mark">/</span>
+					{t("about.kicker")}
+				</p>
+				<h1 className="display-title mb-4 text-4xl font-semibold text-[var(--sea-ink)] sm:text-5xl">
 					{t("about.title")}
 				</h1>
 				<p className="m-0 max-w-3xl text-base leading-8 text-[var(--sea-ink-soft)]">
@@ -82,19 +84,28 @@ function About() {
 						i18nKey="about.bio"
 						components={[
 							<a
+								key="github"
 								href="https://github.com/TaQuangKhoi"
 								target="_blank"
 								rel="noreferrer"
-							/>,
-							<strong />,
+								className="inline-link"
+							>
+								TaQuangKhoi
+							</a>,
+							<strong key="alias" className="text-[var(--sea-ink)]">
+								Keios Starqua
+							</strong>,
 						]}
 					/>
 				</p>
 			</section>
 
 			{/* Education */}
-			<section className="island-shell rounded-2xl p-6 sm:p-8">
-				<p className="island-kicker mb-2">{t("about.education.kicker")}</p>
+			<section className="island-shell p-6 sm:p-8">
+				<p className="island-kicker mb-2">
+					<span className="kicker-mark">/</span>
+					{t("about.education.kicker")}
+				</p>
 				<h2 className="display-title mb-3 text-2xl font-bold text-[var(--sea-ink)]">
 					{t("about.education.university")}
 				</h2>
@@ -102,22 +113,34 @@ function About() {
 					<Trans
 						i18nKey="about.education.desc"
 						components={[
-							<span className="font-semibold text-[var(--sea-ink)]" />,
+							<span
+								key="degree"
+								className="font-semibold text-[var(--sea-ink)]"
+							>
+								{t("about.education.degree")}
+							</span>,
 						]}
 					/>
 				</p>
 			</section>
 
 			{/* Current Focus */}
-			<section className="island-shell rounded-2xl p-6 sm:p-8">
-				<p className="island-kicker mb-4">{t("about.focus.kicker")}</p>
+			<section className="island-shell p-6 sm:p-8">
+				<p className="island-kicker mb-4">
+					<span className="kicker-mark">/</span>
+					{t("about.focus.kicker")}
+				</p>
 				<ul className="m-0 list-none space-y-3 pl-0 text-base text-[var(--sea-ink-soft)]">
 					<li className="flex gap-3">
 						<span className="flex-shrink-0 text-xl">🤖</span>
 						<span>
 							<Trans
 								i18nKey="about.focus.ai"
-								components={[<strong className="text-[var(--sea-ink)]" />]}
+								components={[
+									<strong key="focus" className="text-[var(--sea-ink)]">
+										focus
+									</strong>,
+								]}
 							/>
 						</span>
 					</li>
@@ -126,7 +149,11 @@ function About() {
 						<span>
 							<Trans
 								i18nKey="about.focus.quantum"
-								components={[<strong className="text-[var(--sea-ink)]" />]}
+								components={[
+									<strong key="focus" className="text-[var(--sea-ink)]">
+										focus
+									</strong>,
+								]}
 							/>
 						</span>
 					</li>
@@ -137,10 +164,14 @@ function About() {
 								i18nKey="about.focus.remnote"
 								components={[
 									<a
+										key="remnote"
 										href="https://www.remnote.com/"
 										target="_blank"
 										rel="noreferrer"
-									/>,
+										className="inline-link"
+									>
+										RemNote
+									</a>,
 								]}
 							/>
 						</span>
@@ -150,7 +181,11 @@ function About() {
 						<span>
 							<Trans
 								i18nKey="about.focus.music"
-								components={[<strong className="text-[var(--sea-ink)]" />]}
+								components={[
+									<strong key="focus" className="text-[var(--sea-ink)]">
+										focus
+									</strong>,
+								]}
 							/>
 						</span>
 					</li>
@@ -158,8 +193,11 @@ function About() {
 			</section>
 
 			{/* Open Source */}
-			<section className="island-shell rounded-2xl p-6 sm:p-8">
-				<p className="island-kicker mb-4">{t("about.oss.kicker")}</p>
+			<section className="island-shell p-6 sm:p-8">
+				<p className="island-kicker mb-4">
+					<span className="kicker-mark">/</span>
+					{t("about.oss.kicker")}
+				</p>
 				<p className="mb-4 text-base text-[var(--sea-ink-soft)]">
 					{t("about.oss.intro")}
 				</p>
@@ -206,8 +244,11 @@ function About() {
 			</section>
 
 			{/* Connect */}
-			<section className="island-shell rounded-2xl p-6 sm:p-8">
-				<p className="island-kicker mb-4">{t("about.connect.kicker")}</p>
+			<section className="island-shell p-6 sm:p-8">
+				<p className="island-kicker mb-4">
+					<span className="kicker-mark">/</span>
+					{t("about.connect.kicker")}
+				</p>
 				<div className="grid gap-3 sm:grid-cols-2">
 					{socialLinks.map(({ label, href, desc }) => (
 						<a

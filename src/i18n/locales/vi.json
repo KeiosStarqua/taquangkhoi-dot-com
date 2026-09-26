@@ -10,15 +10,35 @@
 		}
 	},
 	"home": {
-		"kicker": "Lập trình viên & Nhạc sĩ · Việt Nam",
-		"title": "Tạ Quang Khôi",
-		"tagline": "lập trình và yêu bản thân 🥰",
-		"bio": "Tôi xây dựng phần mềm tại <0>@TRUE-TECH</0>, tạo các AI agent, và làm nhạc với Ardour. Hiện đang khám phá lập trình lượng tử như một sở thích bên lề.",
+		"kicker": "Lập trình viên · Khám phá AI · Nhạc sĩ · Việt Nam",
+		"titleLead": "Tạ Quang",
+		"titleAccent": "Khôi",
+		"tagline": "Xây dựng công nghệ cho một tương lai <0>sáng tạo</0> và <0>mở</0> hơn.",
+		"bio": "Tôi xây dựng phần mềm tại <0>@TRUE-TECH</0>, tạo AI agent, và làm nhạc với Ardour. Hiện đang khám phá lập trình lượng tử, và làm những dự án nối công nghệ, sáng tạo với tác động ngoài đời thực.",
+		"collab": "sẵn sàng hợp tác",
+		"quote": "Sự tò mò xây nên những thế giới tốt hơn.",
 		"cta": {
+			"work": "Xem dự án",
 			"github": "Hồ sơ GitHub",
 			"about": "Giới thiệu",
 			"coffee": "☕ Mời tôi một ly cà phê"
 		},
+		"terminal": {
+			"motto": "Code, âm nhạc, và sự tò mò giữ tôi sống.",
+			"hello": "Hello, world!"
+		},
+		"rails": [
+			{ "verb": "Xây dựng", "title": "AI Agent" },
+			{ "verb": "Khám phá", "title": "Điện toán lượng tử" },
+			{ "verb": "Sáng tạo", "title": "Nhạc với Ardour" },
+			{ "verb": "Chia sẻ", "title": "Tri thức mở" }
+		],
+		"statusBar": [
+			{ "label": "Trọng tâm", "value": "AI Agent & Lập trình lượng tử" },
+			{ "label": "Nơi ở", "value": "Việt Nam" },
+			{ "label": "Trạng thái", "value": "Đang xây dựng & học hỏi" },
+			{ "label": "Mở cho", "value": "Cơ hội hợp tác" }
+		],
 		"focus": {
 			"ai": {
 				"title": "AI Agent",
@@ -35,10 +55,11 @@
 		},
 		"skills": {
 			"kicker": "Kỹ năng",
-			"languages": "Ngôn ngữ lập trình",
+			"languages": "Ngôn ngữ",
 			"frontend": "Frontend",
 			"backend": "Backend",
-			"mobile": "Lập trình Di động"
+			"tools": "Công cụ",
+			"mobile": "Di động"
 		},
 		"video": {
 			"kicker": "Cảm hứng",
@@ -49,7 +70,7 @@
 			"kicker": "Dự án Nổi bật",
 			"title": "Vina Doctor 🏥",
 			"desc": "Trợ lý y tế Việt Nam được hỗ trợ bởi AI, xây dựng cho hackathon Qwen AI Build Day. Giúp người dùng Việt Nam tiếp cận thông tin y tế bằng tiếng mẹ đẻ.",
-			"viewAll": "Xem tất cả sản phẩm"
+			"viewAll": "xem tất cả dự án"
 		}
 	},
 	"about": {
@@ -111,7 +132,7 @@
 			"hackathon": "Hackathon",
 			"open-source": "Mã nguồn mở"
 		},
-"opensen": {
+		"opensen": {
 			"name": "OpenSen",
 			"tagline": "Học tiếng Anh qua phương pháp chunking — ghi nhớ cả cụm từ, không phải từng từ.",
 			"description": "Open Sentence là một hệ sinh thái học ngôn ngữ giúp người học ghi nhớ tiếng Anh qua phương pháp chunking: ghi nhớ cả câu và cụm từ được ghép sẵn để lấy ngôn ngữ một cách tự động thay vì ghép từng từ một.",
@@ -176,8 +197,12 @@
 	"nav": {
 		"home": "Trang chủ",
 		"about": "Giới thiệu",
-		"products": "Sản phẩm",
+		"products": "Dự án",
+		"projects": "Dự án",
 		"demo": "Demo"
+	},
+	"footer": {
+		"rights": "Bảo lưu mọi quyền."
 	},
 	"langSwitch": {
 		"label": "Ngôn ngữ",

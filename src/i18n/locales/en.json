@@ -10,15 +10,35 @@
 		}
 	},
 	"home": {
-		"kicker": "Software Developer & Musician · Vietnam",
-		"title": "Tạ Quang Khôi",
-		"tagline": "coding and loving myself 🥰",
-		"bio": "I build software at <0>@TRUE-TECH</0>, craft AI agents, and make music with Ardour. Currently exploring quantum programming on the side.",
+		"kicker": "Software Developer · AI Explorer · Musician · Vietnam",
+		"titleLead": "Tạ Quang",
+		"titleAccent": "Khôi",
+		"tagline": "Building technology for a more <0>creative</0> and <0>open</0> future.",
+		"bio": "I build software at <0>@TRUE-TECH</0>, craft AI agents, and make music with Ardour. Currently exploring quantum programming on the side, and working on projects that connect technology, creativity, and real-world impact.",
+		"collab": "open to collaboration",
+		"quote": "Curiosity builds better worlds.",
 		"cta": {
+			"work": "Explore My Work",
 			"github": "GitHub Profile",
 			"about": "About Me",
 			"coffee": "☕ Buy me a coffee"
 		},
+		"terminal": {
+			"motto": "Coding, music, and curiosity keep me alive.",
+			"hello": "Hello, world!"
+		},
+		"rails": [
+			{ "verb": "Build", "title": "AI Agents" },
+			{ "verb": "Explore", "title": "Quantum Computing" },
+			{ "verb": "Create", "title": "Music with Ardour" },
+			{ "verb": "Share", "title": "Open Knowledge" }
+		],
+		"statusBar": [
+			{ "label": "Focus", "value": "AI Agents & Quantum Programming" },
+			{ "label": "Location", "value": "Vietnam" },
+			{ "label": "Status", "value": "Building & Learning" },
+			{ "label": "Open to", "value": "Collaboration Opportunities" }
+		],
 		"focus": {
 			"ai": {
 				"title": "AI Agents",
@@ -38,6 +58,7 @@
 			"languages": "Languages",
 			"frontend": "Frontend",
 			"backend": "Backend",
+			"tools": "Tools",
 			"mobile": "Mobile"
 		},
 		"video": {
@@ -49,7 +70,7 @@
 			"kicker": "Featured Projects",
 			"title": "Vina Doctor 🏥",
 			"desc": "An AI-powered Vietnamese medical assistant built for the Qwen AI Build Day hackathon. Helps Vietnamese users access health information in their native language.",
-			"viewAll": "View all products"
+			"viewAll": "view all projects"
 		}
 	},
 	"about": {
@@ -176,8 +197,12 @@
 	"nav": {
 		"home": "Home",
 		"about": "About",
-		"products": "Products",
+		"products": "Projects",
+		"projects": "Projects",
 		"demo": "Demo"
+	},
+	"footer": {
+		"rights": "All rights reserved."
 	},
 	"langSwitch": {
 		"label": "Language",

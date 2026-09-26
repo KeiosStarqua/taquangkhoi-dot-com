@@ -1,107 +1,131 @@
-# AGENTS.md — Project Context for AI Agents
+# DOX framework
 
-## Project Identity
+- DOX is highly performant AGENTS.md hierarchy installed here
+- Agent must follow DOX instructions across any edits
 
-- **Site**: Personal portfolio for Tạ Quang Khôi (alias: Keios Starqua)
-- **Canonical domain**: `https://taquangkhoi.com`
-- **Repo**: `taquangkhoi.github.io`
-- **Deployment**: Cloudflare Workers via `wrangler deploy`
+## Core Contract
 
-## Tech Stack
+- AGENTS.md files are binding work contracts for their subtrees
+- Work products, source materials, instructions, records, assets, and durable docs must stay understandable from the nearest applicable AGENTS.md plus every parent AGENTS.md above it
 
-| Layer | Technology |
-|---|---|
-| Framework | TanStack Start (SSR React meta-framework) |
-| Router | TanStack React Router (file-based routing, `src/routes/`) |
-| Build | Vite 8.x |
-| Language | TypeScript 6.x / React 19 |
-| Styling | Tailwind CSS v4.x (`@tailwindcss/vite` plugin) |
-| Deployment | Cloudflare Workers (`wrangler.jsonc`) |
-| Package manager | pnpm |
-| Linting/Format | Biome 2.x (`biome.json`) — NOT ESLint/Prettier |
-| Testing | Vitest 4.x |
-| i18n | i18next + react-i18next (URL-prefix strategy) |
+## Read Before Editing
 
-## Rules for Agents
+1. Read the root AGENTS.md
+2. Identify every file or folder you expect to touch
+3. Walk from the repository root to each target path
+4. Read every AGENTS.md found along each route
+5. If a parent AGENTS.md lists a child AGENTS.md whose scope contains the path, read that child and continue from there
+6. Use the nearest AGENTS.md as the local contract and parent docs for repo-wide rules
+7. If docs conflict, the closer doc controls local work details, but no child doc may weaken DOX
 
-- **Package manager**: `pnpm` always. Never `npm` or `npx`. Use `pnpm add` / `pnpm run`.
-- **Linter**: Biome — run `pnpm check` before committing, never configure ESLint.
-- **Routing**: File-based under `src/routes/`. After adding/renaming route files, run `pnpm dev` once to regenerate `src/routeTree.gen.ts`.
-- **TypeScript**: Strict mode. No `any` without a comment. Use `as const` for literal types.
-- **Styling**: Tailwind v4 utility classes only. No CSS modules. No inline `style={}` except for dynamic values.
-- **No `npm`/`npx`**: Always `pnpm`/`bunx`. Zero exceptions.
-- **Head management**: Use TanStack Router's `head()` option on each route for meta tags, not `react-helmet` or any other library.
+Do not rely on memory. Re-read the applicable DOX chain in the current session before editing.
 
-## SEO Architecture Decisions
+## Update After Editing
 
-### Domain & Canonical
-- Canonical domain: `https://taquangkhoi.com`
-- All canonical links must use this exact domain (no trailing slash inconsistency — pages use `/` for root, no trailing slash elsewhere)
+Every meaningful change requires a DOX pass before the task is done.
 
-### Social Card
-- File: `public/og-card.png` (1200×630)
-- URL: `https://taquangkhoi.com/og-card.png`
-- Used in: `og:image` and `twitter:image` meta tags (set globally in `__root.tsx`)
+Update the closest owning AGENTS.md when a change affects:
 
-### Sitemap
-- **Dynamic** — served from `src/routes/sitemap.xml.ts`
-- URL: `https://taquangkhoi.com/sitemap.xml`
-- Includes only indexable routes (`/en/`, `/en/about`, `/vi/`, `/vi/about`)
-- Does NOT include `/demo/*` routes
-- Update this file when adding new content pages
+- purpose, scope, ownership, or responsibilities
+- durable structure, contracts, workflows, or operating rules
+- required inputs, outputs, permissions, constraints, side effects, or artifacts
+- user preferences about behavior, communication, process, organization, or quality
+- AGENTS.md creation, deletion, move, rename, or index contents
 
-### Robots
-- `public/robots.txt` — no `Disallow` directives (demo routes excluded via `noindex` meta, not robots.txt)
-- `Sitemap:` directive points to `https://taquangkhoi.com/sitemap.xml`
+Update parent docs when parent-level structure, ownership, workflow, or child index changes. Update child docs when parent changes alter local rules. Remove stale or contradictory text immediately. Small edits that do not change behavior or contracts may leave docs unchanged, but the DOX pass still must happen.
 
-### Demo Routes (`/demo/*`)
-- All demo routes are **crawlable** but carry `<meta name="robots" content="noindex, nofollow">`
-- This is set via the `src/routes/demo.tsx` layout route's `head()` — applies to all children automatically
-- Do NOT add `Disallow: /demo/` to robots.txt
+## Hierarchy
 
-## Multi-language (i18n)
+- Root AGENTS.md is the DOX rail: project-wide instructions, global preferences, durable workflow rules, and the top-level Child DOX Index
+- Child AGENTS.md files own domain-specific instructions and their own Child DOX Index
+- Each parent explains what its direct children cover and what stays owned by the parent
+- The closer a doc is to the work, the more specific and practical it must be
 
-### Strategy: URL prefix
-- English: `/en/`, `/en/about`
-- Vietnamese: `/vi/`, `/vi/about`
-- Root `/` redirects to `/en` (server-side, via loader)
-- Old `/about` redirects to `/en/about`
+## Child Doc Shape
 
-### Implementation
-- Library: `i18next` + `react-i18next`
-- Translation files: `src/i18n/locales/en.json` and `src/i18n/locales/vi.json`
-- i18next instance created per-render in `src/routes/$lang.tsx` layout using `createInstance()` + `initImmediate: false` (synchronous, SSR-safe)
-- `$lang` param validated against `['en', 'vi']` — throws `notFound()` for invalid locales
-- `hreflang` alternate links injected in `$lang.tsx` head()
-- `<html lang="...">` attribute reads `$lang` param from current route matches in `__root.tsx`
+- Create a child AGENTS.md when a folder becomes a durable boundary with its own purpose, rules, responsibilities, workflow, materials, or quality standards
+- Work Guidance must reflect the current standards of the project or user instructions; if there are no specific standards or instructions yet, leave it empty
+- Verification must reflect an existing check; if no verification framework exists yet, leave it empty and update it when one exists
 
-### Adding a new language
-1. Add locale code to `SUPPORTED_LOCALES` array in `src/routes/$lang.tsx`
-2. Create `src/i18n/locales/{locale}.json` with all keys from `en.json`
-3. Add alternate `hreflang` link in `$lang.tsx` head()
-4. Add new URLs to `sitemap.xml.ts`
+Default section order:
+- Purpose
+- Ownership
+- Local Contracts
+- Work Guidance
+- Verification
+- Child DOX Index
 
-### Adding a new translatable page
-1. Create `src/routes/$lang/{page}.tsx` using `useTranslation()`
-2. Add translation keys to both `en.json` and `vi.json`
-3. Add the page's canonical URL to `sitemap.xml.ts`
-4. Add `head()` with `og:url` pointing to the canonical URL for that locale
+## Style
 
-## Route Map
+- Keep docs concise, current, and operational
+- Document stable contracts, not diary entries
+- Put broad rules in parent docs and concrete details in child docs
+- Prefer direct bullets with explicit names
+- Do not duplicate rules across many files unless each scope needs a local version
+- Delete stale notes instead of explaining history
+- Trim obvious statements, repeated rules, misplaced detail, and warnings for risks that no longer exist
 
-| Route | File | Indexed? | Notes |
-|---|---|---|---|
-| `/` | `routes/index.tsx` | No (redirect) | Redirects to `/en` |
-| `/en` | `routes/$lang/index.tsx` | Yes | English homepage |
-| `/en/about` | `routes/$lang/about.tsx` | Yes | English about page |
-| `/vi` | `routes/$lang/index.tsx` | Yes | Vietnamese homepage |
-| `/vi/about` | `routes/$lang/about.tsx` | Yes | Vietnamese about page |
-| `/about` | `routes/about.tsx` | No (redirect) | Redirects to `/en/about` |
-| `/demo/*` | `routes/demo/*.tsx` | No (noindex) | Demo playground pages |
-| `/sitemap.xml` | `routes/sitemap.xml.ts` | N/A | Dynamic XML response |
+## Closeout
 
-## JSON-LD Structured Data
+1. Re-check changed paths against the DOX chain
+2. Update nearest owning docs and any affected parents or children
+3. Refresh every affected Child DOX Index
+4. Remove stale or contradictory text
+5. Run existing verification when relevant
+6. Report any docs intentionally left unchanged and why
 
-- `Person` schema on `/en` and `/vi` (homepage)
-- Schema fields: `name`, `alternateName`, `url`, `sameAs` (GitHub, Codeberg, LinkedIn, X, ORCID), `jobTitle`, `nationality`
-- Injected via `scripts` array in route `head()` as `application/ld+json`
+## User Preferences
+
+When the user requests a durable behavior change, record it here or in the relevant child AGENTS.md
+
+### Project
+
+- Site: personal portfolio for Tạ Quang Khôi (alias Keios Starqua)
+- Canonical domain: `https://taquangkhoi.com` (pages use `/` for root; no trailing slash elsewhere)
+- Repo: `taquangkhoi.github.io`
+- Deploy: Cloudflare Workers, `pnpm run deploy` (`wrangler.jsonc`, worker `taquangkhoi-profile-page`)
+- Live app is `src/`. `legacy/` and `archive/` are historical and are not the deployed app
+
+### Tooling
+
+- Package manager: `pnpm` only. Never `npm` or `npx`. Use `pnpm add` / `pnpm run`. `bunx` is allowed for a one-off binary
+- Linter and formatter: Biome (`biome.json`). Run `pnpm check` before committing. Do not configure ESLint or Prettier
+- TypeScript strict. No `any` without a comment. Use `as const` for literal types
+- Styling: Tailwind v4 utility classes only. No CSS modules. No inline `style={}` except dynamic values
+- New shadcn components: `pnpm dlx shadcn@latest add <component>`
+- Meta tags: TanStack Router `head()` on the route. Do not add `react-helmet` or another head library
+- After adding or renaming route files, run `pnpm dev` once so `src/routeTree.gen.ts` regenerates
+- Tests: Vitest via `pnpm test`
+
+### Architecture Principles
+
+Code follows **Clean Architecture**: dependencies point inward (entities → use cases → adapters → frameworks). Business rules never depend on UI, DB, or framework details.
+
+#### SOLID
+
+- **S**: One reason to change per module
+- **O**: Extend behavior with new types, not edits to stable code
+- **L**: Subtypes must honor base contracts
+- **I**: Small, role-specific interfaces
+- **D**: Inner layers depend on abstractions, not concrete frameworks
+
+#### Frontend: feature layer
+
+The app is organized by role under `src/` (`routes/`, `components/`, `lib/`, `hooks/`, `data/`, `i18n/`). A new user-facing capability that owns its UI, state, and API glue goes in `src/features/<name>/` (`components/`, `hooks/`, `api/`, `types/`) and exports only its public surface from `index.ts`. Features may import `src/lib/` and shared components. Those shared modules never import features. Do not deep-import another feature's internals.
+
+#### Deep modules
+
+Prefer modules with **simple interfaces and substantial hidden complexity**. Avoid shallow pass-through wrappers. Split only when a module hides real complexity — not to hit arbitrary file-size limits.
+
+#### Design patterns
+
+Use GoF patterns when they match a recurring problem — not for decoration. Catalog: https://refactoring.guru/design-patterns/catalog
+
+## Child DOX Index
+
+- [src/AGENTS.md](src/AGENTS.md) — TanStack Start app (routes, UI, locale catalogs)
+- [public/AGENTS.md](public/AGENTS.md) — files served as static assets, including the legacy mirror
+- [legacy/AGENTS.md](legacy/AGENTS.md) — in-repo twin of the old static site
+- [archive/AGENTS.md](archive/AGENTS.md) — frozen early experiments
+
+Repo-wide tooling, deploy, and architecture stay here. Route and SEO contracts stay in `src/routes/`. Visual rules stay in `DESIGN.md` and `src/components/`. `.github/` (one Junie workflow) and root notes such as `openfarm-detail-techstack.md` are not separate DOX boundaries.

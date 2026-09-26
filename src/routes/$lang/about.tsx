@@ -43,6 +43,11 @@ function About() {
 			desc: t("about.connect.github"),
 		},
 		{
+			label: "Codeberg",
+			href: "https://codeberg.org/TaQuangKhoi",
+			desc: t("about.connect.codeberg"),
+		},
+		{
 			label: "LinkedIn",
 			href: "https://www.linkedin.com/in/taquangkhoi/",
 			desc: t("about.connect.linkedin"),

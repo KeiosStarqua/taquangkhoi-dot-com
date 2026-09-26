@@ -103,5 +103,5 @@
 ## JSON-LD Structured Data
 
 - `Person` schema on `/en` and `/vi` (homepage)
-- Schema fields: `name`, `alternateName`, `url`, `sameAs` (GitHub, LinkedIn, X, ORCID), `jobTitle`, `nationality`
+- Schema fields: `name`, `alternateName`, `url`, `sameAs` (GitHub, Codeberg, LinkedIn, X, ORCID), `jobTitle`, `nationality`
 - Injected via `scripts` array in route `head()` as `application/ld+json`

@@ -42,6 +42,7 @@ export const Route = createFileRoute("/$lang/")({
 			url: CANONICAL_ORIGIN,
 			sameAs: [
 				"https://github.com/TaQuangKhoi",
+				"https://codeberg.org/TaQuangKhoi",
 				"https://www.linkedin.com/in/taquangkhoi/",
 				"https://x.com/TaLaTaQuangKhoi",
 				"https://orcid.org/0000-0003-2096-7326",

@@ -32,6 +32,24 @@ export const Route = createFileRoute("/$lang/products/$productId")({
 	component: ProductDetailPage,
 });
 
+function labeledList<Key extends "groups" | "items">(
+	value: unknown,
+	listKey: Key,
+): ({ label: string } & Record<Key, string[]>) | null {
+	if (!value || typeof value !== "object") return null;
+	const record = value as Record<string, unknown>;
+	const label = record.label;
+	const list = record[listKey];
+	if (typeof label !== "string" || !Array.isArray(list) || list.length === 0) {
+		return null;
+	}
+	if (!list.every((item) => typeof item === "string")) return null;
+	return { label, [listKey]: list } as { label: string } & Record<
+		Key,
+		string[]
+	>;
+}
+
 const statusColors: Record<string, string> = {
 	active: "chip",
 	hackathon: "chip chip-violet",
@@ -52,15 +70,21 @@ function ProductDetailPage() {
 		defaultValue: "",
 	}) as string;
 
-	const techStack = t(`products.${product.id}.techStack`, {
-		returnObjects: true,
-		defaultValue: null,
-	}) as { label: string; groups: string[] } | null;
+	const techStack = labeledList(
+		t(`products.${product.id}.techStack`, {
+			returnObjects: true,
+			defaultValue: null,
+		}),
+		"groups",
+	);
 
-	const whatsNext = t(`products.${product.id}.whatsNext`, {
-		returnObjects: true,
-		defaultValue: null,
-	}) as { label: string; items: string[] } | null;
+	const whatsNext = labeledList(
+		t(`products.${product.id}.whatsNext`, {
+			returnObjects: true,
+			defaultValue: null,
+		}),
+		"items",
+	);
 
 	return (
 		<main className="page-wrap space-y-6 px-4 py-12">

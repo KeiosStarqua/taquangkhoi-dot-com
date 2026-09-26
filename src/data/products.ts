@@ -39,7 +39,7 @@ export const products: Product[] = [
 		links: [
 			{
 				label: "Website",
-				href: "https://openfarmgroup.com/",
+				href: "https://openfarmgroup.com/?utm_source=taquangkhoi.com",
 			},
 			{
 				label: "Devpost",

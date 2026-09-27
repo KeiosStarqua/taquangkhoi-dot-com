@@ -1,19 +1,29 @@
-import { createRouter as createTanStackRouter } from '@tanstack/react-router'
-import { routeTree } from './routeTree.gen'
+import * as Sentry from "@sentry/tanstackstart-react";
+import { createRouter as createTanStackRouter } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
+
+let tracingAttached = false;
 
 export function getRouter() {
-  const router = createTanStackRouter({
-    routeTree,
-    scrollRestoration: true,
-    defaultPreload: 'intent',
-    defaultPreloadStaleTime: 0,
-  })
+	const router = createTanStackRouter({
+		routeTree,
+		scrollRestoration: true,
+		defaultPreload: "intent",
+		defaultPreloadStaleTime: 0,
+	});
 
-  return router
+	if (!router.isServer && !tracingAttached) {
+		tracingAttached = true;
+		Sentry.addIntegration(
+			Sentry.tanstackRouterBrowserTracingIntegration(router),
+		);
+	}
+
+	return router;
 }
 
-declare module '@tanstack/react-router' {
-  interface Register {
-    router: ReturnType<typeof getRouter>
-  }
+declare module "@tanstack/react-router" {
+	interface Register {
+		router: ReturnType<typeof getRouter>;
+	}
 }

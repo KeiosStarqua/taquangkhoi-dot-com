@@ -1,11 +1,14 @@
+import * as Sentry from "@sentry/tanstackstart-react";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import {
 	createRootRoute,
+	type ErrorComponentProps,
 	HeadContent,
 	Scripts,
 	useRouterState,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -53,7 +56,32 @@ export const Route = createRootRoute({
 		],
 	}),
 	shellComponent: RootDocument,
+	errorComponent: RootError,
 });
+
+function RootError({ error }: ErrorComponentProps) {
+	useEffect(() => {
+		Sentry.captureException(error);
+	}, [error]);
+
+	if (import.meta.env.SSR) {
+		Sentry.captureException(error);
+	}
+
+	const message = error instanceof Error ? error.message : "Unexpected error";
+
+	return (
+		<main className="page-wrap px-6 py-24">
+			<p className="font-mono text-xs tracking-widest text-[var(--ink-faint)]">
+				{"// error"}
+			</p>
+			<h1 className="display-title mt-3 text-3xl text-[var(--sea-ink)]">
+				Something broke
+			</h1>
+			<p className="mt-3 text-[var(--sea-ink-soft)]">{message}</p>
+		</main>
+	);
+}
 
 function RootDocument({ children }: { children: React.ReactNode }) {
 	// Derive lang from current route matches — falls back to 'en'

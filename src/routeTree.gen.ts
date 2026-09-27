@@ -16,9 +16,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
 import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
 import { Route as DemoStoreRouteImport } from './routes/demo/store'
+import { Route as DemoSentryRouteImport } from './routes/demo/sentry'
 import { Route as DemoAiStructuredRouteImport } from './routes/demo/ai-structured'
 import { Route as DemoAiImageRouteImport } from './routes/demo/ai-image'
 import { Route as DemoAiChatRouteImport } from './routes/demo/ai-chat'
+import { Route as ApiSentryExampleRouteImport } from './routes/api/sentry-example'
 import { Route as LangAboutRouteImport } from './routes/$lang/about'
 import { Route as DemoGuitarsIndexRouteImport } from './routes/demo/guitars/index'
 import { Route as LangProductsIndexRouteImport } from './routes/$lang/products/index'
@@ -65,6 +67,11 @@ const DemoStoreRoute = DemoStoreRouteImport.update({
   path: '/store',
   getParentRoute: () => DemoRoute,
 } as any)
+const DemoSentryRoute = DemoSentryRouteImport.update({
+  id: '/sentry',
+  path: '/sentry',
+  getParentRoute: () => DemoRoute,
+} as any)
 const DemoAiStructuredRoute = DemoAiStructuredRouteImport.update({
   id: '/ai-structured',
   path: '/ai-structured',
@@ -79,6 +86,11 @@ const DemoAiChatRoute = DemoAiChatRouteImport.update({
   id: '/ai-chat',
   path: '/ai-chat',
   getParentRoute: () => DemoRoute,
+} as any)
+const ApiSentryExampleRoute = ApiSentryExampleRouteImport.update({
+  id: '/api/sentry-example',
+  path: '/api/sentry-example',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const LangAboutRoute = LangAboutRouteImport.update({
   id: '/about',
@@ -137,9 +149,11 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
+  '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
   '/demo/ai-structured': typeof DemoAiStructuredRoute
+  '/demo/sentry': typeof DemoSentryRoute
   '/demo/store': typeof DemoStoreRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/$lang/': typeof LangIndexRoute
@@ -158,9 +172,11 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
+  '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
   '/demo/ai-structured': typeof DemoAiStructuredRoute
+  '/demo/sentry': typeof DemoSentryRoute
   '/demo/store': typeof DemoStoreRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/$lang': typeof LangIndexRoute
@@ -181,9 +197,11 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
+  '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
   '/demo/ai-structured': typeof DemoAiStructuredRoute
+  '/demo/sentry': typeof DemoSentryRoute
   '/demo/store': typeof DemoStoreRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/$lang/': typeof LangIndexRoute
@@ -205,9 +223,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo'
     | '/$lang/about'
+    | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
     | '/demo/ai-structured'
+    | '/demo/sentry'
     | '/demo/store'
     | '/sitemap/xml'
     | '/$lang/'
@@ -226,9 +246,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo'
     | '/$lang/about'
+    | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
     | '/demo/ai-structured'
+    | '/demo/sentry'
     | '/demo/store'
     | '/sitemap/xml'
     | '/$lang'
@@ -248,9 +270,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo'
     | '/$lang/about'
+    | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
     | '/demo/ai-structured'
+    | '/demo/sentry'
     | '/demo/store'
     | '/sitemap/xml'
     | '/$lang/'
@@ -270,6 +294,7 @@ export interface RootRouteChildren {
   LangRoute: typeof LangRouteWithChildren
   AboutRoute: typeof AboutRoute
   DemoRoute: typeof DemoRouteWithChildren
+  ApiSentryExampleRoute: typeof ApiSentryExampleRoute
   SitemapXmlRoute: typeof SitemapXmlRoute
 }
 
@@ -324,6 +349,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoStoreRouteImport
       parentRoute: typeof DemoRoute
     }
+    '/demo/sentry': {
+      id: '/demo/sentry'
+      path: '/sentry'
+      fullPath: '/demo/sentry'
+      preLoaderRoute: typeof DemoSentryRouteImport
+      parentRoute: typeof DemoRoute
+    }
     '/demo/ai-structured': {
       id: '/demo/ai-structured'
       path: '/ai-structured'
@@ -344,6 +376,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/demo/ai-chat'
       preLoaderRoute: typeof DemoAiChatRouteImport
       parentRoute: typeof DemoRoute
+    }
+    '/api/sentry-example': {
+      id: '/api/sentry-example'
+      path: '/api/sentry-example'
+      fullPath: '/api/sentry-example'
+      preLoaderRoute: typeof ApiSentryExampleRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/$lang/about': {
       id: '/$lang/about'
@@ -438,6 +477,7 @@ interface DemoRouteChildren {
   DemoAiChatRoute: typeof DemoAiChatRoute
   DemoAiImageRoute: typeof DemoAiImageRoute
   DemoAiStructuredRoute: typeof DemoAiStructuredRoute
+  DemoSentryRoute: typeof DemoSentryRoute
   DemoStoreRoute: typeof DemoStoreRoute
   DemoGuitarsGuitarIdRoute: typeof DemoGuitarsGuitarIdRoute
   DemoGuitarsIndexRoute: typeof DemoGuitarsIndexRoute
@@ -452,6 +492,7 @@ const DemoRouteChildren: DemoRouteChildren = {
   DemoAiChatRoute: DemoAiChatRoute,
   DemoAiImageRoute: DemoAiImageRoute,
   DemoAiStructuredRoute: DemoAiStructuredRoute,
+  DemoSentryRoute: DemoSentryRoute,
   DemoStoreRoute: DemoStoreRoute,
   DemoGuitarsGuitarIdRoute: DemoGuitarsGuitarIdRoute,
   DemoGuitarsIndexRoute: DemoGuitarsIndexRoute,
@@ -469,6 +510,7 @@ const rootRouteChildren: RootRouteChildren = {
   LangRoute: LangRouteWithChildren,
   AboutRoute: AboutRoute,
   DemoRoute: DemoRouteWithChildren,
+  ApiSentryExampleRoute: ApiSentryExampleRoute,
   SitemapXmlRoute: SitemapXmlRoute,
 }
 export const routeTree = rootRouteImport
@@ -476,10 +518,11 @@ export const routeTree = rootRouteImport
   ._addFileTypes<FileRouteTypes>()
 
 import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
+import type { startInstance } from './start.ts'
 declare module '@tanstack/react-start' {
   interface Register {
     ssr: true
     router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
   }
 }

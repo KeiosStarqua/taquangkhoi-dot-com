@@ -12,6 +12,8 @@ Owns routes, UI, locale catalogs, static content modules, and client helpers. De
 
 - Import alias `#/*` maps to `./src/*` (`package.json` imports).
 - Router entry: `src/router.tsx`. Generated route tree: `src/routeTree.gen.ts`. Regenerate it by running `pnpm dev` after adding or renaming route files.
+- Sentry client init: `src/instrument.client.ts`, imported first from `src/client.tsx`. Router tracing is attached in `src/router.tsx` when `router.isServer` is false.
+- Sentry server init: `src/server.ts` (`Sentry.withSentry` around `wrapFetchWithSentry`). `wrangler.jsonc` `main` is `src/server.ts`. Global request and function middleware: `src/start.ts`. The public DSN lives in `src/lib/sentry.ts`.
 - Document shell, `<html lang>`, and default Open Graph image tags: `src/routes/__root.tsx`.
 - Design tokens live in `src/styles.css`. Component rules live in `src/components/AGENTS.md` and root `DESIGN.md`.
 - Modules prefixed `demo-` under `hooks/`, `lib/`, `components/`, and `data/` belong to the `/demo` playground. They are not portfolio content. Route rules: `src/routes/demo/AGENTS.md`.

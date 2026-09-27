@@ -11,6 +11,7 @@ Owns demo route modules and the `/demo` layout. Sibling playground code lives ou
 ## Local Contracts
 
 - `src/routes/demo.tsx` sets `<meta name="robots" content="noindex, nofollow">` for every child. New demo routes go under this layout so they inherit that tag.
+- `/demo/sentry` is the Sentry verification page. It is not portfolio content and is not linked from indexable pages.
 - Do not add demo URLs to `src/routes/sitemap.xml.ts`.
 - Do not add `Disallow: /demo/` to `public/robots.txt`.
 

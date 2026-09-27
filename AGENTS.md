@@ -89,6 +89,7 @@ When the user requests a durable behavior change, record it here or in the relev
 ### Tooling
 
 - Package manager: `pnpm` only. Never `npm` or `npx`. Use `pnpm add` / `pnpm run`. `bunx` is allowed for a one-off binary
+- Error monitoring: Sentry (`@sentry/tanstackstart-react` and `@sentry/cloudflare`). Source map upload reads `SENTRY_AUTH_TOKEN` at build time. Do not commit the token. Workers cannot load `instrument.server.mjs` with Node `--import`; server init lives in `src/server.ts`.
 - Linter and formatter: Biome (`biome.json`). Run `pnpm check` before committing. Do not configure ESLint or Prettier
 - TypeScript strict. No `any` without a comment. Use `as const` for literal types
 - Styling: Tailwind v4 utility classes only. No CSS modules. No inline `style={}` except dynamic values

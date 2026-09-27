@@ -18,6 +18,7 @@ Owns URL contracts, `head()` metadata, redirects, and the sitemap. Translation s
 - Sitemap is the dynamic route `src/routes/sitemap.xml.ts`, served at `/sitemap.xml`. It lists only indexable locale URLs. It does not list `/demo/*`.
 - `hreflang` alternates are set in `$lang.tsx` `head()`. `<html lang>` is set in `__root.tsx` from the `$lang` match.
 - `/demo/*` is crawlable and `noindex, nofollow` via `src/routes/demo.tsx`. Do not add `Disallow: /demo/` to `public/robots.txt`.
+- `/api/sentry-example` throws on GET so Sentry can capture a server error. It is not indexable and is not listed in the sitemap. The button that calls it lives at `/demo/sentry`.
 
 ## Work Guidance
 

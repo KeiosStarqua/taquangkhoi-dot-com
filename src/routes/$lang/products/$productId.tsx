@@ -38,29 +38,48 @@ const statusColors: Record<string, string> = {
 	"open-source": "chip chip-green",
 };
 
+function asStringArray(value: unknown): string[] {
+	if (!Array.isArray(value)) return [];
+	return value.filter((item): item is string => typeof item === "string");
+}
+
+function asLabeledList(
+	value: unknown,
+	itemsKey: "groups" | "items",
+): { label: string; items: string[] } | null {
+	if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+	const record = value as Record<string, unknown>;
+	if (typeof record.label !== "string") return null;
+	const items = asStringArray(record[itemsKey]);
+	if (items.length === 0) return null;
+	return { label: record.label, items };
+}
+
 function ProductDetailPage() {
 	const { t } = useTranslation();
 	const { lang } = Route.useParams();
 	const { product } = Route.useLoaderData();
 
-	const features = t(`products.${product.id}.features`, {
-		returnObjects: true,
-		defaultValue: [],
-	}) as string[];
+	const features = asStringArray(
+		t(`products.${product.id}.features`, {
+			returnObjects: true,
+			defaultValue: [],
+		}),
+	);
 
 	const problem = t(`products.${product.id}.problem`, {
 		defaultValue: "",
 	}) as string;
 
-	const techStack = t(`products.${product.id}.techStack`, {
-		returnObjects: true,
-		defaultValue: null,
-	}) as { label: string; groups: string[] } | null;
+	const techStack = asLabeledList(
+		t(`products.${product.id}.techStack`, { returnObjects: true }),
+		"groups",
+	);
 
-	const whatsNext = t(`products.${product.id}.whatsNext`, {
-		returnObjects: true,
-		defaultValue: null,
-	}) as { label: string; items: string[] } | null;
+	const whatsNext = asLabeledList(
+		t(`products.${product.id}.whatsNext`, { returnObjects: true }),
+		"items",
+	);
 
 	return (
 		<main className="page-wrap space-y-6 px-4 py-12">
@@ -157,7 +176,7 @@ function ProductDetailPage() {
 						{techStack.label}
 					</p>
 					<ul className="m-0 list-none space-y-3 pl-0">
-						{techStack.groups.map((group) => (
+						{techStack.items.map((group) => (
 							<li
 								key={group}
 								className="text-sm leading-6 text-[var(--sea-ink-soft)]"

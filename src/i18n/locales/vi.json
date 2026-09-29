@@ -128,14 +128,43 @@
 	},
 	"experience": {
 		"kicker": "Kinh nghiệm",
-		"title": "Lộ trình sự nghiệp",
-		"subtitle": "Từ sinh viên đến kỹ sư phần mềm, và giờ là đồng sáng lập một công ty công nghệ.",
-		"items": [
-			{
+		"title": "Kinh nghiệm",
+		"subtitle": "Từ sinh viên đến kỹ sư phần mềm, và giờ là xây dựng sản phẩm và <0>hệ thống nghiên cứu</0>.",
+		"subtitle2": "Dòng thời gian hành trình của tôi, những gì tôi đã làm và đã học được trên đường đi.",
+		"present": "Hiện tại",
+		"quote": "Xây dựng công nghệ là một hành trình dài của học hỏi, sáng tạo và đóng góp.",
+		"quoteAuthor": "Tạ Quang Khôi",
+		"summary": {
+			"title": "Tóm tắt sự nghiệp",
+			"years": {
+				"value": "4+ năm",
+				"label": "Kinh nghiệm chuyên môn"
+			},
+			"companies": {
+				"value": "2 công ty",
+				"label": "Đã làm việc và đồng sáng lập"
+			},
+			"degree": {
+				"value": "1 bằng cấp",
+				"label": "Lập trình Di động & Game"
+			},
+			"location": {
+				"value": "Việt Nam",
+				"label": "Sống tại TP. Hồ Chí Minh"
+			}
+		},
+		"skills": {
+			"title": "Kỹ năng chính",
+			"languages": "Ngôn ngữ",
+			"frameworks": "Framework",
+			"tools": "Công cụ & Hạ tầng"
+		},
+		"entries": {
+			"openfarm": {
 				"role": "Đồng sáng lập",
 				"org": "OpenFarm",
-				"period": "09/2026 - Hiện tại · 1 tháng",
 				"location": "TP. Hồ Chí Minh, Việt Nam · Hybrid",
+				"period": "09/2026 - Hiện tại · 1 tháng",
 				"desc": "Đồng sáng lập OpenFarm, công ty công nghệ tập trung vào truy xuất nguồn gốc nông nghiệp, AI và danh tính phi tập trung cho chuỗi cung ứng thực tế.",
 				"tags": [
 					"AI",
@@ -143,13 +172,20 @@
 					"Kiến trúc hệ thống",
 					"Nông nghiệp",
 					"Xây dựng đội ngũ"
+				],
+				"highlightsLabel": "Dự án tiêu biểu",
+				"highlights": [
+					"Nền tảng OpenFarm",
+					"OpenFarm Trust",
+					"P&ID Digitizer (R&D)",
+					"AI Agent & Hạ tầng"
 				]
 			},
-			{
+			"truetech": {
 				"role": "Kỹ sư phần mềm",
-				"org": "True Technology Co., Ltd. · Bán thời gian",
+				"org": "True Technology Co., Ltd.",
+				"location": "Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam · Bán thời gian",
 				"period": "06/2022 - 08/2026 · 4 năm 3 tháng",
-				"location": "Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam · Hybrid",
 				"desc": "Làm việc trên các hệ thống web, dịch vụ backend, hạ tầng và công cụ nội bộ. Đóng góp vào phát triển sản phẩm, thiết kế API và tối ưu hệ thống.",
 				"tags": [
 					"Web Engineering",
@@ -158,13 +194,20 @@
 					"DevOps",
 					"API Design",
 					"System Design"
+				],
+				"highlightsLabel": "Đóng góp chính",
+				"highlights": [
+					"Hệ thống web nội bộ",
+					"Dịch vụ backend",
+					"Hạ tầng & DevOps",
+					"Công cụ & Tự động hóa"
 				]
 			},
-			{
+			"bvu": {
 				"role": "Sinh viên",
 				"org": "Đại học Bà Rịa - Vũng Tàu",
-				"period": "08/2020 - 11/2024 · 4 năm 4 tháng",
 				"location": "Vũng Tàu, Việt Nam",
+				"period": "08/2020 - 11/2024 · 4 năm 4 tháng",
 				"desc": "Học ngành Lập trình Di động & Phát triển Game. Xây dựng nền tảng vững chắc về lập trình, phát triển phần mềm và ứng dụng di động.",
 				"tags": [
 					"Android",
@@ -172,9 +215,16 @@
 					"Phát triển di động",
 					"Phát triển game",
 					"Lập trình"
+				],
+				"highlightsLabel": "Điểm nổi bật",
+				"highlights": [
+					"Lập trình Di động & Game",
+					"Tốt nghiệp năm 2024",
+					"Dự án sinh viên",
+					"Nền tảng lập trình"
 				]
 			}
-		]
+		}
 	},
 	"products": {
 		"kicker": "Sản phẩm của tôi",

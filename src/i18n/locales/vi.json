@@ -19,6 +19,10 @@
 		"projects": {
 			"title": "Dự án — Tạ Quang Khôi",
 			"description": "Sản phẩm, dự án kỹ thuật, đóng góp mã nguồn mở và nguyên mẫu nghiên cứu của Tạ Quang Khôi — OpenSen, YT Hunter, Open Farm, P&ID Digitizer và nhiều hơn nữa."
+		},
+		"connect": {
+			"title": "Kết nối — Tạ Quang Khôi",
+			"description": "Liên hệ Tạ Quang Khôi để hợp tác nghiên cứu, dự án kỹ thuật và mã nguồn mở, trao đổi về sản phẩm, hoặc những bài toán kỹ thuật thú vị."
 		}
 	},
 	"home": {
@@ -33,7 +37,8 @@
 			"work": "Xem dự án",
 			"github": "Hồ sơ GitHub",
 			"about": "Giới thiệu",
-			"coffee": "☕ Mời tôi một ly cà phê"
+			"coffee": "☕ Mời tôi một ly cà phê",
+			"connect": "Sẵn sàng hợp tác"
 		},
 		"terminal": {
 			"motto": "Code, âm nhạc, và sự tò mò giữ tôi sống.",
@@ -126,15 +131,10 @@
 				"desc": "Ứng dụng Android để gửi suy nghĩ trực tiếp lên napkin.one. 12 sao trên GitHub."
 			}
 		},
-		"connect": {
-			"kicker": "Liên hệ",
-			"github": "225 repo, 3.7k sao",
-			"codeberg": "codeberg.org/TaQuangKhoi",
-			"linkedin": "Hồ sơ chuyên nghiệp",
-			"twitter": "@TaLaTaQuangKhoi",
-			"kofi": "Mời tôi cà phê ☕",
-			"orcid": "Danh tính nghiên cứu",
-			"facebook": "keios.starqua"
+		"cta": {
+			"title": "Muốn trò chuyện?",
+			"lede": "Email, GitHub, ORCID và mọi cách liên hệ khác đều ở một trang.",
+			"link": "Kết nối với tôi"
 		}
 	},
 	"experience": {
@@ -507,6 +507,80 @@
 			}
 		}
 	},
+	"connect": {
+		"kicker": "Kết nối",
+		"title": "Cùng xây dựng điều gì đó <0>hữu ích.</0>",
+		"lede": "Tôi luôn sẵn sàng trò chuyện về công nghệ, nghiên cứu, mã nguồn mở và những bài toán thú vị có thể tạo ra tác động thực tế. Dù là hợp tác, nghiên cứu, ý tưởng sản phẩm hay chỉ là một cuộc thảo luận kỹ thuật — cứ thoải mái liên hệ.",
+		"note": [
+			"Ý tưởng",
+			"Dự án",
+			"Nghiên cứu",
+			"Mã nguồn mở",
+			"Nói chuyện nhé!"
+		],
+		"newTab": "(mở trong tab mới)",
+		"cta": {
+			"email": "Gửi email cho tôi",
+			"call": "Đặt lịch gọi",
+			"callSubject": "Đặt lịch gọi"
+		},
+		"terminal": {
+			"copy": "Sao chép",
+			"copied": "Đã chép",
+			"copyLabel": "Sao chép địa chỉ email {{email}}"
+		},
+		"touch": {
+			"kicker": "Thông tin liên hệ",
+			"title": "Liên lạc",
+			"lede": "Cách tốt nhất để liên hệ tôi là qua email. Tôi thường <0>phản hồi</0> trong vài ngày. Bạn cũng có thể tìm tôi trên các nền tảng bên dưới.",
+			"notes": {
+				"email": "Phù hợp cho công việc & hợp tác",
+				"codeberg": "Bản sao mã nguồn mở",
+				"github": "225 repo · 3.7k sao",
+				"orcid": "Danh tính nghiên cứu",
+				"linkedin": "Hồ sơ chuyên nghiệp",
+				"kofi": "Ủng hộ tôi",
+				"x": "Suy nghĩ & cập nhật",
+				"facebook": "Cập nhật cá nhân"
+			}
+		},
+		"openTo": {
+			"kicker": "Sẵn sàng",
+			"title": "Cơ hội hợp tác",
+			"lede": "Tôi quan tâm đến những dự án và nghiên cứu kết nối công nghệ, sáng tạo và <0>tác động thực tế</0>.",
+			"entries": {
+				"research": {
+					"title": "Hợp tác nghiên cứu",
+					"desc": "AI, điện toán lượng tử, trí tuệ kỹ thuật."
+				},
+				"technical": {
+					"title": "Hợp tác kỹ thuật",
+					"desc": "Mã nguồn mở, công cụ, hạ tầng."
+				},
+				"product": {
+					"title": "Sản phẩm / Startup",
+					"desc": "Ý tưởng giai đoạn đầu và sản phẩm hướng đến tác động."
+				},
+				"speaking": {
+					"title": "Diễn giả / Workshop",
+					"desc": "Chia sẻ kỹ thuật, workshop và sự kiện cộng đồng."
+				},
+				"problems": {
+					"title": "Bài toán thú vị",
+					"desc": "Những bài toán kỹ thuật đầy thách thức đáng để giải."
+				},
+				"creative": {
+					"title": "Âm nhạc & Công nghệ sáng tạo",
+					"desc": "Làm nhạc với công cụ mã nguồn mở như Ardour."
+				}
+			}
+		},
+		"talk": {
+			"kicker": "Trò chuyện",
+			"title": "Bạn đang có ý tưởng?",
+			"lede": "Cứ gửi email hoặc đặt lịch một cuộc gọi ngắn. Tôi luôn vui khi nghe về ý tưởng mới, cơ hội hợp tác, hay đơn giản là một cuộc thảo luận kỹ thuật hay."
+		}
+	},
 	"nav": {
 		"home": "Trang chủ",
 		"about": "Giới thiệu",
@@ -514,7 +588,8 @@
 		"products": "Dự án",
 		"projects": "Dự án",
 		"demo": "Demo",
-		"research": "Nghiên cứu"
+		"research": "Nghiên cứu",
+		"connect": "Kết nối"
 	},
 	"footer": {
 		"rights": "Bảo lưu mọi quyền."
@@ -523,5 +598,50 @@
 		"label": "Ngôn ngữ",
 		"en": "English",
 		"vi": "Tiếng Việt"
+	},
+	"entities": {
+		"openfarm": {
+			"kicker": "Công ty · Hiện tại",
+			"name": "OpenFarm",
+			"subtitle": "Công nghệ nông nghiệp",
+			"status": "Đang xây dựng",
+			"description": "Xây dựng lớp niềm tin và truy xuất nguồn gốc cho nông nghiệp thực tế.",
+			"role": "Đồng sáng lập",
+			"period": "09/2026 – Hiện tại",
+			"tags": [
+				"AI",
+				"Nông nghiệp",
+				"Truy xuất nguồn gốc",
+				"Mã nguồn mở"
+			],
+			"cta": "Xem OpenFarm",
+			"external": "Mở openfarmgroup.com"
+		},
+		"true-technology": {
+			"kicker": "Kinh nghiệm · 2022–2026",
+			"name": "True Technology",
+			"subtitle": "Kỹ thuật phần mềm",
+			"status": "~4 năm",
+			"description": "Gần bốn năm xây dựng hệ thống web, dịch vụ backend, hạ tầng và công cụ nội bộ.",
+			"role": "Kỹ sư phần mềm",
+			"period": "06/2022 – 08/2026",
+			"facts": [
+				{
+					"label": "Địa điểm",
+					"value": "Việt Nam"
+				},
+				{
+					"label": "Hình thức",
+					"value": "Bán thời gian"
+				}
+			],
+			"tags": [
+				"Backend",
+				"Web Engineering",
+				"DevOps",
+				"API Design"
+			],
+			"cta": "Xem kinh nghiệm"
+		}
 	}
 }

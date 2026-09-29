@@ -19,6 +19,10 @@
 		"projects": {
 			"title": "Projects — Tạ Quang Khôi",
 			"description": "Products, engineering projects, open-source work and research prototypes built by Tạ Quang Khôi — OpenSen, YT Hunter, Open Farm, the P&ID Digitizer and more."
+		},
+		"connect": {
+			"title": "Connect — Tạ Quang Khôi",
+			"description": "Get in touch with Tạ Quang Khôi for research collaboration, technical and open-source projects, product conversations, or interesting engineering problems."
 		}
 	},
 	"home": {
@@ -33,7 +37,8 @@
 			"work": "Explore My Work",
 			"github": "GitHub Profile",
 			"about": "About Me",
-			"coffee": "☕ Buy me a coffee"
+			"coffee": "☕ Buy me a coffee",
+			"connect": "Open to collaboration"
 		},
 		"terminal": {
 			"motto": "Coding, music, and curiosity keep me alive.",
@@ -126,15 +131,10 @@
 				"desc": "Android app to send thoughts directly to napkin.one. 12 stars on GitHub."
 			}
 		},
-		"connect": {
-			"kicker": "Connect",
-			"github": "225 repos, 3.7k stars",
-			"codeberg": "codeberg.org/TaQuangKhoi",
-			"linkedin": "Professional profile",
-			"twitter": "@TaLaTaQuangKhoi",
-			"kofi": "Buy me a coffee ☕",
-			"orcid": "Research identity",
-			"facebook": "keios.starqua"
+		"cta": {
+			"title": "Want to talk?",
+			"lede": "Email, GitHub, ORCID and every other way to reach me live on one page.",
+			"link": "Connect with me"
 		}
 	},
 	"experience": {
@@ -507,6 +507,74 @@
 			}
 		}
 	},
+	"connect": {
+		"kicker": "Connect",
+		"title": "Let's build something <0>useful.</0>",
+		"lede": "I'm always open to conversations about technology, research, open source, and interesting problems that can create real impact. Whether it's collaboration, research, product ideas, or just a good technical discussion — feel free to reach out.",
+		"note": ["Ideas", "Projects", "Research", "Open Source", "Let's talk!"],
+		"newTab": "(opens in a new tab)",
+		"cta": {
+			"email": "Send me an email",
+			"call": "Schedule a call",
+			"callSubject": "Call request"
+		},
+		"terminal": {
+			"copy": "Copy",
+			"copied": "Copied",
+			"copyLabel": "Copy email address {{email}}"
+		},
+		"touch": {
+			"kicker": "Contact Info",
+			"title": "Get in touch",
+			"lede": "The best way to reach me is via email. I usually <0>reply</0> within a few days. You can also find me on the platforms below.",
+			"notes": {
+				"email": "Best for work & collaboration",
+				"codeberg": "Open source mirror",
+				"github": "225 repos · 3.7k stars",
+				"orcid": "Research identity",
+				"linkedin": "Professional profile",
+				"kofi": "Support my work",
+				"x": "Thoughts & updates",
+				"facebook": "Personal updates"
+			}
+		},
+		"openTo": {
+			"kicker": "Open To",
+			"title": "Collaboration Opportunities",
+			"lede": "I'm interested in working on projects and research that connect technology, creativity, and <0>real-world impact</0>.",
+			"entries": {
+				"research": {
+					"title": "Research Collaboration",
+					"desc": "AI, quantum computing, engineering intelligence."
+				},
+				"technical": {
+					"title": "Technical Collaboration",
+					"desc": "Open-source, tools, infrastructure."
+				},
+				"product": {
+					"title": "Product / Startup",
+					"desc": "Early-stage ideas and impact-driven products."
+				},
+				"speaking": {
+					"title": "Speaking / Workshops",
+					"desc": "Technical sharing, workshops, and community events."
+				},
+				"problems": {
+					"title": "Interesting Problems",
+					"desc": "Challenging engineering problems worth solving."
+				},
+				"creative": {
+					"title": "Music & Creative Tech",
+					"desc": "Making music with open-source tools like Ardour."
+				}
+			}
+		},
+		"talk": {
+			"kicker": "Let's Talk",
+			"title": "Have something in mind?",
+			"lede": "Feel free to send me an email or schedule a short call. I'm always happy to hear about new ideas, collaborations, or just a good technical discussion."
+		}
+	},
 	"nav": {
 		"home": "Home",
 		"about": "About",
@@ -514,7 +582,8 @@
 		"products": "Projects",
 		"projects": "Projects",
 		"demo": "Demo",
-		"research": "Research"
+		"research": "Research",
+		"connect": "Connect"
 	},
 	"footer": {
 		"rights": "All rights reserved."
@@ -523,5 +592,50 @@
 		"label": "Language",
 		"en": "English",
 		"vi": "Tiếng Việt"
+	},
+	"entities": {
+		"openfarm": {
+			"kicker": "Company · Current",
+			"name": "OpenFarm",
+			"subtitle": "Agricultural Technology",
+			"status": "Building",
+			"description": "Building a trust and traceability layer for real-world agriculture.",
+			"role": "Co-Founder",
+			"period": "Sep 2026 – Present",
+			"tags": [
+				"AI",
+				"Agriculture",
+				"Traceability",
+				"Open Source"
+			],
+			"cta": "View OpenFarm",
+			"external": "Visit openfarmgroup.com"
+		},
+		"true-technology": {
+			"kicker": "Experience · 2022–2026",
+			"name": "True Technology",
+			"subtitle": "Software Engineering",
+			"status": "~4 years",
+			"description": "Nearly four years building web systems, backend services, infrastructure and internal tools.",
+			"role": "Software Engineer",
+			"period": "Jun 2022 – Aug 2026",
+			"facts": [
+				{
+					"label": "Location",
+					"value": "Vietnam"
+				},
+				{
+					"label": "Type",
+					"value": "Part-time"
+				}
+			],
+			"tags": [
+				"Backend",
+				"Web Engineering",
+				"DevOps",
+				"API Design"
+			],
+			"cta": "View experience"
+		}
 	}
 }

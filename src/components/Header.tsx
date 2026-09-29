@@ -37,6 +37,12 @@ export default function Header() {
 			index: "05",
 			exact: false,
 		},
+		{
+			to: "/$lang/connect" as const,
+			label: t.nav.connect,
+			index: "06",
+			exact: false,
+		},
 	];
 
 	return (
@@ -77,10 +83,14 @@ export default function Header() {
 							</Link>
 						))}
 					</div>
-					<span className="collab-flag hidden lg:inline">
+					<Link
+						to="/$lang/connect"
+						params={{ lang }}
+						className="collab-flag hidden no-underline hover:text-[var(--accent)] lg:inline"
+					>
 						{"// "}
 						{t.home.collab}
-					</span>
+					</Link>
 				</div>
 			</nav>
 		</header>

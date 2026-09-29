@@ -66,6 +66,11 @@ export const Route = createFileRoute("/sitemap.xml")({
 						priority: "0.8",
 					},
 					{
+						loc: `${CANONICAL_ORIGIN}/en/connect`,
+						changefreq: "monthly",
+						priority: "0.7",
+					},
+					{
 						loc: `${CANONICAL_ORIGIN}/en/products/opensen`,
 						changefreq: "monthly",
 						priority: "0.7",
@@ -105,6 +110,11 @@ export const Route = createFileRoute("/sitemap.xml")({
 						loc: `${CANONICAL_ORIGIN}/vi/research`,
 						changefreq: "monthly",
 						priority: "0.8",
+					},
+					{
+						loc: `${CANONICAL_ORIGIN}/vi/connect`,
+						changefreq: "monthly",
+						priority: "0.7",
 					},
 					{
 						loc: `${CANONICAL_ORIGIN}/vi/products/opensen`,

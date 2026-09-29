@@ -983,6 +983,364 @@ html:not(.dark) .chip-violet {
   }
 }
 
+/* ── Entity preview (src/features/entity-preview) ───────────────────── */
+
+.entity-trigger {
+  font-weight: 600;
+  color: var(--sea-ink);
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: color-mix(in oklab, var(--accent) 55%, transparent);
+  text-underline-offset: 0.3em;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease,
+    background-color 180ms ease;
+  border-radius: 4px;
+}
+
+.entity-trigger[data-tone='accent'] {
+  color: var(--accent);
+}
+
+.entity-trigger:hover,
+.entity-trigger[aria-expanded='true'] {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+  background-color: var(--link-bg-hover);
+}
+
+/* No hover on touch screens: a tiny arrow says "tap me". */
+@media (hover: none) {
+  .entity-trigger::after {
+    content: '↗';
+    margin-left: 0.12em;
+    font-size: 0.7em;
+    vertical-align: super;
+    color: var(--accent);
+  }
+}
+
+.entity-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  --tilt: -2.4deg;
+  --enter-y: 10px;
+  --enter-tilt: -4deg;
+}
+
+.entity-layer[data-side='bottom'] {
+  --tilt: 2deg;
+  --enter-y: -10px;
+  --enter-tilt: 4deg;
+}
+
+.entity-bridge {
+  position: fixed;
+  pointer-events: auto;
+}
+
+.entity-connector {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  opacity: 0;
+  animation: entity-fade 260ms 80ms ease-out forwards;
+}
+
+.entity-connector line {
+  stroke: var(--accent);
+  stroke-width: 1.25;
+  stroke-dasharray: 4 4;
+  stroke-linecap: round;
+  animation: entity-dash 1.6s linear infinite;
+}
+
+.entity-connector circle {
+  fill: var(--accent);
+}
+
+.entity-connector .entity-connector-halo {
+  fill: color-mix(in oklab, var(--accent) 22%, transparent);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: entity-halo 1.8s ease-out infinite;
+}
+
+.entity-pop {
+  position: fixed;
+  width: min(22.5rem, calc(100vw - 1.5rem));
+  pointer-events: auto;
+  transform-origin: var(--ox, 25%) var(--oy, 100%);
+}
+
+.entity-layer[data-placed] .entity-pop {
+  animation: entity-in 460ms cubic-bezier(0.2, 0.9, 0.25, 1.15) both;
+}
+
+.entity-layer[data-state='closing'] .entity-pop {
+  animation: entity-out 170ms ease-in both;
+}
+
+.entity-layer[data-state='closing'] .entity-connector {
+  animation: entity-fade-out 140ms ease-in forwards;
+}
+
+.entity-card {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.1rem 1.2rem 1rem;
+  background: linear-gradient(
+    165deg,
+    var(--popover),
+    color-mix(in oklab, var(--popover) 94%, var(--accent))
+  );
+  backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow:
+    0 1px 0 var(--inset-glint) inset,
+    0 12px 32px rgba(16, 40, 46, 0.14),
+    0 2px 6px rgba(16, 40, 46, 0.06);
+  transform: rotate(var(--tilt));
+  transform-origin: inherit;
+  transition:
+    transform 560ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+
+/* Thin mint rail on the leading edge. */
+.entity-card::before {
+  content: '';
+  position: absolute;
+  top: 1.1rem;
+  bottom: 1.1rem;
+  left: -1px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  opacity: 0.8;
+}
+
+.entity-pop:hover .entity-card,
+.entity-pop:focus-within .entity-card {
+  transform: rotate(0deg) translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow:
+    0 1px 0 var(--inset-glint) inset,
+    0 0 0 1px color-mix(in oklab, var(--accent) 18%, transparent),
+    0 20px 44px rgba(16, 40, 46, 0.18),
+    0 0 26px var(--glow);
+}
+
+.dark .entity-card {
+  box-shadow:
+    0 1px 0 var(--inset-glint) inset,
+    0 18px 44px rgba(0, 0, 0, 0.5),
+    0 0 18px color-mix(in oklab, var(--glow) 50%, transparent);
+}
+
+.entity-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.entity-kicker .kicker-mark {
+  margin-right: 0.45em;
+  color: var(--accent);
+}
+
+.entity-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.entity-status[data-tone='past'] {
+  color: var(--ink-faint);
+}
+
+.entity-status-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.entity-status[data-tone='live'] .entity-status-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  background: currentColor;
+  opacity: 0.35;
+  animation: entity-halo 1.8s ease-out infinite;
+}
+
+.entity-logo {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 6px;
+}
+
+.entity-external {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--sea-ink-soft);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.entity-external:hover {
+  border-color: var(--line-strong);
+  color: var(--accent);
+}
+
+.entity-divider {
+  height: 1px;
+  margin: 0.85rem 0;
+  background: linear-gradient(to right, var(--line-strong), transparent);
+}
+
+.entity-tag {
+  border: 1px solid var(--chip-line);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--accent) 9%, transparent);
+  padding: 0.15rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--lagoon-deep);
+}
+
+.entity-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.entity-cta-arrow {
+  transition: transform 180ms ease;
+}
+
+.entity-cta:hover .entity-cta-arrow,
+.entity-cta:focus-visible .entity-cta-arrow {
+  transform: translateX(3px);
+}
+
+@keyframes entity-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--enter-y)) rotate(var(--enter-tilt)) scale(0.94);
+    filter: blur(4px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes entity-out {
+  to {
+    opacity: 0;
+    transform: translateY(calc(var(--enter-y) * 0.6)) scale(0.97);
+  }
+}
+
+@keyframes entity-fade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entity-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes entity-dash {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
+@keyframes entity-halo {
+  from {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entity-layer {
+    --tilt: 0deg;
+  }
+
+  .entity-layer[data-placed] .entity-pop,
+  .entity-layer[data-state='closing'] .entity-pop {
+    animation-duration: 1ms;
+  }
+
+  .entity-connector,
+  .entity-connector line,
+  .entity-connector .entity-connector-halo,
+  .entity-status-dot::after {
+    animation: none;
+    opacity: 1;
+  }
+
+  .entity-connector .entity-connector-halo {
+    opacity: 0;
+  }
+
+  .entity-card {
+    transition: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rise-in,
   .name-caret,

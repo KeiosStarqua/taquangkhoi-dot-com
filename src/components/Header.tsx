@@ -31,6 +31,12 @@ export default function Header() {
 			index: "04",
 			exact: false,
 		},
+		{
+			to: "/$lang/research" as const,
+			label: t.nav.research,
+			index: "05",
+			exact: false,
+		},
 	];
 
 	return (

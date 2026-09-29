@@ -11,6 +11,10 @@
 		"experience": {
 			"title": "Kinh nghiệm — Tạ Quang Khôi",
 			"description": "Lộ trình sự nghiệp của Tạ Quang Khôi — Đồng sáng lập tại OpenFarm, Kỹ sư phần mềm tại True Technology Co., Ltd., và tốt nghiệp Đại học Bà Rịa - Vũng Tàu."
+		},
+		"research": {
+			"title": "Nghiên cứu — Tạ Quang Khôi",
+			"description": "Các hướng nghiên cứu, ghi chú và thử nghiệm của Tạ Quang Khôi: AI agent, trí tuệ kỹ thuật cho bản vẽ P&ID, điện toán lượng tử và hệ thống LLM."
 		}
 	},
 	"home": {
@@ -304,13 +308,130 @@
 			}
 		}
 	},
+	"research": {
+		"kicker": "Nghiên cứu",
+		"title": "Nghiên cứu",
+		"tagline": "<0>Những câu hỏi mình đang khám phá</0> ở giao điểm của phần mềm, trí tuệ nhân tạo và tính toán.",
+		"lede": "Mình thích biến những bài toán phức tạp thành hệ thống chạy được — từ việc dùng AI để hiểu bản vẽ kỹ thuật, xây dựng agent tự động, đến khám phá điện toán lượng tử. Trang này tổng hợp các hướng nghiên cứu, ghi chú, thử nghiệm và công việc đang làm của mình.",
+		"cta": {
+			"notes": "Xem tất cả ghi chú",
+			"openSource": "Mã nguồn mở"
+		},
+		"quote": "Sự tò mò xây nên thế giới tốt đẹp hơn.",
+		"terminal": {
+			"run": "Chạy",
+			"idle": "Khám phá các hướng nghiên cứu bên dưới",
+			"done": "Đã tải 4 hướng nghiên cứu ↓"
+		},
+		"areas": {
+			"kicker": "Hướng nghiên cứu",
+			"title": "Các hướng nghiên cứu chính",
+			"lede": "Những chủ đề dài hạn mình đang tìm hiểu và xây dựng. Mỗi hướng gắn với dự án, ghi chú và thử nghiệm.",
+			"view": "Xem nghiên cứu",
+			"entries": {
+				"ai-agents": {
+					"title": "AI Agent",
+					"desc": "Khám phá kiến trúc agent, bộ nhớ, cách dùng công cụ và quy trình tự động cho các tác vụ thực tế."
+				},
+				"engineering-intelligence": {
+					"title": "Trí tuệ kỹ thuật",
+					"desc": "Dạy máy hiểu bản vẽ kỹ thuật và tài liệu công nghiệp."
+				},
+				"quantum-computing": {
+					"title": "Điện toán lượng tử",
+					"desc": "Học và thử nghiệm thuật toán lượng tử, phần cứng lượng tử và các mô hình tính toán."
+				},
+				"llm-systems": {
+					"title": "Hệ thống LLM",
+					"desc": "Xây dựng và đánh giá ứng dụng LLM, hệ thống RAG và quản lý tri thức theo lĩnh vực."
+				}
+			}
+		},
+		"work": {
+			"kicker": "Nghiên cứu nổi bật",
+			"title": "Công việc tiêu biểu",
+			"lede": "Các dự án nghiên cứu hiện tại và đang tiến hành.",
+			"viewAll": "xem tất cả nghiên cứu",
+			"entries": {
+				"pid-digitizer": {
+					"title": "P&ID Digitizer",
+					"desc": "Từ bản vẽ kỹ thuật đến đồ thị kỹ thuật có cấu trúc. Dùng thị giác máy tính, phân tích bố cục và suy luận đồ thị để số hóa bản vẽ P&ID.",
+					"status": "Riêng tư (đang làm)"
+				},
+				"agent-framework": {
+					"title": "Thử nghiệm framework agent",
+					"desc": "Khám phá kiến trúc agent, hệ thống bộ nhớ và cách dùng công cụ cho các tác vụ tự động hóa thực tế.",
+					"status": "Đang phát triển"
+				},
+				"quantum-experiments": {
+					"title": "Thử nghiệm lượng tử",
+					"desc": "Học thuật toán lượng tử và thử nghiệm với phần cứng lượng tử (ví dụ IonQ) và trình mô phỏng.",
+					"status": "Ghi chú nghiên cứu"
+				}
+			}
+		},
+		"notes": {
+			"kicker": "Ghi chú gần đây",
+			"title": "Ghi chú nghiên cứu",
+			"lede": "Suy nghĩ, tóm tắt và ghi chú kỹ thuật.",
+			"viewAll": "xem tất cả ghi chú",
+			"entries": {
+				"dino-detr": {
+					"title": "DINO và các mô hình kiểu DETR cho bản vẽ kỹ thuật",
+					"desc": "Tóm tắt và ghi chú triển khai DETR, DINO và các công trình liên quan."
+				},
+				"rag-design": {
+					"title": "Thiết kế hệ thống RAG cho tri thức chuyên ngành",
+					"desc": "Thiết kế pipeline RAG cho tài liệu kỹ thuật."
+				},
+				"quantum-basics": {
+					"title": "Thuật toán lượng tử cho người mới",
+					"desc": "Ghi chú về các thuật toán lượng tử cơ bản và thử nghiệm thực hành."
+				},
+				"agent-memory": {
+					"title": "Bộ nhớ và cách dùng công cụ của agent",
+					"desc": "Khám phá kiến trúc bộ nhớ cho agent chạy dài hạn."
+				}
+			}
+		},
+		"reading": {
+			"kicker": "Bài báo & tài liệu",
+			"title": "Danh sách đọc",
+			"lede": "Những bài báo, bài viết và tài liệu quan trọng mình đang theo dõi.",
+			"kinds": {
+				"paper": "Bài báo",
+				"article": "Bài viết",
+				"book": "Sách"
+			}
+		},
+		"playground": {
+			"kicker": "Thử nghiệm",
+			"title": "Sân chơi",
+			"lede": "Những thử nghiệm, demo và khám phá nhỏ.",
+			"entries": {
+				"llm-rag": {
+					"title": "Sân chơi LLM RAG",
+					"desc": "Thử nghiệm pipeline RAG trên tài liệu kỹ thuật."
+				},
+				"quantum-circuit": {
+					"title": "Mô phỏng mạch lượng tử",
+					"desc": "Chạy thử các thuật toán lượng tử đơn giản với Qiskit."
+				},
+				"pid-symbols": {
+					"title": "Nhận diện ký hiệu P&ID (Demo)",
+					"desc": "Thử nghiệm mô hình nhận diện trên bản vẽ mẫu."
+				}
+			}
+		}
+	},
 	"nav": {
 		"home": "Trang chủ",
 		"about": "Giới thiệu",
 		"experience": "Kinh nghiệm",
 		"products": "Dự án",
 		"projects": "Dự án",
-		"demo": "Demo"
+		"demo": "Demo",
+		"research": "Nghiên cứu"
 	},
 	"footer": {
 		"rights": "Bảo lưu mọi quyền."

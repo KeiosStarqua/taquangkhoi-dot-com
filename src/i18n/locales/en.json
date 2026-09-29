@@ -11,6 +11,10 @@
 		"experience": {
 			"title": "Experience — Tạ Quang Khôi",
 			"description": "Career timeline of Tạ Quang Khôi — Co-Founder at OpenFarm, Software Engineer at True Technology Co., Ltd., and graduate of Ba Ria - Vung Tau University."
+		},
+		"research": {
+			"title": "Research — Tạ Quang Khôi",
+			"description": "Research directions, notes and experiments by Tạ Quang Khôi: AI agents, engineering intelligence for P&ID drawings, quantum computing and LLM systems."
 		}
 	},
 	"home": {
@@ -304,13 +308,130 @@
 			}
 		}
 	},
+	"research": {
+		"kicker": "Research",
+		"title": "Research",
+		"tagline": "<0>Questions I'm exploring</0> at the intersection of software, artificial intelligence and computation.",
+		"lede": "I enjoy turning complex problems into working systems — from understanding engineering drawings with AI to building autonomous agents and exploring quantum computing. This page collects my research directions, notes, experiments and ongoing work.",
+		"cta": {
+			"notes": "View All Notes",
+			"openSource": "Open Source"
+		},
+		"quote": "Curiosity builds better worlds.",
+		"terminal": {
+			"run": "Run",
+			"idle": "Explore the research areas below",
+			"done": "4 research areas loaded ↓"
+		},
+		"areas": {
+			"kicker": "Research Areas",
+			"title": "Main Research Directions",
+			"lede": "Long-term topics I'm exploring and building in. Each area connects to projects, notes and experiments.",
+			"view": "View Research",
+			"entries": {
+				"ai-agents": {
+					"title": "AI Agents",
+					"desc": "Exploring agent architectures, memory, tool use and autonomous workflows for real-world tasks."
+				},
+				"engineering-intelligence": {
+					"title": "Engineering Intelligence",
+					"desc": "Teaching machines to understand engineering drawings and industrial documents."
+				},
+				"quantum-computing": {
+					"title": "Quantum Computing",
+					"desc": "Learning and experimenting with quantum algorithms, quantum hardware and computational models."
+				},
+				"llm-systems": {
+					"title": "LLM Systems",
+					"desc": "Building and evaluating LLM applications, RAG systems and domain-specific knowledge management."
+				}
+			}
+		},
+		"work": {
+			"kicker": "Featured Research",
+			"title": "Highlighted Work",
+			"lede": "Current and ongoing research projects.",
+			"viewAll": "view all research",
+			"entries": {
+				"pid-digitizer": {
+					"title": "P&ID Digitizer",
+					"desc": "From engineering drawings to structured engineering graphs. Using computer vision, layout analysis and graph reasoning to digitize P&ID drawings.",
+					"status": "Private (in progress)"
+				},
+				"agent-framework": {
+					"title": "Agent Framework Experiments",
+					"desc": "Exploring agent architectures, memory systems and tool use for real-world automation tasks.",
+					"status": "In development"
+				},
+				"quantum-experiments": {
+					"title": "Quantum Experiments",
+					"desc": "Learning quantum algorithms and experimenting with quantum hardware (e.g. IonQ) and simulators.",
+					"status": "Research notes"
+				}
+			}
+		},
+		"notes": {
+			"kicker": "Recent Notes",
+			"title": "Research Notes",
+			"lede": "Thoughts, summaries and technical notes.",
+			"viewAll": "view all notes",
+			"entries": {
+				"dino-detr": {
+					"title": "DINO and DETR-like Models for Engineering Drawings",
+					"desc": "Summary and implementation notes for DETR, DINO and related work."
+				},
+				"rag-design": {
+					"title": "RAG System Design for Domain Knowledge",
+					"desc": "Designing RAG pipelines for engineering documents."
+				},
+				"quantum-basics": {
+					"title": "Quantum Algorithms for Beginners",
+					"desc": "Notes on basic quantum algorithms and hands-on experiments."
+				},
+				"agent-memory": {
+					"title": "Agent Memory and Tool Use",
+					"desc": "Exploring memory architectures for long-term agents."
+				}
+			}
+		},
+		"reading": {
+			"kicker": "Papers & Resources",
+			"title": "Reading List",
+			"lede": "Key papers, articles and resources I'm following.",
+			"kinds": {
+				"paper": "Paper",
+				"article": "Article",
+				"book": "Book"
+			}
+		},
+		"playground": {
+			"kicker": "Experiments",
+			"title": "Playground",
+			"lede": "Small experiments, demos and explorations.",
+			"entries": {
+				"llm-rag": {
+					"title": "LLM RAG Playground",
+					"desc": "Experimenting with RAG pipelines on engineering documents."
+				},
+				"quantum-circuit": {
+					"title": "Quantum Circuit Simulation",
+					"desc": "Testing simple quantum algorithms with Qiskit."
+				},
+				"pid-symbols": {
+					"title": "P&ID Symbol Detection (Demo)",
+					"desc": "Testing detection models on sample drawings."
+				}
+			}
+		}
+	},
 	"nav": {
 		"home": "Home",
 		"about": "About",
 		"experience": "Experience",
 		"products": "Projects",
 		"projects": "Projects",
-		"demo": "Demo"
+		"demo": "Demo",
+		"research": "Research"
 	},
 	"footer": {
 		"rights": "All rights reserved."

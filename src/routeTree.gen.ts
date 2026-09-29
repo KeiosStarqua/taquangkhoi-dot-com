@@ -9,43 +9,35 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as DemoRouteImport } from './routes/demo'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LangRouteImport } from './routes/$lang'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as DemoRouteImport } from './routes/demo'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
-import { Route as DemoStoreRouteImport } from './routes/demo/store'
-import { Route as DemoSentryRouteImport } from './routes/demo/sentry'
-import { Route as DemoAiStructuredRouteImport } from './routes/demo/ai-structured'
-import { Route as DemoAiImageRouteImport } from './routes/demo/ai-image'
-import { Route as DemoAiChatRouteImport } from './routes/demo/ai-chat'
-import { Route as ApiSentryExampleRouteImport } from './routes/api/sentry-example'
-import { Route as LangExperienceRouteImport } from './routes/$lang/experience'
 import { Route as LangAboutRouteImport } from './routes/$lang/about'
-import { Route as DemoGuitarsIndexRouteImport } from './routes/demo/guitars/index'
+import { Route as LangExperienceRouteImport } from './routes/$lang/experience'
+import { Route as LangResearchRouteImport } from './routes/$lang/research'
+import { Route as ApiSentryExampleRouteImport } from './routes/api/sentry-example'
+import { Route as DemoAiChatRouteImport } from './routes/demo/ai-chat'
+import { Route as DemoAiImageRouteImport } from './routes/demo/ai-image'
+import { Route as DemoAiStructuredRouteImport } from './routes/demo/ai-structured'
+import { Route as DemoSentryRouteImport } from './routes/demo/sentry'
+import { Route as DemoStoreRouteImport } from './routes/demo/store'
 import { Route as LangProductsIndexRouteImport } from './routes/$lang/products/index'
-import { Route as DemoGuitarsGuitarIdRouteImport } from './routes/demo/guitars/$guitarId'
 import { Route as LangProductsProductIdRouteImport } from './routes/$lang/products/$productId'
-import { Route as DemoApiAiTtsRouteImport } from './routes/demo/api.ai.tts'
-import { Route as DemoApiAiTranscriptionRouteImport } from './routes/demo/api.ai.transcription'
-import { Route as DemoApiAiStructuredRouteImport } from './routes/demo/api.ai.structured'
-import { Route as DemoApiAiImageRouteImport } from './routes/demo/api.ai.image'
+import { Route as DemoGuitarsIndexRouteImport } from './routes/demo/guitars/index'
+import { Route as DemoGuitarsGuitarIdRouteImport } from './routes/demo/guitars/$guitarId'
 import { Route as DemoApiAiChatRouteImport } from './routes/demo/api.ai.chat'
+import { Route as DemoApiAiImageRouteImport } from './routes/demo/api.ai.image'
+import { Route as DemoApiAiStructuredRouteImport } from './routes/demo/api.ai.structured'
+import { Route as DemoApiAiTranscriptionRouteImport } from './routes/demo/api.ai.transcription'
+import { Route as DemoApiAiTtsRouteImport } from './routes/demo/api.ai.tts'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoRoute = DemoRouteImport.update({
-  id: '/demo',
-  path: '/demo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangRoute = LangRouteImport.update({
@@ -53,9 +45,24 @@ const LangRoute = LangRouteImport.update({
   path: '/$lang',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangIndexRoute = LangIndexRouteImport.update({
@@ -63,19 +70,29 @@ const LangIndexRoute = LangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LangRoute,
 } as any)
-const DemoStoreRoute = DemoStoreRouteImport.update({
-  id: '/store',
-  path: '/store',
-  getParentRoute: () => DemoRoute,
+const LangAboutRoute = LangAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => LangRoute,
 } as any)
-const DemoSentryRoute = DemoSentryRouteImport.update({
-  id: '/sentry',
-  path: '/sentry',
-  getParentRoute: () => DemoRoute,
+const LangExperienceRoute = LangExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => LangRoute,
 } as any)
-const DemoAiStructuredRoute = DemoAiStructuredRouteImport.update({
-  id: '/ai-structured',
-  path: '/ai-structured',
+const LangResearchRoute = LangResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => LangRoute,
+} as any)
+const ApiSentryExampleRoute = ApiSentryExampleRouteImport.update({
+  id: '/api/sentry-example',
+  path: '/api/sentry-example',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoAiChatRoute = DemoAiChatRouteImport.update({
+  id: '/ai-chat',
+  path: '/ai-chat',
   getParentRoute: () => DemoRoute,
 } as any)
 const DemoAiImageRoute = DemoAiImageRouteImport.update({
@@ -83,29 +100,19 @@ const DemoAiImageRoute = DemoAiImageRouteImport.update({
   path: '/ai-image',
   getParentRoute: () => DemoRoute,
 } as any)
-const DemoAiChatRoute = DemoAiChatRouteImport.update({
-  id: '/ai-chat',
-  path: '/ai-chat',
+const DemoAiStructuredRoute = DemoAiStructuredRouteImport.update({
+  id: '/ai-structured',
+  path: '/ai-structured',
   getParentRoute: () => DemoRoute,
 } as any)
-const ApiSentryExampleRoute = ApiSentryExampleRouteImport.update({
-  id: '/api/sentry-example',
-  path: '/api/sentry-example',
-  getParentRoute: () => rootRouteImport,
+const DemoSentryRoute = DemoSentryRouteImport.update({
+  id: '/sentry',
+  path: '/sentry',
+  getParentRoute: () => DemoRoute,
 } as any)
-const LangExperienceRoute = LangExperienceRouteImport.update({
-  id: '/experience',
-  path: '/experience',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangAboutRoute = LangAboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => LangRoute,
-} as any)
-const DemoGuitarsIndexRoute = DemoGuitarsIndexRouteImport.update({
-  id: '/guitars/',
-  path: '/guitars/',
+const DemoStoreRoute = DemoStoreRouteImport.update({
+  id: '/store',
+  path: '/store',
   getParentRoute: () => DemoRoute,
 } as any)
 const LangProductsIndexRoute = LangProductsIndexRouteImport.update({
@@ -113,29 +120,24 @@ const LangProductsIndexRoute = LangProductsIndexRouteImport.update({
   path: '/products/',
   getParentRoute: () => LangRoute,
 } as any)
-const DemoGuitarsGuitarIdRoute = DemoGuitarsGuitarIdRouteImport.update({
-  id: '/guitars/$guitarId',
-  path: '/guitars/$guitarId',
-  getParentRoute: () => DemoRoute,
-} as any)
 const LangProductsProductIdRoute = LangProductsProductIdRouteImport.update({
   id: '/products/$productId',
   path: '/products/$productId',
   getParentRoute: () => LangRoute,
 } as any)
-const DemoApiAiTtsRoute = DemoApiAiTtsRouteImport.update({
-  id: '/api/ai/tts',
-  path: '/api/ai/tts',
+const DemoGuitarsIndexRoute = DemoGuitarsIndexRouteImport.update({
+  id: '/guitars/',
+  path: '/guitars/',
   getParentRoute: () => DemoRoute,
 } as any)
-const DemoApiAiTranscriptionRoute = DemoApiAiTranscriptionRouteImport.update({
-  id: '/api/ai/transcription',
-  path: '/api/ai/transcription',
+const DemoGuitarsGuitarIdRoute = DemoGuitarsGuitarIdRouteImport.update({
+  id: '/guitars/$guitarId',
+  path: '/guitars/$guitarId',
   getParentRoute: () => DemoRoute,
 } as any)
-const DemoApiAiStructuredRoute = DemoApiAiStructuredRouteImport.update({
-  id: '/api/ai/structured',
-  path: '/api/ai/structured',
+const DemoApiAiChatRoute = DemoApiAiChatRouteImport.update({
+  id: '/api/ai/chat',
+  path: '/api/ai/chat',
   getParentRoute: () => DemoRoute,
 } as any)
 const DemoApiAiImageRoute = DemoApiAiImageRouteImport.update({
@@ -143,9 +145,19 @@ const DemoApiAiImageRoute = DemoApiAiImageRouteImport.update({
   path: '/api/ai/image',
   getParentRoute: () => DemoRoute,
 } as any)
-const DemoApiAiChatRoute = DemoApiAiChatRouteImport.update({
-  id: '/api/ai/chat',
-  path: '/api/ai/chat',
+const DemoApiAiStructuredRoute = DemoApiAiStructuredRouteImport.update({
+  id: '/api/ai/structured',
+  path: '/api/ai/structured',
+  getParentRoute: () => DemoRoute,
+} as any)
+const DemoApiAiTranscriptionRoute = DemoApiAiTranscriptionRouteImport.update({
+  id: '/api/ai/transcription',
+  path: '/api/ai/transcription',
+  getParentRoute: () => DemoRoute,
+} as any)
+const DemoApiAiTtsRoute = DemoApiAiTtsRouteImport.update({
+  id: '/api/ai/tts',
+  path: '/api/ai/tts',
   getParentRoute: () => DemoRoute,
 } as any)
 
@@ -154,9 +166,11 @@ export interface FileRoutesByFullPath {
   '/$lang': typeof LangRouteWithChildren
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
+  '/research': typeof ResearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
   '/$lang/experience': typeof LangExperienceRoute
+  '/$lang/research': typeof LangResearchRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
@@ -178,9 +192,11 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
+  '/research': typeof ResearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
   '/$lang/experience': typeof LangExperienceRoute
+  '/$lang/research': typeof LangResearchRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
@@ -204,9 +220,11 @@ export interface FileRoutesById {
   '/$lang': typeof LangRouteWithChildren
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
+  '/research': typeof ResearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
   '/$lang/experience': typeof LangExperienceRoute
+  '/$lang/research': typeof LangResearchRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
@@ -231,9 +249,11 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/about'
     | '/demo'
+    | '/research'
     | '/sitemap.xml'
     | '/$lang/about'
     | '/$lang/experience'
+    | '/$lang/research'
     | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
@@ -255,9 +275,11 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/demo'
+    | '/research'
     | '/sitemap.xml'
     | '/$lang/about'
     | '/$lang/experience'
+    | '/$lang/research'
     | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
@@ -280,9 +302,11 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/about'
     | '/demo'
+    | '/research'
     | '/sitemap.xml'
     | '/$lang/about'
     | '/$lang/experience'
+    | '/$lang/research'
     | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
@@ -306,31 +330,18 @@ export interface RootRouteChildren {
   LangRoute: typeof LangRouteWithChildren
   AboutRoute: typeof AboutRoute
   DemoRoute: typeof DemoRouteWithChildren
+  ResearchRoute: typeof ResearchRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiSentryExampleRoute: typeof ApiSentryExampleRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo': {
-      id: '/demo'
-      path: '/demo'
-      fullPath: '/demo'
-      preLoaderRoute: typeof DemoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang': {
@@ -340,11 +351,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/': {
@@ -354,25 +386,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRoute
     }
-    '/demo/store': {
-      id: '/demo/store'
-      path: '/store'
-      fullPath: '/demo/store'
-      preLoaderRoute: typeof DemoStoreRouteImport
-      parentRoute: typeof DemoRoute
+    '/$lang/about': {
+      id: '/$lang/about'
+      path: '/about'
+      fullPath: '/$lang/about'
+      preLoaderRoute: typeof LangAboutRouteImport
+      parentRoute: typeof LangRoute
     }
-    '/demo/sentry': {
-      id: '/demo/sentry'
-      path: '/sentry'
-      fullPath: '/demo/sentry'
-      preLoaderRoute: typeof DemoSentryRouteImport
-      parentRoute: typeof DemoRoute
+    '/$lang/experience': {
+      id: '/$lang/experience'
+      path: '/experience'
+      fullPath: '/$lang/experience'
+      preLoaderRoute: typeof LangExperienceRouteImport
+      parentRoute: typeof LangRoute
     }
-    '/demo/ai-structured': {
-      id: '/demo/ai-structured'
-      path: '/ai-structured'
-      fullPath: '/demo/ai-structured'
-      preLoaderRoute: typeof DemoAiStructuredRouteImport
+    '/$lang/research': {
+      id: '/$lang/research'
+      path: '/research'
+      fullPath: '/$lang/research'
+      preLoaderRoute: typeof LangResearchRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/api/sentry-example': {
+      id: '/api/sentry-example'
+      path: '/api/sentry-example'
+      fullPath: '/api/sentry-example'
+      preLoaderRoute: typeof ApiSentryExampleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo/ai-chat': {
+      id: '/demo/ai-chat'
+      path: '/ai-chat'
+      fullPath: '/demo/ai-chat'
+      preLoaderRoute: typeof DemoAiChatRouteImport
       parentRoute: typeof DemoRoute
     }
     '/demo/ai-image': {
@@ -382,39 +428,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoAiImageRouteImport
       parentRoute: typeof DemoRoute
     }
-    '/demo/ai-chat': {
-      id: '/demo/ai-chat'
-      path: '/ai-chat'
-      fullPath: '/demo/ai-chat'
-      preLoaderRoute: typeof DemoAiChatRouteImport
+    '/demo/ai-structured': {
+      id: '/demo/ai-structured'
+      path: '/ai-structured'
+      fullPath: '/demo/ai-structured'
+      preLoaderRoute: typeof DemoAiStructuredRouteImport
       parentRoute: typeof DemoRoute
     }
-    '/api/sentry-example': {
-      id: '/api/sentry-example'
-      path: '/api/sentry-example'
-      fullPath: '/api/sentry-example'
-      preLoaderRoute: typeof ApiSentryExampleRouteImport
-      parentRoute: typeof rootRouteImport
+    '/demo/sentry': {
+      id: '/demo/sentry'
+      path: '/sentry'
+      fullPath: '/demo/sentry'
+      preLoaderRoute: typeof DemoSentryRouteImport
+      parentRoute: typeof DemoRoute
     }
-    '/$lang/experience': {
-      id: '/$lang/experience'
-      path: '/experience'
-      fullPath: '/$lang/experience'
-      preLoaderRoute: typeof LangExperienceRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/about': {
-      id: '/$lang/about'
-      path: '/about'
-      fullPath: '/$lang/about'
-      preLoaderRoute: typeof LangAboutRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/demo/guitars/': {
-      id: '/demo/guitars/'
-      path: '/guitars'
-      fullPath: '/demo/guitars/'
-      preLoaderRoute: typeof DemoGuitarsIndexRouteImport
+    '/demo/store': {
+      id: '/demo/store'
+      path: '/store'
+      fullPath: '/demo/store'
+      preLoaderRoute: typeof DemoStoreRouteImport
       parentRoute: typeof DemoRoute
     }
     '/$lang/products/': {
@@ -424,13 +456,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangProductsIndexRouteImport
       parentRoute: typeof LangRoute
     }
-    '/demo/guitars/$guitarId': {
-      id: '/demo/guitars/$guitarId'
-      path: '/guitars/$guitarId'
-      fullPath: '/demo/guitars/$guitarId'
-      preLoaderRoute: typeof DemoGuitarsGuitarIdRouteImport
-      parentRoute: typeof DemoRoute
-    }
     '/$lang/products/$productId': {
       id: '/$lang/products/$productId'
       path: '/products/$productId'
@@ -438,32 +463,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangProductsProductIdRouteImport
       parentRoute: typeof LangRoute
     }
-    '/demo/api/ai/tts': {
-      id: '/demo/api/ai/tts'
-      path: '/api/ai/tts'
-      fullPath: '/demo/api/ai/tts'
-      preLoaderRoute: typeof DemoApiAiTtsRouteImport
+    '/demo/guitars/': {
+      id: '/demo/guitars/'
+      path: '/guitars'
+      fullPath: '/demo/guitars/'
+      preLoaderRoute: typeof DemoGuitarsIndexRouteImport
       parentRoute: typeof DemoRoute
     }
-    '/demo/api/ai/transcription': {
-      id: '/demo/api/ai/transcription'
-      path: '/api/ai/transcription'
-      fullPath: '/demo/api/ai/transcription'
-      preLoaderRoute: typeof DemoApiAiTranscriptionRouteImport
-      parentRoute: typeof DemoRoute
-    }
-    '/demo/api/ai/structured': {
-      id: '/demo/api/ai/structured'
-      path: '/api/ai/structured'
-      fullPath: '/demo/api/ai/structured'
-      preLoaderRoute: typeof DemoApiAiStructuredRouteImport
-      parentRoute: typeof DemoRoute
-    }
-    '/demo/api/ai/image': {
-      id: '/demo/api/ai/image'
-      path: '/api/ai/image'
-      fullPath: '/demo/api/ai/image'
-      preLoaderRoute: typeof DemoApiAiImageRouteImport
+    '/demo/guitars/$guitarId': {
+      id: '/demo/guitars/$guitarId'
+      path: '/guitars/$guitarId'
+      fullPath: '/demo/guitars/$guitarId'
+      preLoaderRoute: typeof DemoGuitarsGuitarIdRouteImport
       parentRoute: typeof DemoRoute
     }
     '/demo/api/ai/chat': {
@@ -473,12 +484,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoApiAiChatRouteImport
       parentRoute: typeof DemoRoute
     }
+    '/demo/api/ai/image': {
+      id: '/demo/api/ai/image'
+      path: '/api/ai/image'
+      fullPath: '/demo/api/ai/image'
+      preLoaderRoute: typeof DemoApiAiImageRouteImport
+      parentRoute: typeof DemoRoute
+    }
+    '/demo/api/ai/structured': {
+      id: '/demo/api/ai/structured'
+      path: '/api/ai/structured'
+      fullPath: '/demo/api/ai/structured'
+      preLoaderRoute: typeof DemoApiAiStructuredRouteImport
+      parentRoute: typeof DemoRoute
+    }
+    '/demo/api/ai/transcription': {
+      id: '/demo/api/ai/transcription'
+      path: '/api/ai/transcription'
+      fullPath: '/demo/api/ai/transcription'
+      preLoaderRoute: typeof DemoApiAiTranscriptionRouteImport
+      parentRoute: typeof DemoRoute
+    }
+    '/demo/api/ai/tts': {
+      id: '/demo/api/ai/tts'
+      path: '/api/ai/tts'
+      fullPath: '/demo/api/ai/tts'
+      preLoaderRoute: typeof DemoApiAiTtsRouteImport
+      parentRoute: typeof DemoRoute
+    }
   }
 }
 
 interface LangRouteChildren {
   LangAboutRoute: typeof LangAboutRoute
   LangExperienceRoute: typeof LangExperienceRoute
+  LangResearchRoute: typeof LangResearchRoute
   LangIndexRoute: typeof LangIndexRoute
   LangProductsProductIdRoute: typeof LangProductsProductIdRoute
   LangProductsIndexRoute: typeof LangProductsIndexRoute
@@ -487,6 +527,7 @@ interface LangRouteChildren {
 const LangRouteChildren: LangRouteChildren = {
   LangAboutRoute: LangAboutRoute,
   LangExperienceRoute: LangExperienceRoute,
+  LangResearchRoute: LangResearchRoute,
   LangIndexRoute: LangIndexRoute,
   LangProductsProductIdRoute: LangProductsProductIdRoute,
   LangProductsIndexRoute: LangProductsIndexRoute,
@@ -531,6 +572,7 @@ const rootRouteChildren: RootRouteChildren = {
   LangRoute: LangRouteWithChildren,
   AboutRoute: AboutRoute,
   DemoRoute: DemoRouteWithChildren,
+  ResearchRoute: ResearchRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiSentryExampleRoute: ApiSentryExampleRoute,
 }

@@ -83,12 +83,12 @@ The canvas is a fixed grid (`body::before`) plus two glows (`body::after`). Cont
 Sticky, translucent, bottom hairline.
 
 - Brand: mono `_ TQK` plus a solid mint cursor block. Links home.
-- Nav: `[01] Home`, `[02] About`, `[03] Projects`. Active item: mint index and a mint underline on the label only.
+- Nav: `[01] Home`, `[02] About`, `[03] Experience`, `[04] Projects`, `[05] Research`. Active item: mint index and a mint underline on the label only.
 - Theme control: icon button, cycles dark → light → auto.
 - Language: pill. Active locale is a mint fill with `--accent-ink` text.
 - Status, wide screens only: `// open to collaboration` in faint mono.
 
-Writing, Music, and Resources appear in the original composition as `[04]`–`[06]`. They are reserved. Do not render them until those routes exist.
+Writing, Music, and Resources are reserved. Do not render them until those routes exist.
 
 ### Buttons
 

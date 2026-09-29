@@ -12,8 +12,8 @@ Owns URL contracts, `head()` metadata, redirects, and the sitemap. Translation s
 
 - Canonical origin: `https://taquangkhoi.com`. Root is `/`. Other paths have no trailing slash.
 - Locales: `en` and `vi`, validated in `src/routes/$lang.tsx` (`SUPPORTED_LOCALES`). Any other `$lang` is `notFound()`.
-- `/` redirects to `/en`. `/about` redirects to `/en/about`.
-- Indexable pages: `/$lang`, `/$lang/about`, `/$lang/experience`, `/$lang/products`, `/$lang/products/$productId` for product ids in `src/data/products.ts` (`opensen`, `yt-hunter`, `open-farm`).
+- `/` redirects to `/en`. `/about` redirects to `/en/about`. `/research` redirects to `/en/research`.
+- Indexable pages: `/$lang`, `/$lang/about`, `/$lang/experience`, `/$lang/products`, `/$lang/research`, `/$lang/products/$productId` for product ids in `src/data/products.ts` (`opensen`, `yt-hunter`, `open-farm`).
 - `Person` JSON-LD is injected from the homepage route `head()` as `application/ld+json` (`name`, `alternateName`, `url`, `sameAs`, `jobTitle`, `nationality`).
 - Sitemap is the dynamic route `src/routes/sitemap.xml.ts`, served at `/sitemap.xml`. It lists only indexable locale URLs. It does not list `/demo/*`.
 - `hreflang` alternates are set in `$lang.tsx` `head()`. `<html lang>` is set in `__root.tsx` from the `$lang` match.

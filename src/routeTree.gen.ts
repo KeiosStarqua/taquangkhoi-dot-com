@@ -21,6 +21,7 @@ import { Route as DemoAiStructuredRouteImport } from './routes/demo/ai-structure
 import { Route as DemoAiImageRouteImport } from './routes/demo/ai-image'
 import { Route as DemoAiChatRouteImport } from './routes/demo/ai-chat'
 import { Route as ApiSentryExampleRouteImport } from './routes/api/sentry-example'
+import { Route as LangExperienceRouteImport } from './routes/$lang/experience'
 import { Route as LangAboutRouteImport } from './routes/$lang/about'
 import { Route as DemoGuitarsIndexRouteImport } from './routes/demo/guitars/index'
 import { Route as LangProductsIndexRouteImport } from './routes/$lang/products/index'
@@ -92,6 +93,11 @@ const ApiSentryExampleRoute = ApiSentryExampleRouteImport.update({
   path: '/api/sentry-example',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangExperienceRoute = LangExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => LangRoute,
+} as any)
 const LangAboutRoute = LangAboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -149,6 +155,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
+  '/$lang/experience': typeof LangExperienceRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
@@ -172,6 +179,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
+  '/$lang/experience': typeof LangExperienceRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
@@ -197,6 +205,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
+  '/$lang/experience': typeof LangExperienceRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
   '/demo/ai-image': typeof DemoAiImageRoute
@@ -223,6 +232,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo'
     | '/$lang/about'
+    | '/$lang/experience'
     | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
@@ -246,6 +256,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo'
     | '/$lang/about'
+    | '/$lang/experience'
     | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
@@ -270,6 +281,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo'
     | '/$lang/about'
+    | '/$lang/experience'
     | '/api/sentry-example'
     | '/demo/ai-chat'
     | '/demo/ai-image'
@@ -384,6 +396,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiSentryExampleRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/experience': {
+      id: '/$lang/experience'
+      path: '/experience'
+      fullPath: '/$lang/experience'
+      preLoaderRoute: typeof LangExperienceRouteImport
+      parentRoute: typeof LangRoute
+    }
     '/$lang/about': {
       id: '/$lang/about'
       path: '/about'
@@ -459,6 +478,7 @@ declare module '@tanstack/react-router' {
 
 interface LangRouteChildren {
   LangAboutRoute: typeof LangAboutRoute
+  LangExperienceRoute: typeof LangExperienceRoute
   LangIndexRoute: typeof LangIndexRoute
   LangProductsProductIdRoute: typeof LangProductsProductIdRoute
   LangProductsIndexRoute: typeof LangProductsIndexRoute
@@ -466,6 +486,7 @@ interface LangRouteChildren {
 
 const LangRouteChildren: LangRouteChildren = {
   LangAboutRoute: LangAboutRoute,
+  LangExperienceRoute: LangExperienceRoute,
   LangIndexRoute: LangIndexRoute,
   LangProductsProductIdRoute: LangProductsProductIdRoute,
   LangProductsIndexRoute: LangProductsIndexRoute,

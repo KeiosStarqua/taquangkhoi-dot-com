@@ -12,11 +12,13 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangRouteImport } from './routes/$lang'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ConnectRouteImport } from './routes/connect'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
 import { Route as LangAboutRouteImport } from './routes/$lang/about'
+import { Route as LangConnectRouteImport } from './routes/$lang/connect'
 import { Route as LangExperienceRouteImport } from './routes/$lang/experience'
 import { Route as LangResearchRouteImport } from './routes/$lang/research'
 import { Route as ApiSentryExampleRouteImport } from './routes/api/sentry-example'
@@ -50,6 +52,11 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConnectRoute = ConnectRouteImport.update({
+  id: '/connect',
+  path: '/connect',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DemoRoute = DemoRouteImport.update({
   id: '/demo',
   path: '/demo',
@@ -73,6 +80,11 @@ const LangIndexRoute = LangIndexRouteImport.update({
 const LangAboutRoute = LangAboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangConnectRoute = LangConnectRouteImport.update({
+  id: '/connect',
+  path: '/connect',
   getParentRoute: () => LangRoute,
 } as any)
 const LangExperienceRoute = LangExperienceRouteImport.update({
@@ -165,10 +177,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
   '/about': typeof AboutRoute
+  '/connect': typeof ConnectRoute
   '/demo': typeof DemoRouteWithChildren
   '/research': typeof ResearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
+  '/$lang/connect': typeof LangConnectRoute
   '/$lang/experience': typeof LangExperienceRoute
   '/$lang/research': typeof LangResearchRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
@@ -191,10 +205,12 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/connect': typeof ConnectRoute
   '/demo': typeof DemoRouteWithChildren
   '/research': typeof ResearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
+  '/$lang/connect': typeof LangConnectRoute
   '/$lang/experience': typeof LangExperienceRoute
   '/$lang/research': typeof LangResearchRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
@@ -219,10 +235,12 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
   '/about': typeof AboutRoute
+  '/connect': typeof ConnectRoute
   '/demo': typeof DemoRouteWithChildren
   '/research': typeof ResearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
+  '/$lang/connect': typeof LangConnectRoute
   '/$lang/experience': typeof LangExperienceRoute
   '/$lang/research': typeof LangResearchRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
@@ -248,10 +266,12 @@ export interface FileRouteTypes {
     | '/'
     | '/$lang'
     | '/about'
+    | '/connect'
     | '/demo'
     | '/research'
     | '/sitemap.xml'
     | '/$lang/about'
+    | '/$lang/connect'
     | '/$lang/experience'
     | '/$lang/research'
     | '/api/sentry-example'
@@ -274,10 +294,12 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/connect'
     | '/demo'
     | '/research'
     | '/sitemap.xml'
     | '/$lang/about'
+    | '/$lang/connect'
     | '/$lang/experience'
     | '/$lang/research'
     | '/api/sentry-example'
@@ -301,10 +323,12 @@ export interface FileRouteTypes {
     | '/'
     | '/$lang'
     | '/about'
+    | '/connect'
     | '/demo'
     | '/research'
     | '/sitemap.xml'
     | '/$lang/about'
+    | '/$lang/connect'
     | '/$lang/experience'
     | '/$lang/research'
     | '/api/sentry-example'
@@ -329,6 +353,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LangRoute: typeof LangRouteWithChildren
   AboutRoute: typeof AboutRoute
+  ConnectRoute: typeof ConnectRoute
   DemoRoute: typeof DemoRouteWithChildren
   ResearchRoute: typeof ResearchRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -356,6 +381,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/connect': {
+      id: '/connect'
+      path: '/connect'
+      fullPath: '/connect'
+      preLoaderRoute: typeof ConnectRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/demo': {
@@ -391,6 +423,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/$lang/about'
       preLoaderRoute: typeof LangAboutRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/connect': {
+      id: '/$lang/connect'
+      path: '/connect'
+      fullPath: '/$lang/connect'
+      preLoaderRoute: typeof LangConnectRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/experience': {
@@ -517,6 +556,7 @@ declare module '@tanstack/react-router' {
 
 interface LangRouteChildren {
   LangAboutRoute: typeof LangAboutRoute
+  LangConnectRoute: typeof LangConnectRoute
   LangExperienceRoute: typeof LangExperienceRoute
   LangResearchRoute: typeof LangResearchRoute
   LangIndexRoute: typeof LangIndexRoute
@@ -526,6 +566,7 @@ interface LangRouteChildren {
 
 const LangRouteChildren: LangRouteChildren = {
   LangAboutRoute: LangAboutRoute,
+  LangConnectRoute: LangConnectRoute,
   LangExperienceRoute: LangExperienceRoute,
   LangResearchRoute: LangResearchRoute,
   LangIndexRoute: LangIndexRoute,
@@ -571,6 +612,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LangRoute: LangRouteWithChildren,
   AboutRoute: AboutRoute,
+  ConnectRoute: ConnectRoute,
   DemoRoute: DemoRouteWithChildren,
   ResearchRoute: ResearchRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

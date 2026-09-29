@@ -144,6 +144,10 @@ Open on the canvas, not inside a panel. Each group is a mono label plus wrapping
 
 Ghost icon buttons, `36px`, mint on hover. GitHub, X, LinkedIn, Ko-fi. Same component in the hero and the footer.
 
+### Entity preview
+
+Inline entity names (OpenFarm, True Technology) get a dashed mint underline. They open a context card: a `/ TYPE · QUALIFIER` kicker plus a status dot, a logo tile, the name in serif, a subtitle, a one-line description, role and period, tags, and one CTA. The card sits above or below the text and joins the underline through a dashed connector. It rests slightly tilted and straightens when hovered. Spec and behavior: `src/features/entity-preview/AGENTS.md`.
+
 ### Footer
 
 Top hairline, mono copyright, the social row. No large link columns.

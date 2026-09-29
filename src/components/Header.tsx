@@ -20,9 +20,15 @@ export default function Header() {
 			exact: false,
 		},
 		{
+			to: "/$lang/experience" as const,
+			label: t.nav.experience,
+			index: "03",
+			exact: false,
+		},
+		{
 			to: "/$lang/products" as const,
 			label: t.nav.projects,
-			index: "03",
+			index: "04",
 			exact: false,
 		},
 	];

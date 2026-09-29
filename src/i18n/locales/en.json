@@ -7,6 +7,10 @@
 		"about": {
 			"title": "About — Tạ Quang Khôi",
 			"description": "About Tạ Quang Khôi — Vietnamese software developer, musician, and open source contributor. Graduate of Ba Ria Vung Tau University."
+		},
+		"experience": {
+			"title": "Experience — Tạ Quang Khôi",
+			"description": "Career timeline of Tạ Quang Khôi — Co-Founder at OpenFarm, Software Engineer at True Technology Co., Ltd., and graduate of Ba Ria - Vung Tau University."
 		}
 	},
 	"home": {
@@ -122,6 +126,106 @@
 			"facebook": "keios.starqua"
 		}
 	},
+	"experience": {
+		"kicker": "Experience",
+		"title": "Experience",
+		"subtitle": "From student to software engineer, and now building products and <0>research systems</0>.",
+		"subtitle2": "A timeline of my journey, what I've worked on, and what I've learned along the way.",
+		"present": "Present",
+		"quote": "Building technology is a long journey of learning, creating and contributing.",
+		"quoteAuthor": "Tạ Quang Khôi",
+		"summary": {
+			"title": "Career Summary",
+			"years": {
+				"value": "4+ years",
+				"label": "Professional experience"
+			},
+			"companies": {
+				"value": "2 companies",
+				"label": "Worked and co-founded"
+			},
+			"degree": {
+				"value": "1 degree",
+				"label": "Mobile & Game Development"
+			},
+			"location": {
+				"value": "Vietnam",
+				"label": "Based in Ho Chi Minh City"
+			}
+		},
+		"skills": {
+			"title": "Core Skills",
+			"languages": "Languages",
+			"frameworks": "Frameworks",
+			"tools": "Tools & Infrastructure"
+		},
+		"entries": {
+			"openfarm": {
+				"role": "Co-Founder",
+				"org": "OpenFarm",
+				"location": "Ho Chi Minh City, Vietnam · Hybrid",
+				"period": "Sep 2026 - Present · 1 mo",
+				"desc": "Co-founding OpenFarm, a technology company focused on agricultural traceability, AI and decentralized identity for real-world supply chains.",
+				"tags": [
+					"AI",
+					"Product Development",
+					"System Architecture",
+					"Agriculture",
+					"Team Building"
+				],
+				"highlightsLabel": "Selected Work",
+				"highlights": [
+					"OpenFarm Platform",
+					"OpenFarm Trust",
+					"P&ID Digitizer (R&D)",
+					"AI Agents & Infrastructure"
+				]
+			},
+			"truetech": {
+				"role": "Software Engineer",
+				"org": "True Technology Co., Ltd.",
+				"location": "Vung Tau, Ba Ria-Vung Tau, Vietnam · Part-time",
+				"period": "Jun 2022 - Aug 2026 · 4 yrs 3 mos",
+				"desc": "Worked on web systems, backend services, infrastructure and internal tools. Contributed to product development, API design, and system optimization.",
+				"tags": [
+					"Web Engineering",
+					"Backend",
+					"Database",
+					"DevOps",
+					"API Design",
+					"System Design"
+				],
+				"highlightsLabel": "Key Contributions",
+				"highlights": [
+					"Internal Web Systems",
+					"Backend Services",
+					"Infrastructure & DevOps",
+					"Tools & Automation"
+				]
+			},
+			"bvu": {
+				"role": "Student",
+				"org": "Ba Ria - Vung Tau University",
+				"location": "Vung Tau, Vietnam",
+				"period": "Aug 2020 - Nov 2024 · 4 yrs 4 mos",
+				"desc": "Studied Mobile & Game Development. Built a strong foundation in programming, software development and mobile applications.",
+				"tags": [
+					"Android",
+					"Flutter",
+					"Mobile Development",
+					"Game Development",
+					"Programming"
+				],
+				"highlightsLabel": "Highlights",
+				"highlights": [
+					"Mobile & Game Development",
+					"Graduated in 2024",
+					"Student Projects",
+					"Programming Foundation"
+				]
+			}
+		}
+	},
 	"products": {
 		"kicker": "My Products",
 		"title": "Things I Build",
@@ -203,6 +307,7 @@
 	"nav": {
 		"home": "Home",
 		"about": "About",
+		"experience": "Experience",
 		"products": "Projects",
 		"projects": "Projects",
 		"demo": "Demo"

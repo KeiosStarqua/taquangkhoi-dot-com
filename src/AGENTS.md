@@ -35,4 +35,4 @@ From the repo root: `pnpm check`.
 - [components/AGENTS.md](components/AGENTS.md) — shared UI
 - [i18n/AGENTS.md](i18n/AGENTS.md) — locale catalogs
 
-`src/lib/`, `src/hooks/`, and `src/data/` stay owned here. Product records live in `src/data/products.ts` and are rendered by `src/routes/$lang/products/`.
+`src/lib/`, `src/hooks/`, and `src/data/` stay owned here. Product records live in `src/data/products.ts` and are rendered by `src/routes/$lang/products/`. Experience records (logos, years, highlight links) and core skills live in `src/data/experience.ts` and are rendered by `src/routes/$lang/experience.tsx`; their copy lives in `experience.entries.<id>` in the locale catalogs.

@@ -296,5 +296,5 @@ For TanStack Start specific documentation, visit [TanStack Start](https://tansta
 ## Contact
 
 - Facebook: [Tạ Quang Khôi](https://www.facebook.com/TaLaTaQuangKhoi)
-- Email: taquangkhoi@hotmail.com
+- Email: hello@taquangkhoi.com
 - Blog: [blog.taquangkhoi.tech](https://blog.taquangkhoi.tech)

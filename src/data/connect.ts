@@ -4,7 +4,7 @@
  * `connect.*` in the locale catalogs, keyed by each record's `id`.
  */
 
-export const EMAIL = "taquangkhoi@hotmail.com";
+export const EMAIL = "hello@taquangkhoi.com";
 
 /** Mail link with a prefilled subject for the "Schedule a call" CTA. */
 export function callRequestHref(subject: string): string {

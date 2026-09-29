@@ -1,4 +1,5 @@
 import "./instrument.client";
+import "./instrument.analytics";
 
 import * as Sentry from "@sentry/tanstackstart-react";
 import { StartClient } from "@tanstack/react-start/client";

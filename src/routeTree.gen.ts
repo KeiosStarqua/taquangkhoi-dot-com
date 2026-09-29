@@ -9,12 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
-import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
 import { Route as DemoStoreRouteImport } from './routes/demo/store'
 import { Route as DemoSentryRouteImport } from './routes/demo/sentry'
 import { Route as DemoAiStructuredRouteImport } from './routes/demo/ai-structured'
@@ -32,6 +32,11 @@ import { Route as DemoApiAiStructuredRouteImport } from './routes/demo/api.ai.st
 import { Route as DemoApiAiImageRouteImport } from './routes/demo/api.ai.image'
 import { Route as DemoApiAiChatRouteImport } from './routes/demo/api.ai.chat'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DemoRoute = DemoRouteImport.update({
   id: '/demo',
   path: '/demo',
@@ -56,11 +61,6 @@ const LangIndexRoute = LangIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => LangRoute,
-} as any)
-const SitemapXmlRoute = SitemapXmlRouteImport.update({
-  id: '/sitemap/xml',
-  path: '/sitemap/xml',
-  getParentRoute: () => rootRouteImport,
 } as any)
 const DemoStoreRoute = DemoStoreRouteImport.update({
   id: '/store',
@@ -148,6 +148,7 @@ export interface FileRoutesByFullPath {
   '/$lang': typeof LangRouteWithChildren
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
@@ -155,7 +156,6 @@ export interface FileRoutesByFullPath {
   '/demo/ai-structured': typeof DemoAiStructuredRoute
   '/demo/sentry': typeof DemoSentryRoute
   '/demo/store': typeof DemoStoreRoute
-  '/sitemap/xml': typeof SitemapXmlRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/products/$productId': typeof LangProductsProductIdRoute
   '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
@@ -171,6 +171,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
@@ -178,7 +179,6 @@ export interface FileRoutesByTo {
   '/demo/ai-structured': typeof DemoAiStructuredRoute
   '/demo/sentry': typeof DemoSentryRoute
   '/demo/store': typeof DemoStoreRoute
-  '/sitemap/xml': typeof SitemapXmlRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/products/$productId': typeof LangProductsProductIdRoute
   '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
@@ -196,6 +196,7 @@ export interface FileRoutesById {
   '/$lang': typeof LangRouteWithChildren
   '/about': typeof AboutRoute
   '/demo': typeof DemoRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/about': typeof LangAboutRoute
   '/api/sentry-example': typeof ApiSentryExampleRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
@@ -203,7 +204,6 @@ export interface FileRoutesById {
   '/demo/ai-structured': typeof DemoAiStructuredRoute
   '/demo/sentry': typeof DemoSentryRoute
   '/demo/store': typeof DemoStoreRoute
-  '/sitemap/xml': typeof SitemapXmlRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/products/$productId': typeof LangProductsProductIdRoute
   '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
@@ -222,6 +222,7 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/about'
     | '/demo'
+    | '/sitemap.xml'
     | '/$lang/about'
     | '/api/sentry-example'
     | '/demo/ai-chat'
@@ -229,7 +230,6 @@ export interface FileRouteTypes {
     | '/demo/ai-structured'
     | '/demo/sentry'
     | '/demo/store'
-    | '/sitemap/xml'
     | '/$lang/'
     | '/$lang/products/$productId'
     | '/demo/guitars/$guitarId'
@@ -245,6 +245,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/demo'
+    | '/sitemap.xml'
     | '/$lang/about'
     | '/api/sentry-example'
     | '/demo/ai-chat'
@@ -252,7 +253,6 @@ export interface FileRouteTypes {
     | '/demo/ai-structured'
     | '/demo/sentry'
     | '/demo/store'
-    | '/sitemap/xml'
     | '/$lang'
     | '/$lang/products/$productId'
     | '/demo/guitars/$guitarId'
@@ -269,6 +269,7 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/about'
     | '/demo'
+    | '/sitemap.xml'
     | '/$lang/about'
     | '/api/sentry-example'
     | '/demo/ai-chat'
@@ -276,7 +277,6 @@ export interface FileRouteTypes {
     | '/demo/ai-structured'
     | '/demo/sentry'
     | '/demo/store'
-    | '/sitemap/xml'
     | '/$lang/'
     | '/$lang/products/$productId'
     | '/demo/guitars/$guitarId'
@@ -294,12 +294,19 @@ export interface RootRouteChildren {
   LangRoute: typeof LangRouteWithChildren
   AboutRoute: typeof AboutRoute
   DemoRoute: typeof DemoRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiSentryExampleRoute: typeof ApiSentryExampleRoute
-  SitemapXmlRoute: typeof SitemapXmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/demo': {
       id: '/demo'
       path: '/demo'
@@ -334,13 +341,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/$lang/'
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRoute
-    }
-    '/sitemap/xml': {
-      id: '/sitemap/xml'
-      path: '/sitemap/xml'
-      fullPath: '/sitemap/xml'
-      preLoaderRoute: typeof SitemapXmlRouteImport
-      parentRoute: typeof rootRouteImport
     }
     '/demo/store': {
       id: '/demo/store'
@@ -510,8 +510,8 @@ const rootRouteChildren: RootRouteChildren = {
   LangRoute: LangRouteWithChildren,
   AboutRoute: AboutRoute,
   DemoRoute: DemoRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiSentryExampleRoute: ApiSentryExampleRoute,
-  SitemapXmlRoute: SitemapXmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

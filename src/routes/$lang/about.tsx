@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Trans, useTranslation } from "react-i18next";
 
 const CANONICAL_ORIGIN = "https://taquangkhoi.com";
@@ -35,44 +35,7 @@ export const Route = createFileRoute("/$lang/about")({
 
 function About() {
 	const { t } = useTranslation();
-
-	const socialLinks = [
-		{
-			label: "GitHub",
-			href: "https://github.com/TaQuangKhoi",
-			desc: t("about.connect.github"),
-		},
-		{
-			label: "Codeberg",
-			href: "https://codeberg.org/TaQuangKhoi",
-			desc: t("about.connect.codeberg"),
-		},
-		{
-			label: "LinkedIn",
-			href: "https://www.linkedin.com/in/taquangkhoi/",
-			desc: t("about.connect.linkedin"),
-		},
-		{
-			label: "X / Twitter",
-			href: "https://x.com/TaLaTaQuangKhoi",
-			desc: t("about.connect.twitter"),
-		},
-		{
-			label: "Ko-fi",
-			href: "https://ko-fi.com/taquangkhoi",
-			desc: t("about.connect.kofi"),
-		},
-		{
-			label: "ORCID",
-			href: "https://orcid.org/0000-0003-2096-7326",
-			desc: t("about.connect.orcid"),
-		},
-		{
-			label: "Facebook",
-			href: "https://www.facebook.com/keios.starqua/",
-			desc: t("about.connect.facebook"),
-		},
-	];
+	const { lang } = Route.useParams();
 
 	return (
 		<main className="page-wrap space-y-6 px-4 py-12">
@@ -248,28 +211,20 @@ function About() {
 				</div>
 			</section>
 
-			{/* Connect */}
-			<section className="island-shell p-6 sm:p-8">
-				<p className="island-kicker mb-4">
-					<span className="kicker-mark">/</span>
-					{t("about.connect.kicker")}
-				</p>
-				<div className="grid gap-3 sm:grid-cols-2">
-					{socialLinks.map(({ label, href, desc }) => (
-						<a
-							key={label}
-							href={href}
-							target="_blank"
-							rel="noreferrer"
-							className="island-shell feature-card flex items-center justify-between rounded-xl px-4 py-3 no-underline"
-						>
-							<span className="font-semibold text-[var(--sea-ink)]">
-								{label}
-							</span>
-							<span className="text-sm text-[var(--sea-ink-soft)]">{desc}</span>
-						</a>
-					))}
+			{/* Connect CTA — contact and social links live on /$lang/connect */}
+			<section className="island-shell flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+				<div>
+					<h2 className="display-title m-0 mb-1 text-2xl font-bold text-[var(--sea-ink)]">
+						{t("about.cta.title")}
+					</h2>
+					<p className="m-0 text-sm text-[var(--sea-ink-soft)]">
+						{t("about.cta.lede")}
+					</p>
 				</div>
+				<Link to="/$lang/connect" params={{ lang }} className="btn-primary">
+					{t("about.cta.link")}
+					<span aria-hidden="true">→</span>
+				</Link>
 			</section>
 		</main>
 	);

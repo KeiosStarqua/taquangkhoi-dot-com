@@ -4,6 +4,7 @@ import AboutCode from "#/components/AboutCode";
 import ProjectCard from "#/components/ProjectCard";
 import SocialLinks from "#/components/SocialLinks";
 import { products } from "#/data/products";
+import { EntityPreview } from "#/features/entity-preview";
 import en from "#/i18n/locales/en.json";
 import vi from "#/i18n/locales/vi.json";
 
@@ -107,23 +108,12 @@ function Home() {
 						<Trans
 							i18nKey="home.bio"
 							components={[
-								<a
+								<EntityPreview
 									key="openfarm"
-									href={OPENFARM_URL}
-									target="_blank"
-									rel="noreferrer"
-									className="font-semibold text-[var(--accent)] no-underline"
-								>
-									OpenFarm
-								</a>,
-								<Link
-									key="truetech"
-									to="/$lang/experience"
-									params={{ lang }}
-									className="font-semibold text-[var(--sea-ink)] no-underline"
-								>
-									True Technology
-								</Link>,
+									entity="openfarm"
+									tone="accent"
+								/>,
+								<EntityPreview key="truetech" entity="true-technology" />,
 							]}
 						/>
 					</p>
@@ -140,7 +130,16 @@ function Home() {
 							{t("home.cta.about")}
 						</Link>
 					</div>
-					<SocialLinks />
+					<div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+						<SocialLinks />
+						<Link
+							to="/$lang/connect"
+							params={{ lang }}
+							className="font-mono text-xs tracking-wide text-[var(--accent)] no-underline"
+						>
+							{t("home.cta.connect")} →
+						</Link>
+					</div>
 				</div>
 
 				<AboutCode />

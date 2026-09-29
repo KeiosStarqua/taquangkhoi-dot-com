@@ -172,7 +172,10 @@ function ExperienceCard({
 	copy: ExperienceCopy;
 }) {
 	return (
-		<article className="island-shell grid gap-6 p-5 sm:p-6 xl:grid-cols-[minmax(0,1fr)_260px]">
+		<article
+			id={record.id}
+			className="island-shell grid scroll-mt-24 gap-6 p-5 sm:p-6 xl:grid-cols-[minmax(0,1fr)_260px]"
+		>
 			<div className="flex flex-col gap-4 sm:flex-row">
 				<LogoTile logo={record.logo} name={copy.org} />
 				<div className="min-w-0">

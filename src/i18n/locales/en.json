@@ -15,6 +15,10 @@
 		"research": {
 			"title": "Research — Tạ Quang Khôi",
 			"description": "Research directions, notes and experiments by Tạ Quang Khôi: AI agents, engineering intelligence for P&ID drawings, quantum computing and LLM systems."
+		},
+		"projects": {
+			"title": "Projects — Tạ Quang Khôi",
+			"description": "Products, engineering projects, open-source work and research prototypes built by Tạ Quang Khôi — OpenSen, YT Hunter, Open Farm, the P&ID Digitizer and more."
 		}
 	},
 	"home": {
@@ -48,7 +52,10 @@
 		],
 		"statusBar": [
 			{ "label": "Now", "value": "Co-Founder @ OpenFarm" },
-			{ "label": "Focus", "value": "AI Agents · Engineering Intelligence · Quantum" },
+			{
+				"label": "Focus",
+				"value": "AI Agents · Engineering Intelligence · Quantum"
+			},
 			{ "label": "Location", "value": "Vietnam" },
 			{ "label": "Open to", "value": "Research & Product Collaboration" }
 		],
@@ -231,9 +238,6 @@
 		}
 	},
 	"products": {
-		"kicker": "My Products",
-		"title": "Things I Build",
-		"subtitle": "Personal products and side projects — from language learning tools to blockchain apps.",
 		"back": "All Products",
 		"features": "Features",
 		"links": "Links",
@@ -306,6 +310,85 @@
 					"Open APIs for retailers and food safety auditors to query the on-chain provenance directly"
 				]
 			}
+		}
+	},
+	"projects": {
+		"kicker": "Projects",
+		"titleLead": "Things I",
+		"titleAccent": "Build",
+		"lede": "A collection of products, engineering projects, and open-source tools that I've built, maintained, or contributed to. From real-world applications to research prototypes.",
+		"motto": {
+			"build": "Build",
+			"explore": "Explore",
+			"openSource": "Open Source",
+			"quote": "Turning ideas into working systems — from products to research prototypes.",
+			"sign": "// TQK"
+		},
+		"filters": {
+			"label": "Filter projects by category",
+			"all": "All",
+			"products": "Products",
+			"engineering": "Engineering",
+			"open-source": "Open Source",
+			"research": "Research"
+		},
+		"search": {
+			"label": "Search projects",
+			"placeholder": "Search projects…",
+			"empty": "No projects match “{{query}}”.",
+			"reset": "Clear search and filters"
+		},
+		"sections": {
+			"products": {
+				"title": "Products",
+				"lede": "Products that people can use — solving real problems and creating value.",
+				"viewAll": "view all products"
+			},
+			"engineering": {
+				"title": "Engineering Projects",
+				"lede": "Technical projects, system builds, and specialized engineering tools.",
+				"viewAll": "view all engineering projects"
+			},
+			"open-source": {
+				"title": "Open Source",
+				"lede": "Open-source tools and contributions to the community.",
+				"viewAll": "view all open source"
+			},
+			"research": {
+				"title": "Research",
+				"lede": "Prototypes and experiments from my research directions.",
+				"viewAll": "view all research"
+			}
+		},
+		"links": {
+			"demo": "Live Demo",
+			"github": "GitHub",
+			"docs": "Docs",
+			"details": "View details"
+		},
+		"status": {
+			"in-progress": "In Progress",
+			"running": "Running"
+		},
+		"stars": "{{count}} GitHub stars",
+		"engineering": {
+			"pid-digitizer": {
+				"name": "P&ID Digitizer",
+				"desc": "From engineering drawings to structured engineering graphs. Detect symbols, extract text, and convert P&ID drawings into editable digital models."
+			},
+			"agent-workstation": {
+				"name": "AI Agent Workstation",
+				"desc": "Experimenting with AI agents, tool use, memory systems, and autonomous workflows for real tasks."
+			},
+			"home-lab": {
+				"name": "Home Lab & Infra",
+				"desc": "Self-hosted development environment with Docker, PostgreSQL, Redis, and Cloudflare Tunnel."
+			}
+		},
+		"openSource": {
+			"web-scrobbler": "Contributing to the browser extension that scrobbles music to Last.fm and other services.",
+			"napkin-collect-android": "Android app to send thoughts directly to napkin.one.",
+			"vina-doctor": "AI-powered Vietnamese medical assistant."
 		}
 	},
 	"research": {

@@ -15,6 +15,7 @@ Owns URL contracts, `head()` metadata, redirects, and the sitemap. Translation s
 - `/` redirects to `/en`. `/about` redirects to `/en/about`. `/research` redirects to `/en/research`.
 - Indexable pages: `/$lang`, `/$lang/about`, `/$lang/experience`, `/$lang/products`, `/$lang/research`, `/$lang/products/$productId` for product ids in `src/data/products.ts` (`opensen`, `yt-hunter`, `open-farm`).
 - `Person` JSON-LD is injected from the homepage route `head()` as `application/ld+json` (`name`, `alternateName`, `url`, `sameAs`, `jobTitle`, `worksFor`, `nationality`). Homepage `title`/`description` come from `meta.home` in the locale catalogs.
+- `/$lang/products` is the projects index (Products, Engineering, Open Source, Research). Optional search params `?category=products|engineering|open-source|research` and `?q=` drive the filter pills and search; canonical URL omits them.
 - Sitemap is the dynamic route `src/routes/sitemap.xml.ts`, served at `/sitemap.xml`. It lists only indexable locale URLs. It does not list `/demo/*`.
 - `hreflang` alternates are set in `$lang.tsx` `head()`. `<html lang>` is set in `__root.tsx` from the `$lang` match.
 - `/demo/*` is crawlable and `noindex, nofollow` via `src/routes/demo.tsx`. Do not add `Disallow: /demo/` to `public/robots.txt`.

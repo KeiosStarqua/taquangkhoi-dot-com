@@ -15,6 +15,10 @@
 		"research": {
 			"title": "Nghiên cứu — Tạ Quang Khôi",
 			"description": "Các hướng nghiên cứu, ghi chú và thử nghiệm của Tạ Quang Khôi: AI agent, trí tuệ kỹ thuật cho bản vẽ P&ID, điện toán lượng tử và hệ thống LLM."
+		},
+		"projects": {
+			"title": "Dự án — Tạ Quang Khôi",
+			"description": "Sản phẩm, dự án kỹ thuật, đóng góp mã nguồn mở và nguyên mẫu nghiên cứu của Tạ Quang Khôi — OpenSen, YT Hunter, Open Farm, P&ID Digitizer và nhiều hơn nữa."
 		}
 	},
 	"home": {
@@ -48,7 +52,10 @@
 		],
 		"statusBar": [
 			{ "label": "Hiện tại", "value": "Đồng sáng lập @ OpenFarm" },
-			{ "label": "Trọng tâm", "value": "AI Agent · Trí tuệ kỹ thuật · Lượng tử" },
+			{
+				"label": "Trọng tâm",
+				"value": "AI Agent · Trí tuệ kỹ thuật · Lượng tử"
+			},
 			{ "label": "Nơi ở", "value": "Việt Nam" },
 			{ "label": "Mở cho", "value": "Hợp tác nghiên cứu & sản phẩm" }
 		],
@@ -231,9 +238,6 @@
 		}
 	},
 	"products": {
-		"kicker": "Sản phẩm của tôi",
-		"title": "Những thứ tôi xây dựng",
-		"subtitle": "Các sản phẩm cá nhân và dự án bên lề — từ công cụ học ngôn ngữ đến ứng dụng blockchain.",
 		"back": "Tất cả sản phẩm",
 		"features": "Tính năng",
 		"links": "Liên kết",
@@ -306,6 +310,85 @@
 					"API mở cho nhà bán lẻ và đơn vị kiểm định an toàn thực phẩm truy vấn trực tiếp provenance trên chain"
 				]
 			}
+		}
+	},
+	"projects": {
+		"kicker": "Dự án",
+		"titleLead": "Những thứ tôi",
+		"titleAccent": "xây dựng",
+		"lede": "Tập hợp các sản phẩm, dự án kỹ thuật và công cụ mã nguồn mở mà tôi đã xây dựng, duy trì hoặc đóng góp. Từ ứng dụng thực tế đến nguyên mẫu nghiên cứu.",
+		"motto": {
+			"build": "Xây dựng",
+			"explore": "Khám phá",
+			"openSource": "Mã nguồn mở",
+			"quote": "Biến ý tưởng thành hệ thống chạy được — từ sản phẩm đến nguyên mẫu nghiên cứu.",
+			"sign": "// TQK"
+		},
+		"filters": {
+			"label": "Lọc dự án theo nhóm",
+			"all": "Tất cả",
+			"products": "Sản phẩm",
+			"engineering": "Kỹ thuật",
+			"open-source": "Mã nguồn mở",
+			"research": "Nghiên cứu"
+		},
+		"search": {
+			"label": "Tìm dự án",
+			"placeholder": "Tìm dự án…",
+			"empty": "Không có dự án nào khớp với “{{query}}”.",
+			"reset": "Xoá tìm kiếm và bộ lọc"
+		},
+		"sections": {
+			"products": {
+				"title": "Sản phẩm",
+				"lede": "Sản phẩm mọi người có thể dùng — giải quyết vấn đề thật và tạo ra giá trị.",
+				"viewAll": "xem tất cả sản phẩm"
+			},
+			"engineering": {
+				"title": "Dự án kỹ thuật",
+				"lede": "Dự án kỹ thuật, hệ thống tự dựng và công cụ chuyên ngành.",
+				"viewAll": "xem tất cả dự án kỹ thuật"
+			},
+			"open-source": {
+				"title": "Mã nguồn mở",
+				"lede": "Công cụ mã nguồn mở và đóng góp cho cộng đồng.",
+				"viewAll": "xem tất cả mã nguồn mở"
+			},
+			"research": {
+				"title": "Nghiên cứu",
+				"lede": "Nguyên mẫu và thử nghiệm từ các hướng nghiên cứu của tôi.",
+				"viewAll": "xem tất cả nghiên cứu"
+			}
+		},
+		"links": {
+			"demo": "Dùng thử",
+			"github": "GitHub",
+			"docs": "Tài liệu",
+			"details": "Xem chi tiết"
+		},
+		"status": {
+			"in-progress": "Đang thực hiện",
+			"running": "Đang chạy"
+		},
+		"stars": "{{count}} sao trên GitHub",
+		"engineering": {
+			"pid-digitizer": {
+				"name": "P&ID Digitizer",
+				"desc": "Từ bản vẽ kỹ thuật đến đồ thị kỹ thuật có cấu trúc. Nhận diện ký hiệu, trích xuất chữ và chuyển bản vẽ P&ID thành mô hình số chỉnh sửa được."
+			},
+			"agent-workstation": {
+				"name": "AI Agent Workstation",
+				"desc": "Thử nghiệm AI agent, tool use, hệ thống bộ nhớ và quy trình tự động cho công việc thật."
+			},
+			"home-lab": {
+				"name": "Home Lab & Infra",
+				"desc": "Môi trường phát triển tự host với Docker, PostgreSQL, Redis và Cloudflare Tunnel."
+			}
+		},
+		"openSource": {
+			"web-scrobbler": "Đóng góp cho tiện ích trình duyệt scrobble nhạc lên Last.fm và các dịch vụ khác.",
+			"napkin-collect-android": "Ứng dụng Android gửi suy nghĩ thẳng lên napkin.one.",
+			"vina-doctor": "Trợ lý y tế tiếng Việt dùng AI."
 		}
 	},
 	"research": {

@@ -3,6 +3,8 @@ export interface Product {
 	icon: string;
 	tags: string[];
 	links: { label: string; href: string }[];
+	/** Live product URL, shown as "Live Demo" on the projects index. */
+	demo?: string;
 	status: "active" | "hackathon" | "open-source";
 	ideaBy?: string;
 }
@@ -11,6 +13,7 @@ export const products: Product[] = [
 	{
 		id: "opensen",
 		icon: "🗣️",
+		demo: "https://opensen.taquangkhoi.com/?utm_source=taquangkhoi.com",
 		tags: ["AI", "Language Learning", "React", "PWA"],
 		links: [
 			{
@@ -39,6 +42,7 @@ export const products: Product[] = [
 	{
 		id: "open-farm",
 		icon: "🌾",
+		demo: "https://openfarmgroup.com/?utm_source=taquangkhoi.com",
 		tags: ["Sui", "AI", "Walrus", "zkLogin", "Next.js", "AgriTech"],
 		links: [
 			{

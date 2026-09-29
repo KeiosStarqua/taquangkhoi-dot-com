@@ -38,21 +38,25 @@ const statusColors: Record<string, string> = {
 	"open-source": "chip chip-green",
 };
 
-function asStringArray(value: unknown): string[] {
-	if (!Array.isArray(value)) return [];
-	return value.filter((item): item is string => typeof item === "string");
-}
-
-function asLabeledList(
+// Validates and narrows an i18n `returnObjects` result to a labeled string
+// list, preserving the section's real key ("groups" or "items") instead of
+// renaming it, so callers read the same shape defined in the translation data.
+function labeledList<Key extends "groups" | "items">(
 	value: unknown,
-	itemsKey: "groups" | "items",
-): { label: string; items: string[] } | null {
-	if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+	listKey: Key,
+): ({ label: string } & Record<Key, string[]>) | null {
+	if (!value || typeof value !== "object") return null;
 	const record = value as Record<string, unknown>;
-	if (typeof record.label !== "string") return null;
-	const items = asStringArray(record[itemsKey]);
-	if (items.length === 0) return null;
-	return { label: record.label, items };
+	const label = record.label;
+	const list = record[listKey];
+	if (typeof label !== "string" || !Array.isArray(list) || list.length === 0) {
+		return null;
+	}
+	if (!list.every((item) => typeof item === "string")) return null;
+	return { label, [listKey]: list } as { label: string } & Record<
+		Key,
+		string[]
+	>;
 }
 
 function ProductDetailPage() {
@@ -60,24 +64,28 @@ function ProductDetailPage() {
 	const { lang } = Route.useParams();
 	const { product } = Route.useLoaderData();
 
-	const features = asStringArray(
-		t(`products.${product.id}.features`, {
-			returnObjects: true,
-			defaultValue: [],
-		}),
-	);
+	const features = t(`products.${product.id}.features`, {
+		returnObjects: true,
+		defaultValue: [],
+	}) as string[];
 
 	const problem = t(`products.${product.id}.problem`, {
 		defaultValue: "",
 	}) as string;
 
-	const techStack = asLabeledList(
-		t(`products.${product.id}.techStack`, { returnObjects: true }),
+	const techStack = labeledList(
+		t(`products.${product.id}.techStack`, {
+			returnObjects: true,
+			defaultValue: null,
+		}),
 		"groups",
 	);
 
-	const whatsNext = asLabeledList(
-		t(`products.${product.id}.whatsNext`, { returnObjects: true }),
+	const whatsNext = labeledList(
+		t(`products.${product.id}.whatsNext`, {
+			returnObjects: true,
+			defaultValue: null,
+		}),
 		"items",
 	);
 
@@ -176,7 +184,7 @@ function ProductDetailPage() {
 						{techStack.label}
 					</p>
 					<ul className="m-0 list-none space-y-3 pl-0">
-						{techStack.items.map((group) => (
+						{techStack.groups.map((group) => (
 							<li
 								key={group}
 								className="text-sm leading-6 text-[var(--sea-ink-soft)]"

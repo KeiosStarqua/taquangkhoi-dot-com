@@ -4,8 +4,13 @@ import AboutCode from "#/components/AboutCode";
 import ProjectCard from "#/components/ProjectCard";
 import SocialLinks from "#/components/SocialLinks";
 import { products } from "#/data/products";
+import en from "#/i18n/locales/en.json";
+import vi from "#/i18n/locales/vi.json";
 
 const CANONICAL_ORIGIN = "https://taquangkhoi.com";
+const OPENFARM_URL = "https://openfarmgroup.com/?utm_source=taquangkhoi.com";
+/** `head()` runs outside the i18next provider, so it reads the catalogs directly. */
+const catalogs = { en, vi } as const;
 
 const skills = {
 	languages: ["JavaScript", "Java", "Kotlin", "Python", "C#", "Groovy", "Rust"],
@@ -15,23 +20,14 @@ const skills = {
 	mobile: ["Android", "Flutter"],
 } as const;
 
-const railIcons = [CubeIcon, WaveIcon, AudioIcon, ShareIcon] as const;
+// Order matches `home.rails`: OpenFarm, AI agents, drawings, quantum.
+const railIcons = [CubeIcon, ShareIcon, WaveIcon, AudioIcon] as const;
 const statusIcons = [TargetIcon, PinIcon, PulseIcon, PeopleIcon] as const;
 
 export const Route = createFileRoute("/$lang/")({
 	head: ({ params }) => {
-		const titles: Record<string, string> = {
-			en: "Tạ Quang Khôi — Software Developer & Musician",
-			vi: "Tạ Quang Khôi — Lập trình viên & Nhạc sĩ",
-		};
-		const descs: Record<string, string> = {
-			en: "Software developer and musician from Vietnam. Building AI agents, exploring quantum computing at TRUE-TECH, and making music with Ardour.",
-			vi: "Lập trình viên và nhạc sĩ từ Việt Nam. Xây dựng AI agent, khám phá điện toán lượng tử tại TRUE-TECH, và làm nhạc với Ardour.",
-		};
-
-		const lang = params.lang;
-		const title = titles[lang] ?? titles.en;
-		const description = descs[lang] ?? descs.en;
+		const lang = params.lang === "vi" ? "vi" : "en";
+		const { title, description } = catalogs[lang].meta.home;
 		const url = `${CANONICAL_ORIGIN}/${lang}`;
 
 		const personSchema = {
@@ -47,7 +43,12 @@ export const Route = createFileRoute("/$lang/")({
 				"https://x.com/TaLaTaQuangKhoi",
 				"https://orcid.org/0000-0003-2096-7326",
 			],
-			jobTitle: "Software Developer",
+			jobTitle: "Co-Founder",
+			worksFor: {
+				"@type": "Organization",
+				name: "OpenFarm",
+				url: OPENFARM_URL,
+			},
 			nationality: "Vietnamese",
 		};
 
@@ -107,14 +108,22 @@ function Home() {
 							i18nKey="home.bio"
 							components={[
 								<a
-									key="truetech"
-									href="https://github.com/TRUE-TECH"
+									key="openfarm"
+									href={OPENFARM_URL}
 									target="_blank"
 									rel="noreferrer"
 									className="font-semibold text-[var(--accent)] no-underline"
 								>
-									@TRUE-TECH
+									OpenFarm
 								</a>,
+								<Link
+									key="truetech"
+									to="/$lang/experience"
+									params={{ lang }}
+									className="font-semibold text-[var(--sea-ink)] no-underline"
+								>
+									True Technology
+								</Link>,
 							]}
 						/>
 					</p>

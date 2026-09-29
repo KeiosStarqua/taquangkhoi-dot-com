@@ -17,7 +17,7 @@ describe("buildAboutProgram", () => {
 		).toEqual([
 			"Hello, world!",
 			"Keios Starqua · Vietnam",
-			"Developer · AI Explorer · Musician",
+			"Software Engineer · AI/R&D · Builder",
 			"Stay curious.",
 			"4",
 		]);

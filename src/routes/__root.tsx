@@ -26,11 +26,11 @@ export const Route = createRootRoute({
 		meta: [
 			{ charSet: "utf-8" },
 			{ name: "viewport", content: "width=device-width, initial-scale=1" },
-			{ title: "Tạ Quang Khôi — Software Developer & Musician" },
+			{ title: "Tạ Quang Khôi — Software Engineer · AI/R&D · Builder" },
 			{
 				name: "description",
 				content:
-					"Software developer and musician from Vietnam. Building AI agents, exploring quantum computing at TRUE-TECH, and making music with Ardour.",
+					"Software engineer and Co-Founder of OpenFarm from Vietnam. Building software and intelligent systems at the intersection of engineering and research: AI agents, engineering drawing intelligence, and quantum computing.",
 			},
 			{ name: "author", content: "Tạ Quang Khôi" },
 			{ name: "theme-color", content: "#05080d" },
@@ -42,7 +42,7 @@ export const Route = createRootRoute({
 			{ property: "og:image:height", content: "630" },
 			{
 				property: "og:image:alt",
-				content: "Tạ Quang Khôi — Software Developer & Musician",
+				content: "Tạ Quang Khôi — Software Engineer · AI/R&D · Builder",
 			},
 			// Twitter Card
 			{ name: "twitter:card", content: "summary_large_image" },

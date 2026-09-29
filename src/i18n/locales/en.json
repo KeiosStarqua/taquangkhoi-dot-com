@@ -1,8 +1,8 @@
 {
 	"meta": {
 		"home": {
-			"title": "Tạ Quang Khôi — Software Developer & Musician",
-			"description": "Software developer and musician from Vietnam. Building AI agents, exploring quantum computing at TRUE-TECH, and making music with Ardour."
+			"title": "Tạ Quang Khôi — Software Engineer · AI/R&D · Builder",
+			"description": "Software engineer and Co-Founder of OpenFarm from Vietnam. Building software and intelligent systems at the intersection of engineering and research: AI agents, engineering drawing intelligence, and quantum computing."
 		},
 		"about": {
 			"title": "About — Tạ Quang Khôi",
@@ -18,11 +18,11 @@
 		}
 	},
 	"home": {
-		"kicker": "Software Developer · AI Explorer · Musician · Vietnam",
+		"kicker": "Software Engineer · AI/R&D · Builder · Vietnam",
 		"titleLead": "Tạ Quang",
 		"titleAccent": "Khôi",
-		"tagline": "Building technology for a more <0>creative</0> and <0>open</0> future.",
-		"bio": "I build software at <0>@TRUE-TECH</0>, craft AI agents, and make music with Ardour. Currently exploring quantum programming on the side, and working on projects that connect technology, creativity, and real-world impact.",
+		"tagline": "Building <0>software</0>. Exploring <0>intelligence</0>. Turning research into systems.",
+		"bio": "Co-Founder of <0>OpenFarm</0>, after nearly four years as a software engineer at <1>True Technology</1>. I build software and intelligent systems where engineering meets research. Right now that means AI agents, the P&ID Digitizer for engineering drawings, and quantum computing.",
 		"collab": "open to collaboration",
 		"quote": "Curiosity builds better worlds.",
 		"cta": {
@@ -41,16 +41,16 @@
 			"idle": "scroll the file, then Run"
 		},
 		"rails": [
-			{ "verb": "Build", "title": "AI Agents" },
-			{ "verb": "Explore", "title": "Quantum Computing" },
-			{ "verb": "Create", "title": "Music with Ardour" },
-			{ "verb": "Share", "title": "Open Knowledge" }
+			{ "verb": "Build", "title": "OpenFarm" },
+			{ "verb": "Research", "title": "AI Agents" },
+			{ "verb": "Digitize", "title": "Engineering Drawings" },
+			{ "verb": "Explore", "title": "Quantum Computing" }
 		],
 		"statusBar": [
-			{ "label": "Focus", "value": "AI Agents & Quantum Programming" },
+			{ "label": "Now", "value": "Co-Founder @ OpenFarm" },
+			{ "label": "Focus", "value": "AI Agents · Engineering Intelligence · Quantum" },
 			{ "label": "Location", "value": "Vietnam" },
-			{ "label": "Status", "value": "Building & Learning" },
-			{ "label": "Open to", "value": "Collaboration Opportunities" }
+			{ "label": "Open to", "value": "Research & Product Collaboration" }
 		],
 		"focus": {
 			"ai": {

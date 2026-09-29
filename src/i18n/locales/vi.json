@@ -1,8 +1,8 @@
 {
 	"meta": {
 		"home": {
-			"title": "Tạ Quang Khôi — Lập trình viên & Nhạc sĩ",
-			"description": "Lập trình viên và nhạc sĩ từ Việt Nam. Xây dựng AI agent, khám phá điện toán lượng tử tại TRUE-TECH, và làm nhạc với Ardour."
+			"title": "Tạ Quang Khôi — Kỹ sư phần mềm · AI/R&D · Builder",
+			"description": "Kỹ sư phần mềm và Đồng sáng lập OpenFarm từ Việt Nam. Xây dựng phần mềm và hệ thống thông minh ở giao điểm giữa kỹ thuật và nghiên cứu: AI agent, trí tuệ cho bản vẽ kỹ thuật, và điện toán lượng tử."
 		},
 		"about": {
 			"title": "Giới thiệu — Tạ Quang Khôi",
@@ -18,11 +18,11 @@
 		}
 	},
 	"home": {
-		"kicker": "Lập trình viên · Khám phá AI · Nhạc sĩ · Việt Nam",
+		"kicker": "Kỹ sư phần mềm · AI/R&D · Builder · Việt Nam",
 		"titleLead": "Tạ Quang",
 		"titleAccent": "Khôi",
-		"tagline": "Xây dựng công nghệ cho một tương lai <0>sáng tạo</0> và <0>mở</0> hơn.",
-		"bio": "Tôi xây dựng phần mềm tại <0>@TRUE-TECH</0>, tạo AI agent, và làm nhạc với Ardour. Hiện đang khám phá lập trình lượng tử, và làm những dự án nối công nghệ, sáng tạo với tác động ngoài đời thực.",
+		"tagline": "Xây dựng <0>phần mềm</0>. Khám phá <0>trí tuệ</0>. Biến nghiên cứu thành hệ thống.",
+		"bio": "Đồng sáng lập <0>OpenFarm</0>, sau gần bốn năm làm kỹ sư phần mềm tại <1>True Technology</1>. Tôi xây dựng phần mềm và hệ thống thông minh ở nơi kỹ thuật gặp nghiên cứu. Hiện tại là AI agent, P&ID Digitizer cho bản vẽ kỹ thuật, và điện toán lượng tử.",
 		"collab": "sẵn sàng hợp tác",
 		"quote": "Sự tò mò xây nên những thế giới tốt hơn.",
 		"cta": {
@@ -41,16 +41,16 @@
 			"idle": "cuộn file, rồi bấm Chạy"
 		},
 		"rails": [
-			{ "verb": "Xây dựng", "title": "AI Agent" },
-			{ "verb": "Khám phá", "title": "Điện toán lượng tử" },
-			{ "verb": "Sáng tạo", "title": "Nhạc với Ardour" },
-			{ "verb": "Chia sẻ", "title": "Tri thức mở" }
+			{ "verb": "Xây dựng", "title": "OpenFarm" },
+			{ "verb": "Nghiên cứu", "title": "AI Agent" },
+			{ "verb": "Số hóa", "title": "Bản vẽ kỹ thuật" },
+			{ "verb": "Khám phá", "title": "Điện toán lượng tử" }
 		],
 		"statusBar": [
-			{ "label": "Trọng tâm", "value": "AI Agent & Lập trình lượng tử" },
+			{ "label": "Hiện tại", "value": "Đồng sáng lập @ OpenFarm" },
+			{ "label": "Trọng tâm", "value": "AI Agent · Trí tuệ kỹ thuật · Lượng tử" },
 			{ "label": "Nơi ở", "value": "Việt Nam" },
-			{ "label": "Trạng thái", "value": "Đang xây dựng & học hỏi" },
-			{ "label": "Mở cho", "value": "Cơ hội hợp tác" }
+			{ "label": "Mở cho", "value": "Hợp tác nghiên cứu & sản phẩm" }
 		],
 		"focus": {
 			"ai": {

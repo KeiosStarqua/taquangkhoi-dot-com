@@ -25,13 +25,16 @@ export type AboutProgram = {
 
 const ALIAS = "Keios Starqua";
 const LOCATION = "Vietnam";
-const ROLES = ["Developer", "AI Explorer", "Musician"] as const;
+const ROLES = ["Software Engineer", "AI/R&D", "Builder"] as const;
+const NOW = "Co-Founder @ OpenFarm";
 const FOCUS = [
+	"OpenFarm",
 	"AI Agents",
-	"Quantum Programming",
-	"Open Source",
-	"Music with Ardour",
+	"P&ID Digitizer",
+	"Quantum Computing",
 ] as const;
+/** Personality layer: kept, but below the professional identity. */
+const INTERESTS = ["Music with Ardour", "Open Source"] as const;
 const STACK = ["TypeScript", "React", "Kotlin", "Python"] as const;
 
 function escapeString(value: string): string {
@@ -101,10 +104,13 @@ export function buildAboutProgram(input: {
 		...stringList(ROLES),
 		line(plain("  "), punct("],")),
 		line(plain("  location: "), str(LOCATION), punct(",")),
-		line(plain("  now: "), str("TRUE-TECH"), punct(",")),
+		line(plain("  now: "), str(NOW), punct(",")),
 		line(plain("  site: "), str("https://taquangkhoi.com"), punct(",")),
 		line(plain("  currentFocus: "), punct("[")),
 		...stringList(FOCUS),
+		line(plain("  "), punct("],")),
+		line(plain("  interests: "), punct("[")),
+		...stringList(INTERESTS),
 		line(plain("  "), punct("],")),
 		line(plain("  stack: "), punct("[")),
 		...stringList(STACK),

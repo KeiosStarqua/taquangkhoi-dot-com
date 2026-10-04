@@ -148,6 +148,16 @@ Ghost icon buttons, `36px`, mint on hover. GitHub, X, LinkedIn, Ko-fi. Same comp
 
 Inline entity names (OpenFarm, True Technology) get a dashed mint underline. They open a context card: a `/ TYPE · QUALIFIER` kicker plus a status dot, a logo tile, the name in serif, a subtitle, a one-line description, role and period, tags, and one CTA. The card sits above or below the text and joins the underline through a dashed connector. It rests slightly tilted and straightens when hovered. Spec and behavior: `src/features/entity-preview/AGENTS.md`.
 
+### Case study (OpenSen)
+
+`/$lang/products/opensen` is a long-form page: open hero (copy left, product window right), then numbered sections split by top hairlines. Each section: `/ 01. KICKER`, serif title, lede on the left; the visual on the right in `.island-shell` panels.
+
+- `.opensen-app`: the product window. It keeps the OpenSen app's light studio palette in both themes, as the code window stays dark.
+- `.chunk-tone[data-tone]`: chunk roles. `request` (blue), `action` (accent), `slot` (amber), `error`. These hues carry linguistic meaning; they are not a second brand accent.
+- `.margin-note`: tilted Fraunces italic for handwritten-style annotations.
+
+Spec: `src/features/opensen-case-study/AGENTS.md`.
+
 ### Footer
 
 Top hairline, mono copyright, the social row. No large link columns.

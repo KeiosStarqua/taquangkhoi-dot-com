@@ -983,6 +983,168 @@ html:not(.dark) .chip-violet {
   }
 }
 
+/* ── OpenSen case study (src/features/opensen-case-study) ───────────── */
+
+/* Chunk roles. Meaning-carrying content hues, not a second brand accent. */
+:root {
+  --chunk-request: #0369a1;
+  --chunk-action: var(--accent);
+  --chunk-slot: #b45309;
+}
+
+.dark {
+  --chunk-request: #7dd3fc;
+  --chunk-slot: #fbbf24;
+}
+
+.chunk-tone {
+  --tone: var(--chunk-action);
+  border: 1px solid color-mix(in oklab, var(--tone) 38%, transparent);
+  background: color-mix(in oklab, var(--tone) 12%, transparent);
+  color: color-mix(in oklab, var(--tone) 82%, var(--sea-ink));
+}
+
+.chunk-tone[data-tone='request'] {
+  --tone: var(--chunk-request);
+}
+
+.chunk-tone[data-tone='slot'] {
+  --tone: var(--chunk-slot);
+}
+
+.chunk-tone[data-tone='error'] {
+  --tone: var(--destructive);
+}
+
+/* Handwritten margin note (Fraunces italic, tilted). */
+.margin-note {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 560;
+  line-height: 1.3;
+  color: var(--sea-ink-soft);
+}
+
+/*
+ * The OpenSen app window keeps the real product's light "studio" palette
+ * in both themes, the same way the code window always stays dark.
+ */
+.opensen-app {
+  --os-paper: #f6f4ee;
+  --os-card: #ffffff;
+  --os-ink: #1b2a22;
+  --os-muted: #6b7c73;
+  --os-primary: #1f9d52;
+  --os-soft: #e7f6eb;
+  --os-line: #e4eee6;
+  --os-track: #eef3ef;
+  --os-gold: #e4b322;
+  color: var(--os-ink);
+  background: var(--os-paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow:
+    0 24px 60px rgba(16, 40, 46, 0.16),
+    0 0 42px var(--glow);
+  overflow: hidden;
+}
+
+.opensen-app .os-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--os-line);
+  background: var(--os-card);
+}
+
+.opensen-app .os-url {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--os-muted);
+}
+
+.opensen-app .os-card {
+  background: var(--os-card);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(40, 80, 50, 0.07);
+}
+
+.opensen-app .os-muted {
+  color: var(--os-muted);
+}
+
+.opensen-app .os-primary-text {
+  color: var(--os-primary);
+}
+
+.opensen-app .os-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 12px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--os-muted);
+}
+
+.opensen-app .os-nav-item[aria-current='page'] {
+  background: var(--os-soft);
+  color: var(--os-primary);
+}
+
+.opensen-app .os-pill {
+  border-radius: 999px;
+  background: var(--os-card);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(40, 80, 50, 0.08);
+}
+
+.opensen-app .os-toggle {
+  display: inline-flex;
+  border-radius: 999px;
+  background: var(--os-track);
+  padding: 3px;
+}
+
+.opensen-app .os-toggle span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--os-muted);
+}
+
+.opensen-app .os-toggle span[data-active='true'] {
+  background: var(--os-primary);
+  color: #ffffff;
+}
+
+.opensen-app .os-meaning {
+  border-radius: 14px;
+  background: var(--os-soft);
+  padding: 0.65rem 0.85rem;
+}
+
+.opensen-app .os-primary {
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--os-primary);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.opensen-app .os-star {
+  color: var(--os-gold);
+}
+
 /* ── Entity preview (src/features/entity-preview) ───────────────────── */
 
 .entity-trigger {

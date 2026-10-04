@@ -12,6 +12,7 @@ Owns files that must be reachable without a React route. The sitemap is not a fi
 
 - Open Graph image: `og-card.png` (1200×630), URL `https://taquangkhoi.com/og-card.png`. Referenced as `og:image` and `twitter:image` from `src/routes/__root.tsx`.
 - `robots.txt` has no `Disallow` path. `Sitemap:` points at `https://taquangkhoi.com/sitemap.xml`. Demo routes stay out of the index via the meta tag in `src/routes/demo.tsx`, not via `robots.txt`.
+- `public/products/<id>/` holds per-product images (WebP, resized). `products/opensen/` is owned by `src/features/opensen-case-study/`.
 - `public/legacy/` is the served copy of the old static site (`/legacy/...`). It matches `legacy/` at the repo root. Change both trees together.
 
 ## Work Guidance

@@ -1,6 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { getProduct } from "#/data/products";
+import {
+	getOpenSenCopy,
+	OpenSenCaseStudy,
+} from "#/features/opensen-case-study";
 
 const CANONICAL_ORIGIN = "https://taquangkhoi.com";
 
@@ -11,13 +15,13 @@ export const Route = createFileRoute("/$lang/products/$productId")({
 		return { product };
 	},
 	head: ({ params, loaderData }) => {
+		if (!loaderData) return {};
 		const { product } = loaderData;
 		const lang = params.lang;
 
-		const titleEn = `${params.productId} — Tạ Quang Khôi`;
-		const titleVi = `${params.productId} — Tạ Quang Khôi`;
-
-		const title = lang === "vi" ? titleVi : titleEn;
+		const caseStudyMeta =
+			product.id === "opensen" ? getOpenSenCopy(lang).meta : null;
+		const title = caseStudyMeta?.title ?? `${params.productId} — Tạ Quang Khôi`;
 		const url = `${CANONICAL_ORIGIN}/${lang}/products/${product.id}`;
 
 		return {
@@ -25,6 +29,15 @@ export const Route = createFileRoute("/$lang/products/$productId")({
 				{ title },
 				{ property: "og:title", content: title },
 				{ property: "og:url", content: url },
+				...(caseStudyMeta
+					? [
+							{ name: "description", content: caseStudyMeta.description },
+							{
+								property: "og:description",
+								content: caseStudyMeta.description,
+							},
+						]
+					: []),
 			],
 			links: [{ rel: "canonical", href: url }],
 		};
@@ -60,6 +73,16 @@ function labeledList<Key extends "groups" | "items">(
 }
 
 function ProductDetailPage() {
+	const { lang } = Route.useParams();
+	const { product } = Route.useLoaderData();
+
+	if (product.id === "opensen") {
+		return <OpenSenCaseStudy lang={lang} product={product} />;
+	}
+	return <GenericProductDetail />;
+}
+
+function GenericProductDetail() {
 	const { t } = useTranslation();
 	const { lang } = Route.useParams();
 	const { product } = Route.useLoaderData();
@@ -214,25 +237,6 @@ function ProductDetailPage() {
 					</ul>
 				</section>
 			) : null}
-
-			{/* Video */}
-			{product.id === "opensen" && (
-				<section className="island-shell p-6 sm:p-8">
-					<p className="island-kicker mb-4">
-						<span className="kicker-mark">/</span>
-						{t("products.opensen.video")}
-					</p>
-					<div className="aspect-video overflow-hidden rounded-xl border border-[var(--line)]">
-						<iframe
-							src="https://www.youtube.com/embed/nRouJO5Dhjw"
-							title="OpenSen Inspiration"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowFullScreen
-							className="h-full w-full"
-						/>
-					</div>
-				</section>
-			)}
 
 			{/* Links */}
 			{product.links.length > 0 && (

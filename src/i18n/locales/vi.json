@@ -254,14 +254,187 @@
 			"name": "OpenSen",
 			"tagline": "Học tiếng Anh qua phương pháp chunking — ghi nhớ cả cụm từ, không phải từng từ.",
 			"description": "Open Sentence là một hệ sinh thái học ngôn ngữ giúp người học ghi nhớ tiếng Anh qua phương pháp chunking: ghi nhớ cả câu và cụm từ được ghép sẵn để lấy ngôn ngữ một cách tự động thay vì ghép từng từ một.",
-			"features": [
-				"Dialog Builder — Tạo các đoạn hội thoại và bài phát biểu sẵn sàng để ghi nhớ",
-				"Chunk Library — Các cụm từ phổ biến với các mẫu hoán đổi",
-				"Situation Coverage — Các tình huống thực tế (tán gẫu, đặt món, du lịch, v.v.)",
-				"Practice Plan — Lịch học tập với Spaced Repetition",
-				"Anki export — Mang chunk đi đâu cũng được"
-			],
-			"video": "Nguồn cảm hứng"
+			"caseStudy": {
+				"meta": {
+					"title": "OpenSen — học câu, không học từ · Tạ Quang Khôi",
+					"description": "OpenSen là một studio học ngôn ngữ dựa trên chunking: tình huống thật, câu hoàn chỉnh, mẫu câu hoán đổi, luyện nói và lặp lại ngắt quãng FSRS."
+				},
+				"hero": {
+					"titleLead": "Nếu bạn ngừng học từng từ,",
+					"titleAccent": "và bắt đầu học cả câu thì sao?",
+					"lede": "Mình xây OpenSen để thử một cách học ngôn ngữ khác: tình huống thật, câu hoàn chỉnh và các chunk dùng lại được thay vì từng từ rời rạc.",
+					"extraTags": ["Lặp lại ngắt quãng", "Dự án cá nhân"],
+					"note": ["Tình huống thật.", "Câu nói hữu ích.", "Nhớ là của bạn."],
+					"previewLabel": "Màn hình bài học OpenSen: At the Airport, Ask for help"
+				},
+				"problem": {
+					"kicker": "Vấn đề",
+					"title": "Cách chúng ta học ngôn ngữ đang bị ngược.",
+					"lede": "Nhiều người biết hàng nghìn từ nhưng vẫn khó nói ra một câu đơn giản ngay lúc cần.",
+					"traditional": {
+						"label": "Cách học truyền thống",
+						"steps": ["từ vựng", "ngữ pháp", "câu", "hội thoại"],
+						"note": "Bắt đầu từ từ rời và quy tắc, nên khó dùng được trong tình huống thật."
+					},
+					"opensen": {
+						"label": "OpenSen",
+						"steps": ["tình huống", "câu", "chunk", "phản xạ tự động"],
+						"note": "Bắt đầu từ tình huống thật và luyện các chunk dùng lại được để nói tự nhiên."
+					}
+				},
+				"idea": {
+					"kicker": "Ý tưởng cốt lõi",
+					"title": "Học ngôn ngữ theo chunk.",
+					"lede": "Con người nhớ và dùng ngôn ngữ theo cụm, không theo từng từ. OpenSen biến mỗi câu thành một khung câu có ô trống để hoán đổi.",
+					"annotation": "Một câu thật → các chunk nhỏ hơn mà bạn dùng lại được.",
+					"parts": ["Lời nhờ lịch sự", "Hành động", "Ô trống · địa điểm"],
+					"swapLabel": "Giữ khung câu, đổi ô trống"
+				},
+				"system": {
+					"kicker": "Hệ thống",
+					"title": "Một vòng học ngôn ngữ trọn vẹn.",
+					"lede": "Từ tình huống thật đến lặp lại ngắt quãng, OpenSen giúp bạn xây bộ nhớ ngôn ngữ của riêng mình.",
+					"steps": [
+						{
+							"title": "Tình huống thật",
+							"caption": "Sân bay, quán cà phê, lớp học"
+						},
+						{
+							"title": "Dialog Builder",
+							"caption": "Tạo đoạn hội thoại"
+						},
+						{
+							"title": "Chunk Library",
+							"caption": "Lưu mẫu câu dùng lại"
+						},
+						{
+							"title": "Luyện nhớ lại",
+							"caption": "Nói ra, không chỉ nhận ra"
+						},
+						{
+							"title": "Practice Plan",
+							"caption": "Lịch FSRS cho từng chunk"
+						},
+						{
+							"title": "Dùng tự động",
+							"caption": "Nói mà không cần dịch"
+						}
+					],
+					"loop": "Xây bộ nhớ ngôn ngữ của riêng bạn"
+				},
+				"features": {
+					"kicker": "Tính năng",
+					"title": "Công cụ cho việc học thật.",
+					"lede": "Mỗi module được thiết kế quanh chunk và tình huống thật.",
+					"items": [
+						{
+							"title": "Situation Coverage",
+							"body": "Tán gẫu, gọi món, du lịch, trường học và hơn thế."
+						},
+						{
+							"title": "Dialog Builder",
+							"body": "Hội thoại sẵn sàng để ghi nhớ từ tình huống của bạn."
+						},
+						{
+							"title": "Chunk Library",
+							"body": "Cụm từ bản xứ phổ biến kèm mẫu hoán đổi."
+						},
+						{
+							"title": "Substitution Drills",
+							"body": "Giữ khung câu, đổi ô trống."
+						},
+						{
+							"title": "Practice Plan",
+							"body": "Nhớ lại bằng cách nói ra, lên lịch bằng FSRS."
+						},
+						{
+							"title": "Anki Export",
+							"body": "Mang chunk đi đâu cũng được."
+						}
+					]
+				},
+				"action": {
+					"kicker": "Sản phẩm thực tế",
+					"title": "Từ tình huống đến ngôn ngữ.",
+					"lede": "Một bước trong bài học của app: tình huống thật trở thành một câu, một mẫu câu và một câu trả lời nói ra.",
+					"situation": {
+						"title": "Tình huống",
+						"body": "At the Airport · Ask for help",
+						"alt": "Minh họa một hành khách nhờ nhân viên sân bay giúp đỡ"
+					},
+					"sentence": {
+						"title": "Nghe câu",
+						"slow": "Chậm",
+						"natural": "Tự nhiên"
+					},
+					"pattern": {
+						"title": "Thấy mẫu câu"
+					},
+					"speak": {
+						"title": "Nói ra",
+						"body": "Chấm điểm từ giọng nói thật của bạn, rồi xếp lịch ôn tập."
+					}
+				},
+				"experiment": {
+					"kicker": "Thử nghiệm",
+					"title": "Mình không định làm thêm một Duolingo nữa.",
+					"lede": "Mình muốn kiểm chứng một giả thuyết: liệu một hệ thống học có giúp người học thật sự dùng được ngôn ngữ họ học không?",
+					"questions": [
+						"Chunking có giảm tải nhận thức khi nói không?",
+						"Người học có nhớ lại nhanh hơn khi học cụm từ như một đơn vị không?",
+						"AI có tạo được chunk hữu ích, đúng ngữ cảnh thay vì bài tập từ vựng chung chung không?"
+					]
+				},
+				"learned": {
+					"kicker": "Điều mình học được",
+					"title": "Tiến bộ, không cần hoàn hảo.",
+					"lede": "Có cái hiệu quả, có cái không, và dự án đã thay đổi trên đường đi.",
+					"worked": {
+						"title": "Điều hiệu quả",
+						"body": "Học cụm từ trong ngữ cảnh tự nhiên hơn học thuộc từ vựng rời rạc."
+					},
+					"didnt": {
+						"title": "Điều chưa hiệu quả",
+						"body": "Tạo thật nhiều nội dung AI nhanh chóng kém hữu ích hơn tuyển chọn một bộ ví dụ nhỏ chất lượng cao."
+					},
+					"changed": {
+						"title": "Điều đã thay đổi",
+						"body": "OpenSen chuyển từ một công cụ tạo hội thoại sang một studio ngôn ngữ nhẹ nhàng: tình huống minh họa, câu tuyển chọn và luyện nói."
+					}
+				},
+				"next": {
+					"kicker": "Bước tiếp theo",
+					"title": "OpenSen sẽ đi về đâu.",
+					"lede": "Một hành trình dài hướng tới việc học ngôn ngữ cá nhân hóa và thích ứng hơn.",
+					"roadmap": [
+						{
+							"stage": "Đã ra mắt",
+							"label": "Vòng học cơ bản"
+						},
+						{
+							"stage": "Hiện tại",
+							"label": "Luyện nói"
+						},
+						{
+							"stage": "Tiếp theo",
+							"label": "Đồ thị ngôn ngữ cá nhân"
+						},
+						{
+							"stage": "Sau đó",
+							"label": "Gói nội dung chia sẻ"
+						}
+					],
+					"question": {
+						"label": "Câu hỏi dài hạn",
+						"body": "Liệu ta có thể xây một hệ thống học ngôn ngữ thích ứng với chính ngôn ngữ mà mỗi người thật sự cần dùng?"
+					},
+					"cta": {
+						"website": "Xem website",
+						"video": "Video cảm hứng",
+						"connect": "Kết nối"
+					}
+				}
+			}
 		},
 		"yt-hunter": {
 			"name": "YT Hunter",
@@ -608,12 +781,7 @@
 			"description": "Xây dựng lớp niềm tin và truy xuất nguồn gốc cho nông nghiệp thực tế.",
 			"role": "Đồng sáng lập",
 			"period": "09/2026 – Hiện tại",
-			"tags": [
-				"AI",
-				"Nông nghiệp",
-				"Truy xuất nguồn gốc",
-				"Mã nguồn mở"
-			],
+			"tags": ["AI", "Nông nghiệp", "Truy xuất nguồn gốc", "Mã nguồn mở"],
 			"cta": "Xem OpenFarm",
 			"external": "Mở openfarmgroup.com"
 		},
@@ -635,12 +803,7 @@
 					"value": "Bán thời gian"
 				}
 			],
-			"tags": [
-				"Backend",
-				"Web Engineering",
-				"DevOps",
-				"API Design"
-			],
+			"tags": ["Backend", "Web Engineering", "DevOps", "API Design"],
 			"cta": "Xem kinh nghiệm"
 		}
 	}

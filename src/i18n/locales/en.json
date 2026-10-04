@@ -254,14 +254,191 @@
 			"name": "OpenSen",
 			"tagline": "Learn English through chunking — memorize whole phrases, not words.",
 			"description": "Open Sentence is a language learning ecosystem that helps learners memorize English through the chunking method: memorizing whole sentences and pre-assembled phrases so they retrieve language automatically rather than constructing it word-by-word.",
-			"features": [
-				"Dialog Builder — Generate memorization-ready dialogs and speeches",
-				"Chunk Library — High-frequency native phrases with swap patterns",
-				"Situation Coverage — Real-world scenarios (small talk, ordering, travel, etc.)",
-				"Practice Plan — Spaced repetition based practice schedules",
-				"Anki export — Take your chunks anywhere"
-			],
-			"video": "Inspiration"
+			"caseStudy": {
+				"meta": {
+					"title": "OpenSen — learn sentences, not words · Tạ Quang Khôi",
+					"description": "OpenSen is a language-learning studio built on chunking: real situations, whole sentences, swappable patterns, speaking practice, and FSRS spaced repetition."
+				},
+				"hero": {
+					"titleLead": "What if you stopped learning words,",
+					"titleAccent": "and started learning sentences?",
+					"lede": "I built OpenSen to explore a different way of learning a language: real situations, whole sentences, and reusable chunks instead of isolated words.",
+					"extraTags": ["Spaced Repetition", "Personal Project"],
+					"note": [
+						"Real situations.",
+						"Useful sentences.",
+						"Yours to remember."
+					],
+					"previewLabel": "OpenSen lesson screen: At the Airport, Ask for help"
+				},
+				"problem": {
+					"kicker": "The problem",
+					"title": "The way we learn language is backwards.",
+					"lede": "Most learners know thousands of words but still struggle to produce a simple sentence in real time.",
+					"traditional": {
+						"label": "Traditional learning",
+						"steps": ["word", "grammar", "sentence", "conversation"],
+						"note": "Starts from isolated words and rules, so they are hard to use in a real situation."
+					},
+					"opensen": {
+						"label": "OpenSen",
+						"steps": ["situation", "sentence", "chunk", "automatic recall"],
+						"note": "Starts from a real situation and trains reusable chunks for natural speech."
+					}
+				},
+				"idea": {
+					"kicker": "Core idea",
+					"title": "Learn language as chunks.",
+					"lede": "People remember and use language in chunks, not isolated words. OpenSen turns each sentence into a reusable frame with a slot you can swap.",
+					"annotation": "A real sentence → smaller chunks you can actually reuse.",
+					"parts": ["Polite request", "Action", "Slot · place"],
+					"swapLabel": "Keep the frame, swap the slot"
+				},
+				"system": {
+					"kicker": "The system",
+					"title": "A complete loop for language learning.",
+					"lede": "From a real situation to spaced repetition, OpenSen helps you build a personal language memory.",
+					"steps": [
+						{
+							"title": "Real-world situation",
+							"caption": "Airport, café, class"
+						},
+						{
+							"title": "Dialog Builder",
+							"caption": "Generate the conversation"
+						},
+						{
+							"title": "Chunk Library",
+							"caption": "Store reusable patterns"
+						},
+						{
+							"title": "Recall practice",
+							"caption": "Speak, don't just recognize"
+						},
+						{
+							"title": "Practice Plan",
+							"caption": "FSRS schedule per chunk"
+						},
+						{
+							"title": "Automatic usage",
+							"caption": "Say it without translating"
+						}
+					],
+					"loop": "Build your personal language memory"
+				},
+				"features": {
+					"kicker": "Features",
+					"title": "Tools for real learning.",
+					"lede": "Each module is built around chunks and real situations.",
+					"items": [
+						{
+							"title": "Situation Coverage",
+							"body": "Small talk, ordering, travel, school, and more."
+						},
+						{
+							"title": "Dialog Builder",
+							"body": "Memorization-ready dialogs from your own situation."
+						},
+						{
+							"title": "Chunk Library",
+							"body": "High-frequency native phrases with swap patterns."
+						},
+						{
+							"title": "Substitution Drills",
+							"body": "Keep the frame, swap the slot."
+						},
+						{
+							"title": "Practice Plan",
+							"body": "Recall that produces speech, scheduled with FSRS."
+						},
+						{
+							"title": "Anki Export",
+							"body": "Take your chunks anywhere."
+						}
+					]
+				},
+				"action": {
+					"kicker": "Product in action",
+					"title": "From situation to language.",
+					"lede": "One lesson step from the app: a real situation becomes a sentence, a pattern, and a spoken answer.",
+					"situation": {
+						"title": "Situation",
+						"body": "At the Airport · Ask for help",
+						"alt": "Illustration of a traveler asking an airport staff member for help"
+					},
+					"sentence": {
+						"title": "Hear the sentence",
+						"slow": "Slow",
+						"natural": "Natural"
+					},
+					"pattern": {
+						"title": "See the pattern"
+					},
+					"speak": {
+						"title": "Speak it",
+						"body": "Scored from your real speech, then scheduled for review."
+					}
+				},
+				"experiment": {
+					"kicker": "The experiment",
+					"title": "I wasn't trying to build another Duolingo.",
+					"lede": "I wanted to test a hypothesis: can a learning system help people actually use the language they learn?",
+					"questions": [
+						"Can chunking reduce the cognitive load of speaking?",
+						"Can learners recall language faster when phrases are learned as units?",
+						"Can AI generate useful, context-aware chunks instead of generic vocabulary exercises?"
+					]
+				},
+				"learned": {
+					"kicker": "What I learned",
+					"title": "Progress, not perfection.",
+					"lede": "Some things worked, some didn't, and the project changed along the way.",
+					"worked": {
+						"title": "What worked",
+						"body": "Learning phrases in context felt more natural than memorizing isolated vocabulary."
+					},
+					"didnt": {
+						"title": "What didn't",
+						"body": "Generating lots of AI content quickly was less useful than curating a small set of high-quality examples."
+					},
+					"changed": {
+						"title": "What changed",
+						"body": "OpenSen moved from a dialogue generator toward a calm language studio: illustrated situations, curated sentences, and speaking practice."
+					}
+				},
+				"next": {
+					"kicker": "Next steps",
+					"title": "Where OpenSen goes next.",
+					"lede": "A long-term exploration toward more personal and adaptive language learning.",
+					"roadmap": [
+						{
+							"stage": "Shipped",
+							"label": "Learning loop"
+						},
+						{
+							"stage": "Now",
+							"label": "Speaking practice"
+						},
+						{
+							"stage": "Next",
+							"label": "Personal language graph"
+						},
+						{
+							"stage": "Later",
+							"label": "Shareable packs"
+						}
+					],
+					"question": {
+						"label": "The long-term question",
+						"body": "Can we build a language-learning system that adapts to the language a person actually needs to use?"
+					},
+					"cta": {
+						"website": "Visit website",
+						"video": "Inspiration video",
+						"connect": "Connect"
+					}
+				}
+			}
 		},
 		"yt-hunter": {
 			"name": "YT Hunter",
@@ -602,12 +779,7 @@
 			"description": "Building a trust and traceability layer for real-world agriculture.",
 			"role": "Co-Founder",
 			"period": "Sep 2026 – Present",
-			"tags": [
-				"AI",
-				"Agriculture",
-				"Traceability",
-				"Open Source"
-			],
+			"tags": ["AI", "Agriculture", "Traceability", "Open Source"],
 			"cta": "View OpenFarm",
 			"external": "Visit openfarmgroup.com"
 		},
@@ -629,12 +801,7 @@
 					"value": "Part-time"
 				}
 			],
-			"tags": [
-				"Backend",
-				"Web Engineering",
-				"DevOps",
-				"API Design"
-			],
+			"tags": ["Backend", "Web Engineering", "DevOps", "API Design"],
 			"cta": "View experience"
 		}
 	}

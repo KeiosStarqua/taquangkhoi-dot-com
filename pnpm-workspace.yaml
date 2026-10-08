@@ -7,6 +7,8 @@ onlyBuiltDependencies:
 
 allowBuilds:
   "@google/genai": true
+  # ascii.rest is a git dependency; its `prepare` script compiles TypeScript to dist/.
+  "ascii.rest@https://codeload.github.com/bas3line/ascii/tar.gz/fcb644403bfc25af0002e415d1006dd10b99ca34": true
   esbuild: true
   protobufjs: true
   sharp: true

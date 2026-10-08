@@ -1,3 +1,5 @@
+import { mount } from "ascii.rest";
+import * as typewriter from "ascii.rest/pieces/typewriter";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { EMAIL } from "#/data/connect";
@@ -92,7 +94,7 @@ export default function ConnectTerminal() {
 				</ul>
 				<p className="m-0 mt-2" aria-hidden="true">
 					<span className="prompt-mark">&gt;</span>{" "}
-					<span className="code-caret align-middle" />
+					<TypedLine phrases={OPEN_TO} />
 				</p>
 				<p className="sr-only" aria-live="polite">
 					{copied ? t("connect.terminal.copied") : ""}
@@ -100,4 +102,28 @@ export default function ConnectTerminal() {
 			</div>
 		</section>
 	);
+}
+
+/**
+ * The last prompt line: ascii.rest's typewriter cycling through `phrases`.
+ * The piece centres one line in a 3-row frame; only that line is kept and its
+ * fixed left padding trimmed, so the text sits right after the prompt. The
+ * piece draws its own cursor and holds the first frame under reduced motion.
+ */
+function TypedLine({ phrases }: { phrases: readonly string[] }) {
+	const ref = useRef<HTMLSpanElement>(null);
+
+	useEffect(() => {
+		const el = ref.current;
+		if (!el) return;
+		const frame = typewriter.default({ prefix: "", phrases: [...phrases] });
+		const middle = typewriter.meta.rows >> 1;
+		return mount(
+			el,
+			() => (t, env) => (frame(t, env).split("\n")[middle] ?? "").trim(),
+			{ fps: typewriter.meta.fps },
+		);
+	}, [phrases]);
+
+	return <span ref={ref} className="tok-str whitespace-pre" />;
 }

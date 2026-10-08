@@ -1,5 +1,16 @@
+import * as cpuMeters from "ascii.rest/pieces/cpu-meters";
 import { Captions, FileText, ListChecks, NotebookPen } from "lucide-react";
 import type { ReactNode } from "react";
+import AsciiArt from "./AsciiArt";
+
+const HOME_LAB_SERVICES = [
+	"web",
+	"admin",
+	"auth",
+	"worker",
+	"postgres",
+	"redis",
+] as const;
 
 export type ProjectVisualKind =
 	| "opensen"
@@ -343,29 +354,23 @@ function AgentGraph() {
 	);
 }
 
+/**
+ * Home-lab card: ascii.rest's htop-style meters, cropped to the left meter
+ * column so the text stays legible in the narrow panel. Colors are the fixed
+ * code-window palette so it stays dark in light mode.
+ */
 function ServicesTerminal() {
-	const services = ["web", "admin", "auth", "worker", "postgres", "redis"];
 	return (
 		<DarkPanel>
-			<div className="p-3 font-mono text-[0.55rem] leading-[1.6]">
-				<p className="m-0 mb-1 text-[#d7fff4]">Services</p>
-				<ul className="m-0 mb-3 list-none p-0">
-					{services.map((name) => (
-						<li key={name} className="flex items-center gap-1.5">
-							<span className="h-1.5 w-1.5 rounded-full bg-[#3dff9a]" />
-							<span className="flex-1 text-[#93aeb3]">{name}</span>
-							<span className="text-[#3dff9a]">running</span>
-						</li>
-					))}
-				</ul>
-				<p className="m-0 text-[#93aeb3]">CPU</p>
-				<div className="mb-2 h-1 rounded bg-[rgba(62,232,196,0.15)]">
-					<div className="h-full w-1/6 rounded bg-[#3ee8c4]" />
-				</div>
-				<p className="m-0 text-[#93aeb3]">Memory</p>
-				<div className="h-1 rounded bg-[rgba(62,232,196,0.15)]">
-					<div className="h-full w-1/2 rounded bg-[#3ee8c4]" />
-				</div>
+			<div className="p-3">
+				<p className="m-0 mb-1 font-mono text-[0.55rem] text-[#d7fff4]">htop</p>
+				<AsciiArt
+					piece={cpuMeters}
+					options={{ commands: HOME_LAB_SERVICES }}
+					fitCols={33}
+					maxFontPx={8}
+					className="text-[#93aeb3]"
+				/>
 			</div>
 		</DarkPanel>
 	);

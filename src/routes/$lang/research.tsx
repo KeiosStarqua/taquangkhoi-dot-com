@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import * as lorenz from "ascii.rest/pieces/lorenz";
 import {
 	ArrowUpRight,
 	Atom,
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import AsciiArt from "#/components/AsciiArt";
 import ResearchCode from "#/components/ResearchCode";
 import {
 	type HighlightedWork,
@@ -447,6 +449,16 @@ function Playground() {
 					);
 				})}
 			</div>
+			<figure className="island-shell m-0 mt-4 p-5">
+				<AsciiArt
+					piece={lorenz}
+					maxFontPx={11}
+					className="mx-auto max-w-2xl text-[var(--accent)]"
+				/>
+				<figcaption className="mt-3 text-right font-mono text-xs tracking-[0.14em] text-[var(--ink-faint)]">
+					{"// lorenz attractor · σ=10 ρ=28 β=8/3"}
+				</figcaption>
+			</figure>
 		</section>
 	);
 }

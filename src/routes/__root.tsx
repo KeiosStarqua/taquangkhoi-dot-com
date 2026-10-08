@@ -11,6 +11,7 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import NotFound from "../components/NotFound";
 
 import StoreDevtools from "../lib/demo-store-devtools";
 
@@ -57,6 +58,7 @@ export const Route = createRootRoute({
 	}),
 	shellComponent: RootDocument,
 	errorComponent: RootError,
+	notFoundComponent: NotFound,
 });
 
 function RootError({ error }: ErrorComponentProps) {

@@ -767,6 +767,12 @@
 	"footer": {
 		"rights": "Bảo lưu mọi quyền."
 	},
+	"notFound": {
+		"kicker": "// 404",
+		"title": "Không tìm thấy trang",
+		"message": "Trang bạn tìm đã được chuyển đi hoặc chưa từng tồn tại.",
+		"home": "Về trang chủ"
+	},
 	"langSwitch": {
 		"label": "Ngôn ngữ",
 		"en": "English",

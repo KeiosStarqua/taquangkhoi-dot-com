@@ -35,6 +35,7 @@
     "@tanstack/react-store": "latest",
     "@tanstack/router-plugin": "^1.132.0",
     "@tanstack/store": "latest",
+    "ascii.rest": "github:bas3line/ascii#fcb644403bfc25af0002e415d1006dd10b99ca34",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "highlight.js": "^11.11.1",

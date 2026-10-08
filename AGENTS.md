@@ -97,6 +97,7 @@ When the user requests a durable behavior change, record it here or in the relev
 - Meta tags: TanStack Router `head()` on the route. Do not add `react-helmet` or another head library
 - After adding or renaming route files, run `pnpm dev` once so `src/routeTree.gen.ts` regenerates
 - Tests: Vitest via `pnpm test`. Config is `vitest.config.ts`, separate from the Cloudflare Vite config.
+- Git dependencies are pinned to a commit SHA. If one needs a build script (`prepare`), allow that exact tarball URL in `pnpm-workspace.yaml` `allowBuilds` (as done for `ascii.rest`). `latest` specifiers mean any lockfile write can bump TanStack packages; review the `pnpm-lock.yaml` diff after adding a dependency.
 
 ### Architecture Principles
 

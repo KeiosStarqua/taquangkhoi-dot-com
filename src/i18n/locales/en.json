@@ -765,6 +765,12 @@
 	"footer": {
 		"rights": "All rights reserved."
 	},
+	"notFound": {
+		"kicker": "// 404",
+		"title": "Page not found",
+		"message": "The page you asked for has moved or never existed.",
+		"home": "Back to home"
+	},
 	"langSwitch": {
 		"label": "Language",
 		"en": "English",

@@ -18,16 +18,20 @@ type AsciiArtProps = {
 	fitRows?: number;
 	/** Upper bound for the font size so wide boxes do not blow the art up. */
 	maxFontPx?: number;
+	/** Draw a coloured piece (a scene) as text in one ink, in a `<pre>`. Ink comes from `className`. */
+	mono?: boolean;
 	className?: string;
 };
 
 /**
  * Decorative ascii.rest animation. Text pieces render in a `<pre>` in the
- * current text color, so color comes from the `className` token. The font
- * scales with the container width, and the box height is reserved before the
- * first frame so the page does not jump. Hidden from assistive tech; the
- * surrounding copy carries the meaning. ascii.rest keeps the first frame when
- * the reader prefers reduced motion and pauses while off screen.
+ * current text color, so color comes from the `className` token. Scenes
+ * (`cell: 1`) with `mono` use square cells, so their line height matches the
+ * glyph width. The font scales with the container width, and the box height
+ * is reserved before the first frame so the page does not jump. Hidden from
+ * assistive tech; the surrounding copy carries the meaning. ascii.rest keeps
+ * the first frame when the reader prefers reduced motion and pauses while off
+ * screen.
  */
 export default function AsciiArt({
 	piece,
@@ -35,10 +39,13 @@ export default function AsciiArt({
 	fitCols,
 	fitRows,
 	maxFontPx = 14,
+	mono = false,
 	className,
 }: AsciiArtProps) {
 	const cols = fitCols ?? piece.meta.cols;
 	const fontSize = `min(calc(100cqw / ${cols * CELL_WIDTH_EM}), ${maxFontPx}px)`;
+	const lineHeight =
+		mono && piece.meta.cell === 1 ? CELL_WIDTH_EM : LINE_HEIGHT;
 
 	return (
 		<div
@@ -51,11 +58,12 @@ export default function AsciiArt({
 			<Ascii
 				piece={piece}
 				options={options}
+				mono={mono}
 				className="mx-auto my-0 w-fit overflow-hidden font-mono whitespace-pre"
 				style={{
 					fontSize,
-					lineHeight: LINE_HEIGHT,
-					height: `${(fitRows ?? piece.meta.rows) * LINE_HEIGHT}em`,
+					lineHeight,
+					height: `${(fitRows ?? piece.meta.rows) * lineHeight}em`,
 				}}
 			/>
 		</div>

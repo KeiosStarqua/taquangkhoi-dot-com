@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import * as nightCoast from "ascii.rest/pieces/night-coast";
 import {
 	BookOpen,
 	Bot,
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 import type { ComponentType } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import AsciiArt from "#/components/AsciiArt";
 import {
 	CodebergIcon,
 	FacebookIcon,
@@ -305,22 +307,37 @@ function LetsTalk() {
 
 	return (
 		<section
-			className="island-shell flex flex-col gap-6 p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between"
+			className="island-shell relative overflow-hidden p-6 sm:p-8"
 			aria-labelledby="lets-talk"
 		>
-			<div className="max-w-xl">
-				<Kicker>{t("connect.talk.kicker")}</Kicker>
-				<h2
-					id="lets-talk"
-					className="display-title m-0 mb-2 text-2xl font-bold text-[var(--sea-ink)]"
-				>
-					{t("connect.talk.title")}
-				</h2>
-				<p className="m-0 text-sm leading-6 text-[var(--sea-ink-soft)]">
-					{t("connect.talk.lede")}
-				</p>
+			<div
+				aria-hidden="true"
+				className="pointer-events-none absolute inset-x-0 top-0 hidden text-[var(--accent)] opacity-35 [mask-image:linear-gradient(to_bottom,black_40%,transparent)] lg:block"
+			>
+				<AsciiArt
+					piece={nightCoast}
+					mono
+					options={{ fps: 8 }}
+					fitRows={56}
+					maxFontPx={9}
+					className="w-full"
+				/>
 			</div>
-			<ContactButtons />
+			<div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+				<div className="max-w-xl">
+					<Kicker>{t("connect.talk.kicker")}</Kicker>
+					<h2
+						id="lets-talk"
+						className="display-title m-0 mb-2 text-2xl font-bold text-[var(--sea-ink)]"
+					>
+						{t("connect.talk.title")}
+					</h2>
+					<p className="m-0 text-sm leading-6 text-[var(--sea-ink-soft)]">
+						{t("connect.talk.lede")}
+					</p>
+				</div>
+				<ContactButtons />
+			</div>
 		</section>
 	);
 }

@@ -83,6 +83,7 @@
 			"languages": "Languages",
 			"frontend": "Frontend",
 			"backend": "Backend",
+			"ai": "AI & Agents",
 			"tools": "Tools",
 			"mobile": "Mobile"
 		},
@@ -165,10 +166,30 @@
 			}
 		},
 		"skills": {
-			"title": "Core Skills",
-			"languages": "Languages",
-			"frameworks": "Frameworks",
-			"tools": "Tools & Infrastructure"
+			"title": "Technology Map",
+			"intro": "Grouped by proven responsibility, not self-rated. Hover a technology to see where it was used.",
+			"levels": {
+				"owned": {
+					"label": "Owned",
+					"desc": "Designed or decided the architecture, runs it, answers for the outcome."
+				},
+				"shipped": {
+					"label": "Shipped",
+					"desc": "Delivered into real use with tests, error handling and maintenance."
+				},
+				"applied": {
+					"label": "Applied",
+					"desc": "Solved a real problem with it and can debug it."
+				},
+				"exploring": {
+					"label": "Exploring",
+					"desc": "Prototypes and experiments only."
+				}
+			},
+			"prior": {
+				"label": "Earlier work",
+				"desc": "Used earlier in my career, not verified in my current repositories, so no level is claimed."
+			}
 		},
 		"entries": {
 			"openfarm": {

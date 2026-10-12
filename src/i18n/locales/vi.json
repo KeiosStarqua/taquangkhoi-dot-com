@@ -83,6 +83,7 @@
 			"languages": "Ngôn ngữ",
 			"frontend": "Frontend",
 			"backend": "Backend",
+			"ai": "AI & Agent",
 			"tools": "Công cụ",
 			"mobile": "Di động"
 		},
@@ -165,10 +166,30 @@
 			}
 		},
 		"skills": {
-			"title": "Kỹ năng chính",
-			"languages": "Ngôn ngữ",
-			"frameworks": "Framework",
-			"tools": "Công cụ & Hạ tầng"
+			"title": "Bản đồ công nghệ",
+			"intro": "Phân nhóm theo trách nhiệm đã được chứng minh, không tự chấm điểm. Rê chuột vào công nghệ để xem nơi đã dùng.",
+			"levels": {
+				"owned": {
+					"label": "Chịu trách nhiệm end-to-end",
+					"desc": "Tự thiết kế hoặc quyết định kiến trúc, vận hành và chịu trách nhiệm về kết quả."
+				},
+				"shipped": {
+					"label": "Đã triển khai",
+					"desc": "Đã đưa vào sử dụng thực tế, có kiểm thử, xử lý lỗi và bảo trì."
+				},
+				"applied": {
+					"label": "Đã ứng dụng",
+					"desc": "Đã dùng để giải quyết bài toán thực tế và biết cách debug."
+				},
+				"exploring": {
+					"label": "Đang khám phá",
+					"desc": "Mới dừng ở nguyên mẫu và thử nghiệm."
+				}
+			},
+			"prior": {
+				"label": "Công việc trước đây",
+				"desc": "Đã dùng trong giai đoạn trước, chưa xác minh được trong các repo hiện tại nên không gắn mức."
+			}
 		},
 		"entries": {
 			"openfarm": {

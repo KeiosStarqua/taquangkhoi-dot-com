@@ -3,6 +3,7 @@ import { Trans, useTranslation } from "react-i18next";
 import AboutCode from "#/components/AboutCode";
 import ProjectCard from "#/components/ProjectCard";
 import SocialLinks from "#/components/SocialLinks";
+import { namesInCategory, techCategories } from "#/data/experience";
 import { products } from "#/data/products";
 import { EntityPreview } from "#/features/entity-preview";
 import en from "#/i18n/locales/en.json";
@@ -13,13 +14,10 @@ const OPENFARM_URL = "https://openfarmgroup.com/?utm_source=taquangkhoi.com";
 /** `head()` runs outside the i18next provider, so it reads the catalogs directly. */
 const catalogs = { en, vi } as const;
 
-const skills = {
-	languages: ["JavaScript", "Java", "Kotlin", "Python", "C#", "Groovy", "Rust"],
-	frontend: ["HTML5", "CSS3", "React"],
-	backend: ["NestJS"],
-	tools: ["Git", "Docker", "Linux", "AWS"],
-	mobile: ["Android", "Flutter"],
-} as const;
+/** Home shows only technologies verified at "shipped" or above. The full map is on /experience. */
+const skillRows = techCategories
+	.map((key) => [key, namesInCategory(key, "shipped")] as const)
+	.filter(([, items]) => items.length > 0);
 
 // Order matches `home.rails`: OpenFarm, AI agents, drawings, quantum.
 const railIcons = [CubeIcon, ShareIcon, WaveIcon, AudioIcon] as const;
@@ -223,15 +221,7 @@ function Home() {
 					{t("home.skills.kicker")}
 				</p>
 				<div className="flex flex-col gap-4">
-					{(
-						[
-							["languages", skills.languages],
-							["frontend", skills.frontend],
-							["backend", skills.backend],
-							["tools", skills.tools],
-							["mobile", skills.mobile],
-						] as const
-					).map(([key, items]) => (
+					{skillRows.map(([key, items]) => (
 						<div
 							key={key}
 							className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4"

@@ -12,11 +12,13 @@ import type { ReactNode } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import TrueTechLogo from "#/components/TrueTechLogo";
 import {
-	coreSkills,
 	type ExperienceLogo,
 	type ExperienceRecord,
 	experiences,
+	groupByLevel,
 	type HighlightLink,
+	priorStack,
+	proficiencyLevels,
 } from "#/data/experience";
 
 const CANONICAL_ORIGIN = "https://taquangkhoi.com";
@@ -354,35 +356,56 @@ function CareerSummary() {
 
 function CoreSkills() {
 	const { t } = useTranslation();
-	const groups = [
-		{ key: "languages", items: coreSkills.languages },
-		{ key: "frameworks", items: coreSkills.frameworks },
-		{ key: "tools", items: coreSkills.tools },
-	] as const;
+	const grouped = groupByLevel();
 
 	return (
 		<section className="island-shell p-5">
-			<h2 className="m-0 mb-3 text-lg font-bold text-[var(--sea-ink)]">
+			<h2 className="m-0 mb-1 text-lg font-bold text-[var(--sea-ink)]">
 				{t("experience.skills.title")}
 			</h2>
+			<p className="m-0 mb-4 text-xs text-[var(--sea-ink-soft)]">
+				{t("experience.skills.intro")}
+			</p>
 			<div className="space-y-4">
-				{groups.map(({ key, items }) => (
-					<div key={key}>
-						<h3 className="m-0 mb-2 text-sm font-medium text-[var(--sea-ink-soft)]">
-							{t(`experience.skills.${key}`)}
+				{proficiencyLevels.map((level) => (
+					<div key={level}>
+						<h3 className="m-0 text-sm font-medium text-[var(--sea-ink-soft)]">
+							{t(`experience.skills.levels.${level}.label`)}
 						</h3>
+						<p className="m-0 mb-2 text-xs text-[var(--sea-ink-soft)]">
+							{t(`experience.skills.levels.${level}.desc`)}
+						</p>
 						<ul className="m-0 flex list-none flex-wrap gap-2 pl-0">
-							{items.map((skill) => (
+							{grouped[level].map((skill) => (
 								<li
-									key={skill}
+									key={skill.name}
+									title={skill.evidence.join(" · ")}
 									className="rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-3 py-1 text-xs text-[var(--kicker)]"
 								>
-									{skill}
+									{skill.name}
 								</li>
 							))}
 						</ul>
 					</div>
 				))}
+				<div>
+					<h3 className="m-0 text-sm font-medium text-[var(--sea-ink-soft)]">
+						{t("experience.skills.prior.label")}
+					</h3>
+					<p className="m-0 mb-2 text-xs text-[var(--sea-ink-soft)]">
+						{t("experience.skills.prior.desc")}
+					</p>
+					<ul className="m-0 flex list-none flex-wrap gap-2 pl-0">
+						{priorStack.map((name) => (
+							<li
+								key={name}
+								className="rounded-full border border-dashed border-[var(--chip-line)] px-3 py-1 text-xs text-[var(--sea-ink-soft)]"
+							>
+								{name}
+							</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		</section>
 	);
